@@ -59,6 +59,44 @@ function routeUser() {
             window.location.href = "HTML setup/setup-html-linux.html";
             return;
         }
+
+
+
+    }
+
+            if (language === "nodejs") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "Nodejs setup/setup-nodejs-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "Nodejs setup/setup-nodejs-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "Nodejs setup/setup-nodejs-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "Nodejs setup/setup-nodejs-linux.html";
+            return;
+        }
+
+
+
+
+
+
+
+
     }
 
     // ===============================
