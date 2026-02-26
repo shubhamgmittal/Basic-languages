@@ -60,9 +60,11 @@ function routeUser() {
             return;
         }
 
-
-
     }
+
+
+
+
 
             if (language === "nodejs") {
 
@@ -89,15 +91,47 @@ function routeUser() {
             window.location.href = "Nodejs setup/setup-nodejs-linux.html";
             return;
         }
-
-
-
-
-
-
-
-
     }
+
+
+
+
+
+
+                if (language === "python") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "Python setup/setup-python-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "Python setup/setup-python-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "Python setup/setup-python-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "Python setup/setup-python-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
 
     // ===============================
     // FUTURE LANGUAGES GO HERE
