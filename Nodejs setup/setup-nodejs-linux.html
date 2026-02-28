@@ -1,46 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set up Node.js on Linux</title>
+    <title>Node.js Setup Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main class="container">
         <h1 style="color:black;">
             Node.js Development Setup on Linux
         </h1>
 
+        <!-- Required software -->
         <section class="glass-block setup-section">
             <h2>Required Software</h2>
             <p class="setup-text">
                 To work with Node.js professionally, you will need to install
                 <strong>Node.js</strong> and a code editor like
-                <strong>Visual Studio Code</strong>.    
+                <strong>Visual Studio Code</strong>.
+                Basically, node is a runtime environment that allows you to run JavaScript code outside of a web
+                browser, and Visual Studio Code is a popular code editor that provides a great development experience
+                for JavaScript and Node.js projects.
             </p>
         </section>
-        <section class="glass-block setup-section">
-            <h2>Download Node.js</h2>
-            <p class="setup-text">
-                Here is the installer matching your operating system.
-            </p>
-            <ul class="setup-list">
-                <li>
-                    <strong>Linux (64-bit)</strong><br>
-                    <a class="download-link"
-                       href="https://nodejs.org/dist/v18.17.1/node-v18.17.1-linux-x64.tar.xz">
-                       Download Node.js for Linux
-                    </a>
-                </li>
-            </ul><br><br>
-            <h3>Here is how it should look after installation</h3>
-            <div class="screen-shot">
-                <div class="screen-shot">
-                    <img src="screens/nodejs.png" alt="Node.js" style="width:100%; height:100%;">
-                </div>
-            </div>
-        </section>
+        <!-- Download vs code -->
         <section class="glass-block setup-section">
             <h2>Download Visual Studio Code</h2>
             <p class="setup-text">
@@ -49,9 +35,8 @@
             <ul class="setup-list">
                 <li>
                     <strong>Linux (64-bit)</strong><br>
-                    <a class="download-link"
-                       href="https://update.code.visualstudio.com/latest/linux-x64/stable">
-                       Download VS Code for Linux
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/linux-x64/stable">
+                        Download VS Code for Linux
                     </a>
                 </li>
             </ul><br><br>
@@ -62,6 +47,50 @@
                 </div>
             </div>
         </section>
+
+        <!-- Download node.js -->
+        <section class="glass-block setup-section">
+            <h2>Download Node.js</h2>
+            <p class="setup-text">
+                Here is the installer matching your operating system.
+            </p>
+            <ul class="setup-list">
+                <li>
+                    <strong>Linux (64-bit)</strong><br>
+                    <a class="download-link" href="https://nodejs.org/dist/v18.17.1/node-v18.17.1-linux-x64.tar.xz">
+                        Download Node.js for Linux
+                    </a>
+                </li>
+            </ul><br><br>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/download-file.png" alt="Node.js" style="width:100%; height:100%;">
+                </div>
+            </div><br><br><br>
+            <h3>Here is how it should look after installation</h3><br>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/after-installation.png" alt="Node.js" style="width:100%; height:100%;">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Required extensions -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions for VS Code</h2>
+            <p class="setup-text">
+                To enhance your Node.js development experience in VS Code, you should install the following extensions:
+            </p>
+            <ul class="setup-list">
+                <li><strong>ESLint</strong> - Linting for JavaScript and TypeScript</li>
+                <li><strong>Prettier</strong> - Code formatting tool</li>
+                <li><strong>Node.js Extension Pack</strong> - Collection of useful extensions for Node.js development
+                </li>
+            </ul>
+        </section>
+
     </main>
 </body>
+
 </html>
