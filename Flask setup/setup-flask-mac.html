@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Setup Guide for Mac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1 style="color: black;">Flask Setup Guide for Mac</h1>
+
+        <!-- Required software -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Software</h2>
+            <ul>
+                <li><a class="download-link" href="https://www.python.org/downloads/macos/" target="_blank">Python</a> (version 3.6 or higher)
+                </li>
+            </ul>
+        </section>
+
+        <!-- Download vscode -->
+        <section class="glass-block setup-section">
+        <h2 style="color: black;">Download Visual Studio Code</h2>
+        <p class="setup-text">
+            Here is the installer matching your operating system.
+        </p>
+
+        <ul class="setup-list">
+            <li>
+                <strong>Windows (64-bit)</strong><br>
+                <a class="download-link"
+                   href="https://update.code.visualstudio.com/latest/win32-x64-user/stable">
+                   Download VS Code for Windows
+                </a>
+            </li>
+        </ul>
+        </section>
+
+        <!-- Steps of installation flask -->
+         <section class="glass-block setup-section">
+            <h2 style="color: black;">Following Steps of Flask</h2><br>
+
+            <!-- Step 1: Install Python -->
+            <section class="glass-block setup-section">
+                <h2 style="color: black;">Step 1: Install Python</h2>
+                <p style="color: black;">Download and install Python from the official website. Follow the installation
+                    instructions provided for macOS.</p>
+            </section>
+    
+            <!-- Step 2: Create a Virtual Environment -->
+            <section class="glass-block setup-section">
+                <h2 style="color: black;">Step 2: Create a Virtual Environment</h2>
+                <p style="color: black;">Open Terminal and navigate to your project directory. Run the following command to
+                    create a virtual environment:</p><br>
+                <pre><code>python3 -m venv venv</code></pre><br>
+                <p style="color: black;">Activate the virtual environment:</p><br>
+                <pre><code>source venv/bin/activate</code></pre>
+            </section>
+    
+            <!-- Step 3: Install Flask -->
+            <section class="glass-block setup-section">
+                <h2 style="color: black;">Step 3: Install Flask</h2><br>
+                <p style="color: black;">With the virtual environment activated, run the following command to install Flask:
+                </p><br>
+                <pre><code>pip install Flask</code></pre>
+    
+            </section>
+    
+            <!-- Step 4: Verify Installation -->
+            <section class="glass-block setup-section">
+                <h2 style="color: black;">Step 4: Verify Installation</h2>
+                <p style="color: black;">To verify that Flask is installed correctly, run the following command:</p>
+                <pre><code>python3 -c "import flask; print(flask.__version__)"</code></pre>
+            </section>
+            
+         </section>
+
+
+        <!-- Step 5: Create a Flask App -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Step 5: Create a Flask App</h2>
+            <p style="color: black;">Create a new file called <code>app.py</code> and add the following code:</p><br>
+            <pre><code>from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def hello():
+    return "Hello, World!"</code></pre><br>
+            <p style="color: black;">Run the Flask app using the following command:</p><br>
+            <pre><code>python3 app.py</code></pre><br>
+        <p style="color: black;">Open your web browser and navigate to <code>http://localhost:5000</code></p>
+        </section>
+
+        <!-- Required extensions -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Extensions</h2>
+            <ul>
+                <li><a class="download-link" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python"
+                        target="_blank">Python Extension for Visual Studio Code</a></li><br>
+                <li><a class="download-link" href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance"
+                        target="_blank">Pylance Extension for Visual Studio Code</a></li>
+            </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Conclusion</h2><br>
+            <p style="color: black;">You have successfully set up Flask on your Mac. You can now start building your Flask applications!</p>
+        </section>
+
+    </main>
+</body>
+
+</html>
