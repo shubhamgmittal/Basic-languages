@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Setup Guide</title>
+    <title>JavaScript Setup Guide for Mac</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <main class="container">
-        <h1 style="color:black;">
-            Python Development Setup on Mac
-        </h1>
+        <h1 style="color: black;">
+            Setting Up JavaScript on Mac</h1>
 
         <!-- Required software -->
         <section class="glass-block setup-section">
             <h2>Required Software</h2>
             <p class="setup-text">
-                To work with Python professionally, you will need to install
-                <strong>Python</strong> and a code editor like
+                To work with JavaScript professionally, you will need to install
+                <strong>Node.js</strong> and a code editor like
                 <strong>Visual Studio Code</strong>.
-                Python is a popular programming language used for web development, data science, and automation, and Visual Studio Code is a great code editor that provides excellent support for Python development.
-            </p>
+                Node.js is a JavaScript runtime that allows you to run JavaScript code outside of a web browser, and Visual Studio Code is a great code editor that provides excellent support for JavaScript development.
+            </p>    
         </section>
 
         <!-- Download vs code -->
@@ -30,11 +28,10 @@
             <p class="setup-text">
                 Here is the installer matching your operating system.
             </p>
-
             <ul class="setup-list">
                 <li>
                     <strong>Mac (64-bit)</strong><br>
-                    <a class="download-link" href="https://update.code.visualstudio.com/latest/mac-x64/stable">
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/darwin-universal/stable">
                         Download VS Code for Mac
                     </a>
                 </li>
@@ -45,58 +42,54 @@
                     <img src="screens/vscode.png" alt="VS Code" style="width:100%; height:100%;">
                 </div>
             </div>
-        </section>
+        </section>          
 
-        <!-- Download python -->
+        <!-- Download node.js -->
         <section class="glass-block setup-section">
-            <h2>Download Python</h2>
+            <h2>Download Node.js</h2>
             <p class="setup-text">
                 Here is the installer matching your operating system.
             </p>
             <ul class="setup-list">
                 <li>
                     <strong>Mac (64-bit)</strong><br>
-                    <a class="download-link" href="https://www.python.org/downloads/macos/">
-                        Download Python for Mac
+                    <a class="download-link" href="https://nodejs.org/dist/latest-v18.x/node-v18.17.1-darwin-x64.tar.gz">
+                        Download Node.js for Mac
                     </a>
-                </li>   
-            </ul><br><br>
-            <h3>Here is how it should look after installation</h3>
-            <div class="screen-shot">
-                <div class="screen-shot">
-                    <img src="screens/python.png" alt="Python" style="width:100%; height:100%;">
-                </div>
-            </div>  
-        </section>  
+                </li>
+            </ul>
+        </section>
 
         <!-- Required Extensions -->
         <section class="glass-block setup-section">
             <h2>Required Extensions</h2>
             <p class="setup-text">
-                After installing Python and VS Code, you should install the following extensions in VS Code:
+                After installing VS Code, you should install the following extensions:
             </p>
             <ul class="setup-list">
-                <li><strong>Python</strong> - Provides intelligent code completion and error checking for Python.</li>
-                <li><strong>Pylance</strong> - Offers fast, feature-rich language support for Python.</li>
+                <li><strong>JavaScript (ES6) code snippets</strong></li>
+                <li><strong>ESLint</strong></li>
             </ul>
         </section>
 
-        <!-- for beginner lines of code in python -->
+        <!-- For beginner line of code in javascript -->
         <section class="glass-block setup-section">
-            <h2>Test Your Setup</h2>
-            <p class="setup-text    ">
-                To test your Python setup, create a new file named `hello.py` in your project directory and add the following code:
+            <h2>First JavaScript Code</h2>
+            <p class="setup-text">
+                To test your setup, create a new file in Visual Studio Code and name it <code>app.js</code>. Then, add the following code to the file:
             </p>
             <pre class="code-block">
-print("Hello, World!")
+console.log("Hello, JavaScript!");
             </pre>
             <p class="setup-text">
-                Save the file and run it using the command line or terminal:
+                Save the file and open your terminal. Navigate to the directory where you saved <code>app.js</code> and run the following command:
             </p>
-            <pre class="code-block">
-python hello.py
+            <pre class="code-block">node app.js
             </pre>
+            <p class="setup-text">
+                You should see the output <code>Hello, JavaScript!</code> in your terminal, which means your JavaScript setup is working correctly! Congratulations on setting up your JavaScript development environment on Mac!
+            </p>
+        </section>      
     </main>
-
 </body>
 </html>

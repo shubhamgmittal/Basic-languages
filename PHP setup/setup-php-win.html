@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Setup Guide</title>
+    <title>Php Setup Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <main class="container">
         <h1 style="color:black;">
-            Python Development Setup on Mac
+            PHP Development Setup on Windows
         </h1>
 
         <!-- Required software -->
         <section class="glass-block setup-section">
             <h2>Required Software</h2>
             <p class="setup-text">
-                To work with Python professionally, you will need to install
-                <strong>Python</strong> and a code editor like
+                To work with PHP professionally, you will need to install
+                <strong>PHP</strong> and a code editor like
                 <strong>Visual Studio Code</strong>.
-                Python is a popular programming language used for web development, data science, and automation, and Visual Studio Code is a great code editor that provides excellent support for Python development.
+                PHP is a popular server-side scripting language used for web development, and Visual Studio Code is a great code editor that provides excellent support for PHP development.
             </p>
         </section>
 
@@ -33,9 +32,9 @@
 
             <ul class="setup-list">
                 <li>
-                    <strong>Mac (64-bit)</strong><br>
-                    <a class="download-link" href="https://update.code.visualstudio.com/latest/mac-x64/stable">
-                        Download VS Code for Mac
+                    <strong>Windows (64-bit)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/win32-x64/stable">
+                        Download VS Code for Windows
                     </a>
                 </li>
             </ul><br><br>
@@ -46,25 +45,24 @@
                 </div>
             </div>
         </section>
-
-        <!-- Download python -->
+        <!-- Download php -->
         <section class="glass-block setup-section">
-            <h2>Download Python</h2>
+            <h2>Download PHP</h2>
             <p class="setup-text">
                 Here is the installer matching your operating system.
             </p>
             <ul class="setup-list">
                 <li>
-                    <strong>Mac (64-bit)</strong><br>
-                    <a class="download-link" href="https://www.python.org/downloads/macos/">
-                        Download Python for Mac
+                    <strong>Windows (64-bit)</strong><br>
+                    <a class="download-link" href="https://windows.php.net/download#php-8.2">
+                        Download PHP for Windows
                     </a>
                 </li>   
             </ul><br><br>
             <h3>Here is how it should look after installation</h3>
             <div class="screen-shot">
                 <div class="screen-shot">
-                    <img src="screens/python.png" alt="Python" style="width:100%; height:100%;">
+                    <img src="screens/php.png" alt="PHP" style="width:100%; height:100%;">
                 </div>
             </div>  
         </section>  
@@ -73,30 +71,36 @@
         <section class="glass-block setup-section">
             <h2>Required Extensions</h2>
             <p class="setup-text">
-                After installing Python and VS Code, you should install the following extensions in VS Code:
+                After installing PHP and VS Code, you should install the following extensions in VS Code:
             </p>
             <ul class="setup-list">
-                <li><strong>Python</strong> - Provides intelligent code completion and error checking for Python.</li>
-                <li><strong>Pylance</strong> - Offers fast, feature-rich language support for Python.</li>
+                <li><strong>PHP Intelephense</strong> - Provides intelligent code completion and error checking for PHP.</li>
+                <li><strong>PHP Debug</strong> - Allows debugging PHP applications in VS Code.</li>
             </ul>
         </section>
 
-        <!-- for beginner lines of code in python -->
+        <!-- for beginner lines of code in php -->
         <section class="glass-block setup-section">
             <h2>Test Your Setup</h2>
             <p class="setup-text    ">
-                To test your Python setup, create a new file named `hello.py` in your project directory and add the following code:
+                To test your PHP setup, create a new file named <code>index.php</code> in your project directory and add the following code:
             </p>
             <pre class="code-block">
-print("Hello, World!")
+&lt;?php
+echo "Hello, World!";
+?&gt;
             </pre>
             <p class="setup-text">
                 Save the file and run it using the command line or terminal:
             </p>
             <pre class="code-block">
-python hello.py
+php index.php
             </pre>
-    </main>
+            <p class="setup-text">
+                You should see the output <code>Hello, World!</code> in the terminal, confirming that your PHP setup is working correctly.  Congratulations on setting up your PHP development environment on Windows!  You are now ready to start building web applications with PHP and Visual Studio Code.
+            </p>
 
+            
+    </main>
 </body>
 </html>

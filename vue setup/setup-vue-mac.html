@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Setup Guide for Mac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1 style="color: black;">Setting Up Vue on Mac</h1>
+
+        <!-- Required Software -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Software</h2>
+            <ul>
+                <li><strong>Node.js:</strong> Vue requires Node.js to run. You can install it using Homebrew or from the
+                    official website.</li>
+                <li><strong>npm or yarn:</strong> These are package managers that help you manage your project
+                    dependencies. npm comes with Node.js, while yarn can be installed separately.</li>
+            </ul>
+        </section>
+
+        <!-- Installing Node.js -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Installing Node.js</h2>
+            <p>You can install Node.js using Homebrew with the following command in your terminal:</p>
+            <pre class="code-block">
+brew install node
+            </pre>
+            <p>Alternatively, you can download the installer from the <a href="https://nodejs.org/en/download/">official
+                    Node.js website</a> and follow the installation instructions.</p>
+        </section>
+
+        <!-- Installing Vue CLI -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Installing Vue CLI</h2>
+            <p>Once you have Node.js installed, you can install the Vue CLI globally using npm or yarn:</p>
+            <pre class="code-block">
+# Using npm
+npm install -g @vue/cli
+# Using yarn
+yarn global add @vue/cli
+            </pre>
+            <p>After installation, you can verify that Vue CLI is installed by running:</p>
+            <pre class="code-block">
+vue --version   
+
+            </pre>
+        </section>
+
+        <!-- Creating a Vue Project -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Creating a Vue Project</h2>
+            <p>To create a new Vue project, run the following command in your terminal:</p>
+            <pre class="code-block">
+vue create my-vue-app   
+            </pre>
+            <p>Follow the prompts to set up your project. Once the setup is complete, navigate to your project directory
+                and start the development server:</p>
+            <pre class="code-block">
+cd my-vue-app
+npm run serve
+            </pre>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Conclusion</h2>
+            <p>Congratulations! You have successfully set up Vue on your Mac. You can now start building your Vue
+                applications and explore the powerful features that Vue has to offer. Happy coding!</p>
+        </section>
+    </main>
+</body>
+
+</html>

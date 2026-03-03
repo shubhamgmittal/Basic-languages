@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Setup Guide for Linux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <main class="container">
+        <h1 style="color: black;">
+            Java Setup Guide for Linux
+        </h1>
+
+        <!-- Required Software -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p class="setup-text">
+                To work with Java professionally, you will need to install
+                <strong>Java Development Kit (JDK)</strong> and a code editor like
+                <strong>Visual Studio Code</strong>.
+                JDK is a software development kit that includes a compiler, debugger, and other tools needed to develop Java applications.
+            </p>
+        </section>
+
+        <!-- Download JDK -->
+        <section class="glass-block setup-section">
+            <h2>Download JDK</h2>
+            <p class="setup-text">
+                Here is the installer matching your operating system.
+            </p>
+            <ul class="setup-list">
+                <li>
+                    <strong>Linux (64-bit)</strong><br>
+                    <a class="download-link" href="https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz">
+                        Download JDK for Linux
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Required Extensions -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions</h2>
+            <p class="setup-text">
+                After installing VS Code, you should install the following extensions:
+            </p>
+            <ul class="setup-list">
+                <li><strong>Java Extension Pack</strong></li>
+                <li><strong>Debugger for Java</strong></li>
+            </ul>
+        </section>  
+
+        <!-- For beginner line of code in java -->
+        <section class="glass-block setup-section">
+            <h2>First Java Code</h2>
+            <p class="setup-text">
+                To test your setup, create a new file in Visual Studio Code and name it <code>HelloWorld.java</code>. Then, add the following code to the file:
+            </p>
+            <pre class="code-block">public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}
+            </pre>
+            <p class="setup-text">
+                Save the file and open your terminal. Navigate to the directory where you saved the file and run the following command:
+            </p>
+            <pre class="code-block">javac HelloWorld.java && java HelloWorld
+            </pre>
+            <p class="setup-text">
+                You should see the output "Hello, Java!" in your terminal, which means your Java setup is working correctly! Congratulations on setting up your Java development environment on Linux!
+            </p><br><br>
+
+            <!-- output -->
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre class="code-block">
+Hello, Java!
+                </pre>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
