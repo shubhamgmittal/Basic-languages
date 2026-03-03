@@ -3,100 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Setup Guide</title>
+    <title>Python Setup Guide for Mac</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <main class="container">
-        <h1 style="color:black;">
-            Python Development Setup on Mac
-        </h1>
+        <h1 style="color: black;">Setting Up Python on Mac</h1>
 
-        <!-- Required software -->
+        <!-- Required Software -->
         <section class="glass-block setup-section">
-            <h2>Required Software</h2>
-            <p class="setup-text">
-                To work with Python professionally, you will need to install
-                <strong>Python</strong> and a code editor like
-                <strong>Visual Studio Code</strong>.
-                Python is a popular programming language used for web development, data science, and automation, and Visual Studio Code is a great code editor that provides excellent support for Python development.
-            </p>
-        </section>
-
-        <!-- Download vs code -->
-        <section class="glass-block setup-section">
-            <h2>Download Visual Studio Code</h2>
-            <p class="setup-text">
-                Here is the installer matching your operating system.
-            </p>
-
-            <ul class="setup-list">
-                <li>
-                    <strong>Mac (64-bit)</strong><br>
-                    <a class="download-link" href="https://update.code.visualstudio.com/latest/mac-x64/stable">
-                        Download VS Code for Mac
-                    </a>
-                </li>
-            </ul><br><br>
-            <h3>Here is how it should look after installation</h3>
-            <div class="screen-shot">
-                <div class="screen-shot">
-                    <img src="screens/vscode.png" alt="VS Code" style="width:100%; height:100%;">
-                </div>
-            </div>
-        </section>
-
-        <!-- Download python -->
-        <section class="glass-block setup-section">
-            <h2>Download Python</h2>
-            <p class="setup-text">
-                Here is the installer matching your operating system.
-            </p>
-            <ul class="setup-list">
-                <li>
-                    <strong>Mac (64-bit)</strong><br>
-                    <a class="download-link" href="https://www.python.org/downloads/macos/">
-                        Download Python for Mac
-                    </a>
-                </li>   
-            </ul><br><br>
-            <h3>Here is how it should look after installation</h3>
-            <div class="screen-shot">
-                <div class="screen-shot">
-                    <img src="screens/python.png" alt="Python" style="width:100%; height:100%;">
-                </div>
-            </div>  
-        </section>  
-
-        <!-- Required Extensions -->
-        <section class="glass-block setup-section">
-            <h2>Required Extensions</h2>
-            <p class="setup-text">
-                After installing Python and VS Code, you should install the following extensions in VS Code:
-            </p>
-            <ul class="setup-list">
-                <li><strong>Python</strong> - Provides intelligent code completion and error checking for Python.</li>
-                <li><strong>Pylance</strong> - Offers fast, feature-rich language support for Python.</li>
+            <h2 style="color: black;">Required Software</h2>
+            <ul>
+                <li><strong>Python:</strong> You need to install Python from the official website. Make sure to check the
+                    "Add Python to PATH" option during installation.</li>
             </ul>
         </section>
 
-        <!-- for beginner lines of code in python -->
+        <!-- Download vscode -->
         <section class="glass-block setup-section">
-            <h2>Test Your Setup</h2>
-            <p class="setup-text    ">
-                To test your Python setup, create a new file named `hello.py` in your project directory and add the following code:
-            </p>
+            <h2 style="color: black;">Download Visual Studio Code</h2>
+            <p>Visual Studio Code (VS Code) is a popular code editor that supports Python development. You can download it
+                from the <a href="https://code.visualstudio.com/">official VS Code website</a>.</p>
+        </section>
+
+        <!-- Installing Python -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Installing Python</h2>
+            <p>You can download the latest version of Python from the <a href="https://www.python.org/downloads/">official
+                    Python website</a>. After downloading, run the installer and make sure to check "Add Python to PATH"
+                during installation.</p>
+        </section>
+
+        <!-- Verifying Installation -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Verifying Installation</h2>
+            <p>Open a new terminal or command prompt and run:</p>
+            <pre class="code-block">
+python --version
+            </pre>
+            <p>If Python is installed correctly, you should see the version number printed in the terminal.</p>
+        </section>
+
+        <!-- Required extensions -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Extensions for VS Code</h2>
+            <ul>
+                <li><strong>Python:</strong> This extension provides IntelliSense, debugging, and other essential features for Python development.</li>
+                <li><strong>Pylance:</strong> This extension provides enhanced IntelliSense and type checking for Python.</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Conclusion</h2>
+            <p>Congratulations! You have successfully set up Python on your Mac machine. You can now start writing and
+                running Python scripts. Happy coding!</p>
+        </section>
+
+        <!-- Basic lines of code -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Basic Lines of Code</h2>
+            <p>Here is a simple Python script to test your setup:</p>
             <pre class="code-block">
 print("Hello, World!")
             </pre>
-            <p class="setup-text">
-                Save the file and run it using the command line or terminal:
-            </p>
-            <pre class="code-block">
-python hello.py
-            </pre>
+        </section>
     </main>
-
 </body>
 </html>
