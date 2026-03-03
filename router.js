@@ -64,9 +64,9 @@ function routeUser() {
 
 
 
+    // language 1 = nodejs
 
-
-            if (language === "nodejs") {
+    if (language === "nodejs") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -96,9 +96,9 @@ function routeUser() {
 
 
 
+    // language 2 = python
 
-
-                if (language === "python") {
+    if (language === "python") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -124,6 +124,9 @@ function routeUser() {
             return;
         }
     }
+
+
+    
 
 
 
