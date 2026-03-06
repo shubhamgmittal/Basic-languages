@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Setup Guide for Linux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>CSS Setup Guide for Linux</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up CSS development environment, ensure you have the following installed on your Linux system:</p><br>
+            <ul>
+                <li><strong>Linux Distribution:</strong> Any modern Linux distribution (Ubuntu, Fedora, Debian, Arch, etc.)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code (recommended)</li><br>
+                <li><strong>Web Browser:</strong> Chrome, Firefox, Chromium, or other modern browser</li><br>
+                <li><strong>Node.js:</strong> Optional but recommended for CSS preprocessors and development tools</li><br>
+                <li><strong>npm:</strong> Comes with Node.js for package management</li><br>
+                <li><strong>Git:</strong> For version control (optional but recommended)</li><br>
+            </ul>
+        </section>
+
+   <!-- Download vscode editor -->
+        <section class="glass-block setup-section">
+                <h2>Download Visual Studio Code</h2>
+        <p class="setup-text">
+            Here is the installer matching your operating system.
+        </p>
+
+        <ul class="setup-list">
+            <li>
+                <strong>Linux (.deb)</strong><br>
+                <a class="download-link"
+                   href="https://update.code.visualstudio.com/latest/linux-deb-x64/stable">
+                   Download VS Code for Debian/Ubuntu
+                </a>
+            </li>
+
+            <li>
+                <strong>Linux (.rpm)</strong><br>
+                <a class="download-link"
+                   href="https://update.code.visualstudio.com/latest/linux-rpm-x64/stable">
+                   Download VS Code for Fedora/RHEL
+                </a>
+            </li>
+        </ul>
+        </section>
+
+        <!-- Steps of Installations -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installations</h2><br>
+            <h3>Step 1: Install VS Code</h3><br>
+            <ol>
+                <li>Using package manager:
+                    <br><br><code>sudo apt install code</code> (Debian/Ubuntu)<br>
+                    <code>sudo dnf install code</code> (Fedora/RHEL)<br>
+                    <code>sudo pacman -S code</code> (Arch Linux)
+                </li><br>
+                <li>Or use Snapcraft (universal):
+                    <br><br><code>sudo snap install code --classic</code>
+                </li><br>
+                <li>Launch VS Code:
+                    <br><br><code>code</code>
+                </li>
+            </ol><br><br>
+
+            <h3>Step 2: Install a Web Browser (if not already installed)</h3><br>
+            <ol>
+                <li>For Firefox (usually pre-installed):
+                    <br><br><code>sudo apt install firefox</code> (Debian/Ubuntu)<br>
+                    <code>sudo dnf install firefox</code> (Fedora/RHEL)
+                </li><br>
+                <li>For Chromium:
+                    <br><br><code>sudo apt install chromium</code> (Debian/Ubuntu)<br>
+                    <code>sudo dnf install chromium</code> (Fedora/RHEL)
+                </li><br>
+                <li>Launch the browser to verify installation</li>
+            </ol><br><br>
+
+            <h3>Step 3: Install Node.js (Optional but Recommended)</h3><br>
+            <ol>
+                <li>Install Node.js using package manager:
+                    <br><br><code>sudo apt install nodejs npm</code> (Debian/Ubuntu)<br>
+                    <code>sudo dnf install nodejs npm</code> (Fedora/RHEL)<br>
+                    <code>sudo pacman -S nodejs npm</code> (Arch Linux)
+                </li><br>
+                <li>Or from NodeSource repository (for latest version):
+                    <br><br><code>curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -</code><br>
+                    <code>sudo apt-get install -y nodejs</code>
+                </li><br>
+                <li>Verify installation:
+                    <br><br><code>node --version</code><br>
+                    <code>npm --version</code>
+                </li>
+            </ol><br><br>
+
+            <h3>Step 4: Configure VS Code for CSS Development</h3><br>
+            <ol>
+                <li>Open VS Code</li><br>
+                <li>Create a new folder for your project</li><br>
+                <li>Open the folder in VS Code: File > Open Folder</li><br>
+                <li>Create a new file: index.html</li><br>
+                <li>Create a new file: styles.css</li>
+            </ol><br><br>
+
+            <h3>Step 5: Install VS Code Extensions for CSS</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for CSS-related extensions</li><br>
+                <li>Click "Install" for each recommended extension</li><br>
+                <li>Reload VS Code by pressing <code>Ctrl+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol><br><br>
+
+            <h3>Step 6: Create Your First CSS Project</h3><br>
+            <ol>
+                <li>Create a new folder on your computer:
+                    <br><br><code>mkdir my-css-project</code><br>
+                    <code>cd my-css-project</code>
+                </li><br>
+                <li>Open it in VS Code</li><br>
+                <li>Create index.html file with basic HTML structure</li><br>
+                <li>Create styles.css file with CSS rules</li><br>
+                <li>Link CSS to HTML: <code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></li><br>
+                <li>Open index.html in a web browser</li>
+            </ol>
+        </section>
+
+        <!-- Required Extension Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extension Section</h2><br>
+            <p>Install the following VS Code extensions for optimal CSS development:</p><br>
+            <ul>
+                <li><strong>CSS Peek</strong> - Peek and Go to CSS definition</li><br>
+                <li><strong>CSS Intellisense</strong> - CSS class name completion</li><br>
+                <li><strong>Live Server</strong> - Live reload server for webpage</li><br>
+                <li><strong>Prettier</strong> - Code formatter</li><br>
+                <li><strong>Better Comments</strong> - Highlights different comment types</li><br>
+                <li><strong>CSS/SCSS/Less Formatter</strong> - CSS formatter</li><br>
+                <li><strong>PostCSS Language Support</strong> - PostCSS support</li><br>
+            </ul>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners Sections -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners Sections</h2>
+            <p>Here are simple CSS examples to get you started:</p><br>
+            <h3>1. Basic HTML with CSS</h3>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First CSS Page&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, CSS!&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+<br>
+            <h3>2. Text Styling</h3>
+            <pre><code>
+/* Font properties */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+p {
+    line-height: 1.6;
+    text-align: justify;
+}
+            </code></pre>
+<br>
+            <h3>3. Colors and Backgrounds</h3>
+            <pre><code>
+/* Background colors */
+body {
+    background-color: #f5f5f5;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+}
+
+/* Gradient background */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px;
+}
+            </code></pre>
+<br>
+            <h3>4. Box Model (Padding, Margin, Border)</h3>
+            <pre><code>
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+.box {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: white;
+}
+            </code></pre>
+<br>
+            <h3>4. Flexbox Layout</h3>
+            <pre><code>
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+.nav-items {
+    display: flex;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+            </code></pre>
+<br>
+            <h3>5. Grid Layout</h3>
+            <pre><code>
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+}
+            </code></pre>
+<br>
+            <h3>6. Hover Effects and Transitions</h3>
+            <pre><code>
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.link {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #2980b9;
+}
+            </code></pre>
+<br>
+            <h3>7. Responsive Design with Media Queries</h3>
+            <pre><code>
+/* Desktop styles */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    
+    .columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    
+    .columns {
+        grid-template-columns: 1fr;
+    }
+}
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-css-project-linux.png" alt="Running CSS Project on Linux" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing CSS project with live preview on Linux</em></p>
+            </div>
+        </section>
+
+        <!-- Best Extension for CSS Development -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for CSS Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>CSS Peek</strong><br>
+                    <em>Publisher:</em> Park Joon<br>
+                    <em>Features:</em> Peek and Go to CSS definition, color picker<br>
+                    <em>Install Command:</em> Search "CSS Peek"
+                </li><br>
+                <li>
+                    <strong>CSS Intellisense</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> CSS class name completion and IntelliSense<br>
+                    <em>Install Command:</em> Search "CSS Intellisense"
+                </li><br>
+                <li>
+                    <strong>Live Server</strong><br>
+                    <em>Publisher:</em> Ritwick Dey<br>
+                    <em>Features:</em> Live reload for static and dynamic pages<br>
+                    <em>Install Command:</em> Search "Live Server"
+                </li><br>
+                <li>
+                    <strong>Prettier - Code formatter</strong><br>
+                    <em>Publisher:</em> Prettier<br>
+                    <em>Features:</em> Automatic code formatting<br>
+                    <em>Install Command:</em> Search "Prettier"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Color-code comment types for better organization<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+                <li>
+                    <strong>CSS/SCSS/Less Formatter</strong><br>
+                    <em>Publisher:</em> Jebbs<br>
+                    <em>Features:</em> Formatting for CSS, SCSS, and Less<br>
+                    <em>Install Command:</em> Search "CSS Formatter"
+                </li><br>
+                <li>
+                    <strong>PostCSS Language Support</strong><br>
+                    <em>Publisher:</em> csstools<br>
+                    <em>Features:</em> PostCSS support and syntax highlighting<br>
+                    <em>Install Command:</em> Search "PostCSS Language Support"
+                </li><br>
+                <li>
+                    <strong>Tailwind CSS IntelliSense</strong><br>
+                    <em>Publisher:</em> Tailwind Labs<br>
+                    <em>Features:</em> Tailwind CSS class completion and preview<br>
+                    <em>Install Command:</em> Search "Tailwind CSS IntelliSense"
+                </li><br>
+                <li>
+                    <strong>Bootstrap 5 & Font Awesome snippets</strong><br>
+                    <em>Publisher:</em> Neelesh Parahar<br>
+                    <em>Features:</em> Bootstrap and Font Awesome snippets<br>
+                    <em>Install Command:</em> Search "Bootstrap 5 snippets"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/css-extension-linux.png" alt="CSS Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing CSS extensions in VS Code on Linux</em></p>
+            </div>
+        </section>
+
+        <!-- Visual Setup Guides -->
+        <section class="glass-block setup-section">
+            <h2>Visual Setup Guides</h2><br>
+
+            <h3>VS Code with CSS Project</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-css-project-linux.png" alt="VS Code CSS Project on Linux" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing CSS project structure on Linux</em></p>
+            </div><br><br>
+
+            <h3>Live Server in Action</h3>
+            <div class="screen-shot">
+                <img src="screens/live-server-linux.png" alt="Live Server on Linux" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Browser showing live CSS changes with Live Server on Linux</em></p>
+            </div><br><br>
+
+            <h3>CSS Preview and Color Picker</h3>
+            <div class="screen-shot">
+                <img src="screens/css-preview-linux.png" alt="CSS Preview on Linux" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing CSS color picker and preview on Linux</em></p>
+            </div><br><br>
+
+            <h3>Browser Developer Tools</h3>
+            <div class="screen-shot">
+                <img src="screens/browser-devtools-linux.png" alt="Browser DevTools on Linux" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Firefox DevTools showing CSS inspection and debugging on Linux</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: CSS Not Loading in Browser</h3>
+            <p><strong>Problem:</strong> CSS file is not being applied to HTML</p>
+            <p><strong>Solution:</strong> Check the file path in the link tag and ensure styles.css is in the correct directory</p><br>
+
+            <h3>Issue 2: Live Server Not Working</h3>
+            <p><strong>Problem:</strong> Live Server extension doesn't start or port is in use</p>
+            <p><strong>Solution:</strong> Change the port in settings or close other applications using the port</p><br>
+
+            <h3>Issue 3: Extensions Not Showing Syntax Highlighting</h3>
+            <p><strong>Problem:</strong> CSS syntax highlighting is not working</p>
+            <p><strong>Solution:</strong> Ensure file has .css extension and reload VS Code</p><br>
+
+            <h3>Issue 4: Color Picker Not Appearing</h3>
+            <p><strong>Problem:</strong> Color picker doesn't show in CSS files</p>
+            <p><strong>Solution:</strong> Install CSS Peek extension and ensure it's enabled</p><br>
+
+            <h3>Issue 5: Browser Caching Issues</h3>
+            <p><strong>Problem:</strong> Changes in CSS don't appear in browser</p>
+            <p><strong>Solution:</strong> Hard refresh browser with <code>Ctrl+Shift+R</code> or clear cache</p><br>
+
+            <h3>Issue 6: VS Code Won't Install Extensions</h3>
+            <p><strong>Problem:</strong> Extension installation hangs or fails</p>
+            <p><strong>Solution:</strong> Check internet connection, restart VS Code, or use command line installation</p>
+        </section>
+
+        <!-- Useful Commands Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Commands for CSS Development</h2><br>
+            <ul>
+                <li><code>code .</code> - Open current directory in VS Code</li><br>
+                <li><code>Ctrl+Shift+P</code> - Open Command Palette in VS Code</li><br>
+                <li><code>Ctrl+,</code> - Open VS Code Settings</li><br>
+                <li><code>Ctrl+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Ctrl+/</code> - Toggle line comment</li><br>
+                <li><code>Alt+Shift+F</code> - Format document with Prettier</li><br>
+                <li><code>Ctrl+F</code> - Find in file</li><br>
+                <li><code>Ctrl+H</code> - Find and Replace</li><br>
+                <li><code>Ctrl+K Ctrl+0</code> - Fold all regions</li><br>
+                <li><code>Ctrl+K Ctrl+J</code> - Unfold all regions</li><br>
+                <li><code>F12</code> - Open Browser Developer Tools</li><br>
+                <li><code>Ctrl+Shift+I</code> - Open Browser Inspector</li><br>
+            </ul>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Linux Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Ctrl+N</code> - Create new file</li><br>
+                <li><code>Ctrl+O</code> - Open file</li><br>
+                <li><code>Ctrl+S</code> - Save file</li><br>
+                <li><code>Ctrl+Shift+S</code> - Save as</li><br>
+                <li><code>Ctrl+Tab</code> - Switch between open files</li><br>
+                <li><code>Ctrl+W</code> - Close current file</li><br>
+                <li><code>Ctrl+`</code> - Open integrated terminal</li><br>
+                <li><code>Alt+Up/Down</code> - Move line up or down</li><br>
+                <li><code>Alt+Shift+Up/Down</code> - Duplicate line</li><br>
+                <li><code>Ctrl+D</code> - Select word</li><br>
+                <li><code>Ctrl+L</code> - Select line</li><br>
+            </ul>
+        </section>
+
+       <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up your CSS development environment on Windows. You are now
+                ready to:</p><br>
+            <ul>
+                <li>Create beautiful and responsive web designs</li><br>
+                <li>Style HTML elements with advanced CSS techniques</li><br>
+                <li>Build responsive layouts using Flexbox and Grid</li><br>
+                <li>Use CSS preprocessors like SASS and LESS</li><br>
+                <li>Implement animations and transitions</li><br>
+                <li>Create mobile-friendly responsive designs</li><br>
+                <li>Use CSS frameworks like Bootstrap and Tailwind CSS</li><br>
+                <li>Debug CSS issues with browser developer tools</li><br>
+            </ul><br>
+            <p>Start exploring CSS by building simple websites and gradually move towards more complex designs. Visit
+                the
+            <p>For learning resources, check out:
+                <a class="download-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN Web
+                    Docs - CSS</a>
+            </p> <br>
+            <p><strong>Happy Styling with CSS on Windows!</strong></p>
+        </section>
+    </main>
+</body>
+</html>
