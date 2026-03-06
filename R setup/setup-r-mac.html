@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Setup Guide for macOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1 style="color: black;">R Setup Guide for macOS</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Software</h2><br>
+            <p>Before setting up R, ensure you have the following installed on your macOS system:<br></p><br>
+            <ul>
+                <li><strong>R Programming Language:</strong> <strong></strong>Latest stable version</strong></li><br>
+                <li><strong>Code Editor:</strong> <strong>Visual Studio Code</strong> or <strong>RStudio</strong></li><br>
+                <li><strong>RStudio:</strong> <strong></strong>Integrated Development Environment for R</strong> (optional but recommended)</li><br>
+                <li><strong>Terminal:</strong> <strong>macOS Terminal</strong> or <strong>iTerm2</strong></li><br>
+                <li><strong>Package Manager:</strong> <strong>Homebrew</strong> (recommended for easy installation)</li><br>
+                <li><strong>Git:</strong> <strong></strong>For version control</strong> (optional but recommended)</li><br>
+            </ul>
+        </section>
+
+        <!-- Download vs code -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Download Visual Studio Code</h2>
+            <p class="setup-text">
+                Here is the installer matching your operating system:<br>
+            </p>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>macOS (Universal)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/darwin/universal/stable">
+                        Download VS Code for macOS
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3 style="color: black;">Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/vscode-mac.png" alt="VS Code" style="width:100%; height:100%;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps of Installation -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Steps of Installation</h2><br>
+            <h3 style="color: black;">Step 1: Install Homebrew (if not already installed)</h3><br>
+            <ol>
+                <li>Open <strong></strong>Terminal</strong> on your Mac</li><br>
+                <li>Copy and paste the following <strong>command</strong>:
+                    <br><br><strong><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></strong>
+                </li><br>
+                <li>Press <strong></strong>Enter</strong> and follow the on-screen instructions</li><br>
+                <li>Verify <strong></strong>installation</strong>:
+                    <br><br><strong><code></code>brew --version</code></strong>
+                </li>
+            </ol><br>
+
+            <h3 style="color: black;">Step 2: Install R Programming Language</h3><br>
+            <ol>
+                <li>Using Homebrew (Recommended):
+                    <br><br><strong><code>brew install r</code></strong>
+                </li><br>
+                <li>Or download from the official website:
+                    <br><br>Visit <a class="download-link" href="https://cran.r-project.org/bin/macosx/" target="_blank">CRAN macOS page</a> and download the appropriate installer for your macOS version
+                </li><br>
+                <li>Verify R installation:
+                    <br><br><code>R --version</code>
+                </li>
+            </ol><br>
+
+            <h3 style="color: black;">Step 3: Install RStudio (Optional but Recommended)</h3><br>
+            <ol>
+                <li>Download RStudio from <a class="download-link" href="https://www.rstudio.com/products/rstudio/download/" target="_blank"><strong></strong>official website</strong></a></li><br>
+                <li>Run the <strong></strong>installer</strong> and follow the <strong></strong>setup wizard</strong></li><br>
+                <li>Launch <strong></strong>RStudio</strong> to verify <strong></strong>installation</strong></li>
+            </ol><br>
+
+            <h3 style="color: black;">Step 4: Set Up VS Code for R</h3><br>
+            <ol>
+                <li>Open <strong></strong>Visual Studio Code</strong></li><br>
+                <li>Press <strong></strong>Cmd+Shift+X</strong> to open the <strong></strong>Extensions panel</strong></li><br>
+                <li>Install necessary <strong></strong>extensions</strong> for R development</li><br>
+                <li>Restart VS Code by pressing <strong></strong>Cmd+Shift+P</strong> and selecting <strong></strong>"Developer: Reload Window"</strong></li>
+            </ol>
+        </section>
+
+        <!-- Required Extensions Section -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Extensions</h2><br>
+            <p>Install the following <strong></strong>VS Code extensions</strong> for optimal R development:</p><br>
+            <ul>
+                <li><strong>R:</strong> <strong></strong>Official R language support extension</strong></li><br>
+                <li><strong>R LSP Client:</strong> <strong></strong>Language Server Protocol support for R</strong></li><br>
+                <li><strong>R Debugger:</strong> <strong></strong>Debugging support for R scripts</strong></li><br>
+                <li><strong>GitLens:</strong> <strong></strong>Git integration for version control</strong></li><br>
+                <li><strong>Prettier:</strong> <strong></strong>Code formatter for clean code formatting</strong></li><br>
+                <li><strong>Better Comments:</strong> <strong></strong>Highlights different comment types</strong></li><br>
+            </ul>
+        </section>
+
+        <!-- Best Extensions for R Development -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">How to Install Extensions</h2><br>
+            <h3 style="color: black;">Installation Steps:</h3><br>
+            <ol>
+                <li>Open <strong></strong>Visual Studio Code</strong></li><br>
+                <li>Press <strong></strong>Cmd+Shift+X</strong> to open the <strong></strong>Extensions panel</strong></li><br>
+                <li>Search for the <strong></strong>extension name</strong> in the search box</li><br>
+                <li>Click the <strong></strong>"Install"</strong> button next to the <strong></strong>extension</strong></li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click <strong></strong>"Reload"</strong> if prompted to reload <strong></strong>VS Code</strong></li><br>
+            </ol><br>
+
+            <h3 style="color: black;">Best Extensions for R Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>R</strong><br>
+                    <em>Publisher:</em> <strong></strong>Yuki Ueda</strong><br>
+                    <em>Features:</em> <strong></strong>Syntax highlighting, code completion, and IntelliSense for R</strong><br>
+                    <em>Install Command:</em> <strong></strong>Search "R"</strong><br>
+                </li><br>
+                <li>
+                    <strong>R LSP Client</strong><br>
+                    <em>Publisher:</em> <strong></strong>REditorSupport</strong><br>
+                    <em>Features:</em> <strong></strong>Advanced language features like hover information and diagnostics</strong><br>
+                    <em>Install Command:</em> <strong></strong>Search "R LSP Client"</strong><br>
+                </li><br>
+                <li>
+                    <strong>R Debugger</strong><br>
+                    <em>Publisher:</em> <strong></strong>REditorSupport</strong><br>
+                    <em>Features:</em> <strong></strong>Debug R scripts with breakpoints and variable inspection</strong><br>
+                    <em>Install Command:</em> <strong></strong>Search "R Debugger"</strong><br>
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> <strong></strong>GitKraken</strong><br>
+                    <em>Features:</em> <strong></strong>Git integration, commit history, and version control</strong><br>
+                    <em>Install Command:</em> <strong></strong>Search "GitLens"</strong><br>
+                </li><br>
+                <li>
+                    <strong>Prettier</strong><br>
+                    <em>Publisher:</em> <strong></strong>Prettier</strong><br>
+                    <em>Features:</em> <strong></strong>Automatic code formatting for clean syntax</strong><br>
+                    <em>Install Command:</em> <strong></strong>Search "Prettier"</strong><br>
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> <strong></strong>Aaron Bond</strong><br>
+                    <em>Features:</em> <strong></strong>Highlights different comment types with colors</strong><br>
+                    <em>Install Command:</em> <strong></strong>Search "Better Comments"</strong><br>
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/r-extension-mac.png" alt="R Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em><strong></strong>Installing R extension in VS Code</strong></em></p>
+            </div>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Basic Lines of Code for Beginners</h2>
+            <p>Here's a simple Hello World program to get you started with R:</p><br>
+            <h3 style="color: black;">HelloWorld.R</h3>
+            <pre><code>
+# Your first R program
+print("Hello, World!")
+            </code></pre>
+
+            <h3 style="color: black;">Simple Calculator</h3>
+            <pre><code>
+# Basic arithmetic operations
+num1 <- 10
+num2 <- 20
+
+sum <- num1 + num2
+difference <- num1 - num2
+product <- num1 * num2
+quotient <- num1 / num2
+
+print(paste("Sum:", sum))
+print(paste("Difference:", difference))
+print(paste("Product:", product))
+print(paste("Quotient:", quotient))
+            </code></pre>
+
+            <h3 style="color: black;">Using Variables and Conditionals</h3>
+            <pre><code>
+# Variables and if-else statements
+name <- "R Learner"
+age <- 25
+
+print(paste("Name:", name))
+print(paste("Age:", age))
+
+if (age >= 18) {
+  print("You are an adult!")
+} else {
+  print("You are a minor!")
+}
+            </code></pre>
+
+            <h3 style="color: black;">Simple Loop</h3>
+            <pre><code>
+# For loop in R
+for (i in 1:5) {
+  print(paste("Number:", i))
+}
+            </code></pre>
+
+            <h3>Working with Vectors</h3>
+            <pre><code>
+# Creating and manipulating vectors
+fruits <- c("Apple", "Banana", "Orange", "Mango")
+
+print("Fruits list:")
+for (fruit in fruits) {
+  print(paste("-", fruit))
+}
+
+print(paste("Total fruits:", length(fruits)))
+            </code></pre>
+
+            <h3>Basic Data Frame</h3>
+            <pre><code>
+# Creating a simple data frame
+students <- data.frame(
+  name = c("Alice", "Bob", "Charlie"),
+  age = c(20, 22, 21),
+  grade = c("A", "B", "A")
+)
+
+print("Student Data:")
+print(students)
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-r-program-mac.png" alt="Running R Program on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing HelloWorld.R with output in the terminal</em></p>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up R on your macOS machine. You are now ready to:</p><br>
+            <ul>
+                <li>Create and run R scripts</li><br>
+                <li>Learn R fundamentals and advanced concepts</li><br>
+                <li>Perform data analysis and statistical computations</li><br>
+                <li>Create visualizations with ggplot2 and other packages</li><br>
+                <li>Develop reproducible research projects</li><br>
+                <li>Use modern IDE features with full debugging support</li><br>
+            </ul>
+            <p>Start exploring R by writing simple scripts and gradually move towards building more complex data analysis projects. Visit the <a class="download-link" href="https://www.r-project.org/" target="_blank">official R website</a> for more resources and tutorials.</p><br>
+            <p>For additional help or questions, visit the <a class="download-link" href="https://stackoverflow.com/questions/tagged/r" target="_blank">Stack Overflow R tag</a> or the <a class="download-link" href="https://community.rstudio.com/" target="_blank">RStudio Community</a>.</p><br>
+            <p><strong>Happy Coding with R on macOS!</strong></p>
+        </section>
+    </main>
+</body>
+</html>

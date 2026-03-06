@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift Setup Guide for Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1 style="color: black;">Shift Setup Guide for Windows</h1>
+
+        <!-- Required Software -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Software</h2>
+            <p>To start developing with Shift on Windows, make sure you have the following installed:</p><br>
+            <ul>
+                <li><strong>Shift Compiler/Runtime:</strong> Download from the official Shift website or repository.</li><br>
+                <li><strong>Visual Studio Code:</strong> A versatile code editor with extension support.<br><br>
+                <li><strong>Git (Optional):</strong> For version control and collaboration.</li><br>
+            </ul>
+        </section>
+
+        <!-- Download vs code -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Download Visual Studio Code</h2>
+            <p class="setup-text">
+                Here is the installer matching your operating system.
+            </p>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Windows (64-bit)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/win32-x64/stable">
+                        Download VS Code for Windows
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/vscode.png" alt="VS Code" style="width:100%; height:100%;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Steps of Installation -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Steps of Installation</h2><br>
+            <h3 style="color: black;">Step 1: Install Shift</h3><br>
+            <p>Obtain the Shift compiler/distribution from the official source. Run the installer or unzip the package to a directory such as <code>C:\Shift</code>. Add the <code>bin</code> folder to your PATH environment variable:</p>
+            <pre class="code-block">
+setx PATH "%PATH%;C:\Shift\bin"
+            </pre><br><br>
+            <h3 style="color: black;">Step 2: Verify Installation</h3><br>
+            <p>Open Command Prompt and run:</p>
+            <pre class="code-block">
+shift --version
+            </pre><br>
+            <p>You should see the Shift version output. If not, double-check your PATH.</p>
+        </section>
+
+        <!-- Required Extensions -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Extensions for VS Code</h2>
+            <ul>
+                <li><strong>Shift Language Support:</strong> Provides syntax highlighting and snippets.</li><br>
+                <li><strong>Code Runner:</strong> Execute Shift scripts quickly.</li><br>
+                <li><strong>GitLens:</strong> Helpful for version control integration.</li><br>
+            </ul>
+        </section>
+
+        <!-- Basic Lines of Code -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Basic Lines of Code for Beginners</h2>
+            <p>Try these simple Shift examples to ensure everything works:</p><br><br>
+            <h3 style="color:black">Hello World</h3>
+            <pre class="code-block">
+println("Hello, Shift!");
+            </pre><br><br>
+            <h3 style="color: black;">Variables and Arithmetic</h3>
+            <pre class="code-block">
+let x = 10;
+let y = 5;
+let sum = x + y;
+println(sum);
+            </pre><br><br>
+            <h3 style="color: black;">Conditional</h3>
+            <pre class="code-block">
+if x > y {
+    println("x is greater");
+} else {
+    println("y is greater or equal");
+}
+            </pre>
+        </section>
+
+        <!-- Best Extensions for Shift Development -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Best Extensions for Shift Development</h2>
+            <ul>
+                <li><strong>Shift Language Support:</strong> Official or community extension for language features.</li><br>
+                <li><strong>Code Runner:</strong> Run snippets without leaving the editor.</li><br>
+                <li><strong>Bracket Pair Colorizer:</strong> Easier bracket matching in complex code.</li><br>
+                <li><strong>Prettier (if available):</strong> Code formatting for consistent style.</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Conclusion</h2>
+            <p>You are now ready to build applications with Shift on Windows. Continue exploring the language documentation, write small programs, and gradually build more complex projects. Happy coding!</p>
+        </section>
+    </main>
+</body>
+</html>

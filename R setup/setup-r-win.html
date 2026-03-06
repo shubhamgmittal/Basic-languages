@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R Setup Guide for Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1 style="color: black;">R Setup Guide for Windows</h1>
+
+        <!-- Required Software -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Software</h2> <br>
+            <p>To set up R development environment on Windows, you'll need the following components:</p> <br>
+            <ul>
+                <li><strong>R:</strong> The core R programming language and runtime environment.</li> <br>
+                <li><strong>RStudio (Optional but Recommended):</strong> An Integrated Development Environment (IDE) for
+                    R that makes development easier.</li> <br>
+                <li><strong>Visual Studio Code:</strong> A lightweight code editor with excellent R support through
+                    extensions.</li> <br>
+                <li><strong>Git (Optional):</strong> For version control and collaboration.</li> <br>
+            </ul>
+        </section>
+
+        <!-- Download vs code -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Download Visual Studio Code</h2>
+            <p class="setup-text">
+                Here is the installer matching your operating system.
+            </p>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Windows (64-bit)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/win32-x64/stable">
+                        Download VS Code for Windows
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/vscode.png" alt="VS Code" style="width:100%; height:100%;">
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Steps -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Steps of Installation</h2>
+
+            <h3 style="color: black;">Step 1: Install R</h3><br>
+            <ol style="color: black;">
+                <li>Visit the <a href="https://cran.r-project.org/bin/windows/" target="_blank">CRAN website
+                        (Comprehensive R Archive Network)</a></li>
+                <li>Click on "base" to download the base R distribution</li>
+                <li>Download the latest version of R for Windows</li>
+                <li>Run the installer (.exe file)</li>
+                <li>Follow the installation wizard and accept the default settings</li>
+                <li>R will be installed typically at <code>C:\Program Files\R\R-x.x.x\</code></li>
+            </ol><br>
+
+            <h3 style="color: black;">Step 2: Install RStudio (Recommended)</h3><br>
+            <ol>
+                <li>Visit <a href="https://posit.co/download/rstudio-desktop/" target="_blank">Posit RStudio Desktop</a>
+                </li>
+                <li>Download the free version for Windows</li>
+                <li>Run the installer and follow the wizard</li>
+                <li>RStudio will automatically detect your R installation</li>
+                <li>Complete the installation</li>
+            </ol><br>
+
+            <h3 style="color: black;">Step 3: Install R Extensions in VS Code</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li>
+                <li>Go to Extensions (Ctrl+Shift+X)</li>
+                <li>Search for "R" and install the official R extension by REditorSupport</li>
+                <li>You may also install "R LSP Client" for enhanced language support</li>
+                <li>Reload VS Code after installation</li>
+            </ol><br>
+
+            <h3 style="color: black;">Step 4: Verify Installation</h3><br>
+            <p>Open Command Prompt or PowerShell and run:</p>
+            <pre class="code-block">
+R --version
+            </pre>
+            <p>You should see the R version information displayed. If not, add R to your PATH environment variable.</p>
+        </section>
+
+        <!-- Required Extensions -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Required Extensions for VS Code</h2>
+            <p>Install these essential extensions to enhance your R development experience in VS Code:</p><br>
+            <br>
+
+            <h3 style="color: black;">1. R (Official Extension by REditorSupport)</h3><br>
+            <ul>
+                <li>Provides syntax highlighting and code completion</li>
+                <li>Supports running R code directly from the editor</li>
+                <li>Includes R terminal integration</li>
+                <li>Supports rmarkdown and Shiny development</li>
+            </ul>
+            <br>
+            <h3 style="color: black;">2. R LSP Client</h3><br>
+            <ul>
+                <li>Language Server Protocol support for R</li>
+                <li>Advanced code navigation and refactoring</li>
+                <li>Improved IntelliSense capabilities</li>
+            </ul>
+            <br>
+            <h3 style="color: black;">3. R Debugger</h3><br>
+            <ul>
+                <li>Debugging tools for R code</li>
+                <li>Breakpoint support and variable inspection</li>
+            </ul>
+            <br>
+            <h3 style="color: black;">4. R Package Manager</h3><br>
+            <ul>
+                <li>Manage R packages from VS Code</li>
+                <li>Easy installation and removal of packages</li>
+            </ul>
+            <br>
+            <h3 style="color: black;">5. Code Runner</h3><br>
+            <ul>
+                <li>Quick code execution for various languages including R</li>
+                <li>Run selected lines or entire scripts</li>
+            </ul>
+            <br>
+        </section>
+
+        <!-- Basic Code Examples -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Basic Lines of Code for Beginners</h2><br>
+            <p>Here are some simple R programs to test your setup and get started with R programming:</p><br><br>
+
+            <h3 style="color: black;">Example 1: Hello World</h3>
+            <pre class="code-block">
+# Simple Hello World program
+print("Hello, World!")
+            </pre>
+            <br><br>
+            <h3 style="color: black;">Example 2: Working with Variables</h3>
+            <pre class="code-block">
+# Create variables
+name <- "John"
+age <- 25
+height <- 5.9
+
+# Print variables
+print(name)
+print(age)
+print(height)
+            </pre>
+            <br><br>
+            <h3 style="color: black;">Example 3: Basic Arithmetic</h3>
+            <pre class="code-block">
+# Perform basic calculations
+a <- 10
+b <- 5
+
+addition <- a + b
+subtraction <- a - b
+multiplication <- a * b
+division <- a / b
+modulus <- a %% b
+
+print(addition)      # 15
+print(subtraction)   # 5
+print(multiplication) # 50
+print(division)      # 2
+print(modulus)       # 0
+            </pre>
+            <br><br>
+            <h3 style="color: black;">Example 4: Working with Vectors</h3>
+            <pre class="code-block">
+# Create vectors
+numbers <- c(1, 2, 3, 4, 5)
+names <- c("Alice", "Bob", "Charlie")
+
+# Access elements
+print(numbers[1])    # 1
+print(names[2])      # Bob
+
+# Vector operations
+sum(numbers)         # 15
+length(names)        # 3
+            </pre>
+            <br><br>
+            <h3 style="color: black;">Example 5: Conditional Statements</h3>
+            <pre class="code-block">
+# If-else statement
+score <- 85
+
+if (score >= 80) {
+    print("Grade: A")
+} else if (score >= 70) {
+    print("Grade: B")
+} else {
+    print("Grade: C")
+}
+            </pre>
+            <br><br>
+            <h3 style="color: black;">Example 6: Loops</h3>
+            <pre class="code-block">
+# For loop
+for (i in 1:5) {
+    print(paste("Iteration", i))
+}
+
+# While loop
+x <- 1
+while (x <= 3) {
+    print(paste("Value:", x))
+    x <- x + 1
+}
+            </pre>
+            <br><br>
+            <h3 style="color: black;">Example 7: Functions</h3>
+            <pre class="code-block">
+# Define a function
+greet <- function(name) {
+    message <- paste("Hello,", name)
+    return(message)
+}
+
+# Call the function
+greet("Alice")
+
+# Function with multiple parameters
+add_numbers <- function(a, b) {
+    return(a + b)
+}
+
+result <- add_numbers(10, 20)
+print(result)  # 30
+            </pre>
+            <br><br>
+            <h3 style="color: black;">Example 8: Working with Data Frames</h3>
+            <pre class="code-block">
+# Create a data frame
+students <- data.frame(
+    name = c("Alice", "Bob", "Charlie"),
+    age = c(20, 21, 22),
+    gpa = c(3.8, 3.5, 3.9)
+)
+
+# Display data frame
+print(students)
+
+# Access columns
+print(students$name)
+
+# Access rows
+print(students[1,])
+            </pre>
+            <br><br>
+        </section>
+
+        <!-- Best Extensions for R Development -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Best Extensions for R Development</h2>
+            <p>To maximize your R development experience, here are the recommended extensions and tools:</p>
+            <br>
+            <h3 style="color: black;">Essential Extensions:</h3><br>
+            <ul>
+                <li><strong>R (by REditorSupport):</strong> The official extension providing comprehensive R language
+                    support</li>
+                <li><strong>R LSP Client:</strong> Language Server Protocol for advanced IDE features</li>
+                <li><strong>Code Runner:</strong> Execute code snippets quickly</li>
+            </ul>
+            <br>
+            <h3 style="color: black;">Productivity Extensions:</h3><br>
+            <ul>
+                <li><strong>Rainbow Brackets:</strong> Color-code matching brackets for better code readability</li>
+                <li><strong>Bracket Pair Colorizer:</strong> Helps track nested brackets easily</li>
+                <li><strong>Prettier:</strong> Code formatter for consistent styling</li>
+                <li><strong>GitLens:</strong> Git integration and history tracking</li>
+            </ul>
+            <br>
+            <h3 style="color: black;">Data Science Extensions:</h3><br>
+            <ul>
+                <li><strong>Jupyter:</strong> Support for R notebooks and interactive development</li>
+                <li><strong>Excel Viewer:</strong> View and edit CSV and Excel files directly</li>
+                <li><strong>R Markdown:</strong> Support for creating dynamic documents with R code</li>
+            </ul>
+            <br>
+            <h3 style="color: black;">Theme and UI Extensions:</h3><br>
+            <ul>
+                <li><strong>One Dark Pro:</strong> Popular dark theme with excellent contrast</li>
+                <li><strong>Dracula Official:</strong> Beautiful dark color scheme</li>
+                <li><strong>Icons Extension:</strong> Better file icons for visual identification</li>
+            </ul>
+            <br>
+            <h3 style="color: black;">Installation Tips:</h3><br>
+            <ol>
+                <li>Open VS Code Extensions panel (Ctrl+Shift+X)</li>
+                <li>Search for each extension by name</li>
+                <li>Click "Install" to add the extension</li>
+                <li>Reload VS Code if prompted</li>
+            </ol>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="glass-block setup-section">
+            <h2 style="color: black;">Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up R on your Windows machine. You now have:</p><br>
+            <ul>
+                <li>R installed and ready for execution</li><br>
+                <li>Visual Studio Code configured with R extensions</li><br>
+                <li>RStudio as an alternative IDE for R development</li><br>
+                <li>Essential tools and extensions for productive R programming</li><br>
+            </ul>
+            <p>You can now start writing R scripts, working with data visualization libraries like ggplot2, building
+                Shiny web applications, and exploring the vast R ecosystem. R is a powerful language for statistical
+                computing and data analysis, widely used by data scientists and statisticians.</p><br>
+            <p><strong>Next Steps:</strong></p><br>
+            <ul>
+                <li>Explore the CRAN (Comprehensive R Archive Network) for thousands of packages</li><br>
+                <li>Learn popular packages like dplyr, tidyverse, and ggplot2</li><br>
+                <li>Start with simple scripts and gradually build complex projects</li><br>
+                <li>Join the R community on platforms like Stack Overflow and RStudio Community</li><br>
+            </ul>
+            <p>Happy coding with R!</p><br>
+        </section>
+    </main>
+</body>
+
+</html>

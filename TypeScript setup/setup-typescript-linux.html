@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Setup Guide for Linux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>TypeScript Setup Guide for Linux</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up TypeScript, ensure you have the following installed on your Linux system:</p><br>
+            <ul>
+                <li><strong>Node.js:</strong> Latest LTS version (includes npm)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code (recommended)</li><br>
+                <li><strong>TypeScript Compiler:</strong> Latest stable version</li><br>
+                <li><strong>npm or Yarn:</strong> Package manager for JavaScript/TypeScript</li><br>
+                <li><strong>Terminal/Shell:</strong> Bash or Zsh for command-line operations</li><br>
+                <li><strong>Package Manager:</strong> apt, yum, or pacman (depending on your Linux distribution)</li><br>
+                <li><strong>Git:</strong> For version control (optional but recommended)</li><br>
+            </ul>
+        </section>
+
+        <!-- Download Node.js Section -->
+        <section class="glass-block setup-section">
+            <h2>Download Node.js</h2>
+            <p class="setup-text">
+                Node.js comes with npm, which is essential for installing TypeScript and managing packages.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Using Package Manager (Recommended):</strong><br>
+                    <code>sudo apt update</code> (Debian/Ubuntu)<br>
+                    <code>sudo apt install nodejs npm</code> (Debian/Ubuntu)<br><br>
+                    <code>sudo dnf install nodejs npm</code> (Fedora/RHEL)<br><br>
+                    <code>sudo pacman -S nodejs npm</code> (Arch Linux)
+                </li><br>
+                <li>
+                    <strong>Or Download from Official Website:</strong><br>
+                    <a class="download-link" href="https://nodejs.org/en/download/">
+                        Download Node.js LTS from Official Website
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Using NVM (Node Version Manager):</strong><br>
+                    <code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash</code><br>
+                    <code>nvm install node</code>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/nodejs-linux.png" alt="Node.js Installation on Linux" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful Node.js and npm installation verification</em></p>
+            </div>
+        </section>
+
+        <!-- Download VS Code -->
+        <section class="glass-block setup-section">
+            <h2>Download Visual Studio Code</h2>
+            <p class="setup-text">
+                Here are the options to install VS Code on Linux.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Using Package Manager (Recommended):</strong><br>
+                    <code>sudo apt install code</code> (Debian/Ubuntu)<br><br>
+                    <code>sudo dnf install code</code> (Fedora/RHEL)<br><br>
+                    <code>sudo pacman -S code</code> (Arch Linux)
+                </li><br>
+                <li>
+                    <strong>Or Download from Official Website:</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/download">
+                        Download VS Code for Linux
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Using Snapcraft (Universal):</strong><br>
+                    <code>sudo snap install code --classic</code>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-linux.png" alt="VS Code on Linux" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code running on Linux with dark theme</em></p>
+            </div>
+        </section>
+
+        <!-- Installation Steps Section -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installation</h2><br>
+            <h3>Step 1: Update System Packages</h3><br>
+            <ol>
+                <li>Open Terminal on your Linux system</li><br>
+                <li>Update package manager:
+                    <br><br><code>sudo apt update</code> (Debian/Ubuntu)<br>
+                    <code>sudo dnf update</code> (Fedora/RHEL)<br>
+                    <code>sudo pacman -Syu</code> (Arch Linux)
+                </li>
+            </ol><br>
+
+            <h3>Step 2: Install Node.js and npm</h3><br>
+            <ol>
+                <li>Install Node.js and npm using your package manager:
+                    <br><br><code>sudo apt install nodejs npm</code> (Debian/Ubuntu)<br>
+                    <code>sudo dnf install nodejs npm</code> (Fedora/RHEL)<br>
+                    <code>sudo pacman -S nodejs npm</code> (Arch Linux)
+                </li><br>
+                <li>Verify the installation:
+                    <br><br><code>node --version</code><br>
+                    <code>npm --version</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/nodejs-installation-linux.png" alt="Node.js Installation Process" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful Node.js and npm installation on Linux</em></p>
+            </div><br><br>
+
+            <h3>Step 3: Install TypeScript Compiler</h3><br>
+            <ol>
+                <li>Open Terminal on your Linux system</li><br>
+                <li>Install TypeScript globally using npm:
+                    <br><br><code>npm install -g typescript</code>
+                </li><br>
+                <li>Verify TypeScript installation:
+                    <br><br><code>tsc --version</code>
+                </li><br>
+                <li>Check npm packages installed globally:
+                    <br><br><code>npm list -g</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/typescript-installation-linux.png" alt="TypeScript Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful TypeScript compiler installation on Linux</em></p>
+            </div><br><br>
+
+            <h3>Step 4: Install VS Code</h3><br>
+            <ol>
+                <li>Using package manager:
+                    <br><br><code>sudo apt install code</code> (Debian/Ubuntu)<br>
+                    <code>sudo dnf install code</code> (Fedora/RHEL)<br>
+                    <code>sudo pacman -S code</code> (Arch Linux)
+                </li><br>
+                <li>Or use Snapcraft (universal):
+                    <br><br><code>sudo snap install code --classic</code>
+                </li><br>
+                <li>Launch VS Code:
+                    <br><br><code>code</code>
+                </li>
+            </ol><br>
+
+            <h3>Step 5: Set Up Your First TypeScript Project</h3><br>
+            <ol>
+                <li>Create a new project directory:
+                    <br><br><code>mkdir my-typescript-project</code><br>
+                    <code>cd my-typescript-project</code>
+                </li><br>
+                <li>Initialize a new Node.js project:
+                    <br><br><code>npm init -y</code>
+                </li><br>
+                <li>Create TypeScript configuration file:
+                    <br><br><code>tsc --init</code>
+                </li><br>
+                <li>Create a src folder for TypeScript files:
+                    <br><br><code>mkdir src</code>
+                </li>
+            </ol><br>
+
+            <h3>Step 6: Install VS Code Extensions</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for recommended TypeScript extensions</li><br>
+                <li>Click "Install" for each extension</li><br>
+                <li>Reload VS Code by pressing <code>Ctrl+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol>
+        </section>
+
+        <!-- Required Extensions Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions</h2><br>
+            <p>Install the following VS Code extensions for optimal TypeScript development:</p><br>
+            <ul>
+                <li><strong>TypeScript Vue Plugin (Volarist):</strong> Enhanced TypeScript support</li><br>
+                <li><strong>Prettier - Code formatter:</strong> Automatic code formatting</li><br>
+                <li><strong>ESLint:</strong> JavaScript and TypeScript linting</li><br>
+                <li><strong>GitLens:</strong> Git integration for version control</li><br>
+                <li><strong>REST Client:</strong> Test REST APIs directly from VS Code</li><br>
+                <li><strong>Thunder Client:</strong> Lightweight REST client alternative</li><br>
+                <li><strong>Better Comments:</strong> Highlights different comment types</li><br>
+            </ul>
+        </section>
+
+        <!-- Best Extensions for TypeScript Development -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for TypeScript Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>TypeScript Vue Plugin (Volarist)</strong><br>
+                    <em>Publisher:</em> Vue<br>
+                    <em>Features:</em> Enhanced TypeScript support with Vue integration and IntelliSense<br>
+                    <em>Install Command:</em> Search "TypeScript Vue Plugin"
+                </li><br>
+                <li>
+                    <strong>Prettier - Code formatter</strong><br>
+                    <em>Publisher:</em> Prettier<br>
+                    <em>Features:</em> Automatic code formatting according to best practices<br>
+                    <em>Install Command:</em> Search "Prettier"
+                </li><br>
+                <li>
+                    <strong>ESLint</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> Identifies and reports on patterns in TypeScript/JavaScript code<br>
+                    <em>Install Command:</em> Search "ESLint"
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> GitKraken<br>
+                    <em>Features:</em> Git integration, commit history, and version control visualization<br>
+                    <em>Install Command:</em> Search "GitLens"
+                </li><br>
+                <li>
+                    <strong>REST Client</strong><br>
+                    <em>Publisher:</em> Huachao Mao<br>
+                    <em>Features:</em> Test REST APIs directly from the editor</em><br>
+                    <em>Install Command:</em> Search "REST Client"
+                </li><br>
+                <li>
+                    <strong>Thunder Client</strong><br>
+                    <em>Publisher:</em> Thunder Client<br>
+                    <em>Features:</em> Lightweight REST API client for testing APIs<br>
+                    <em>Install Command:</em> Search "Thunder Client"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Color-code comment types for better organization<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/typescript-extension-linux.png" alt="TypeScript Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing TypeScript Vue Plugin in VS Code on Linux</em></p>
+            </div>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners</h2>
+            <p>Here's a simple TypeScript program to get you started:</p><br>
+            <h3>HelloWorld.ts</h3>
+            <pre><code>
+// Your first TypeScript program
+function greet(name: string): void {
+    console.log(`Hello, ${name}!`);
+}
+
+greet("World");
+            </code></pre>
+
+            <h3>Working with Types</h3>
+            <pre><code>
+// TypeScript with explicit types
+const age: number = 25;
+const name: string = "TypeScript Developer";
+const isActive: boolean = true;
+
+console.log(`Name: ${name}`);
+console.log(`Age: ${age}`);
+console.log(`Active: ${isActive}`);
+            </code></pre>
+
+            <h3>Simple Calculator with Types</h3>
+            <pre><code>
+// Typed calculator function
+function calculate(num1: number, num2: number, operation: string): number {
+    switch (operation) {
+        case "add":
+            return num1 + num2;
+        case "subtract":
+            return num1 - num2;
+        case "multiply":
+            return num1 * num2;
+        case "divide":
+            return num1 / num2;
+        default:
+            return 0;
+    }
+}
+
+console.log(calculate(10, 5, "add"));
+console.log(calculate(10, 5, "subtract"));
+console.log(calculate(10, 5, "multiply"));
+            </code></pre>
+
+            <h3>Working with Interfaces</h3>
+            <pre><code>
+// Define an interface for type safety
+interface User {
+    name: string;
+    age: number;
+    email: string;
+    isActive?: boolean;
+}
+
+const user: User = {
+    name: "John Doe",
+    age: 30,
+    email: "john@example.com",
+    isActive: true
+};
+
+console.log(`User: ${user.name}, Age: ${user.age}`);
+            </code></pre>
+
+            <h3>Working with Classes</h3>
+            <pre><code>
+// TypeScript class with type safety
+class Person {
+    name: string;
+    age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet(): void {
+        console.log(`Hello, I am ${this.name} and I am ${this.age} years old.`);
+    }
+}
+
+const person = new Person("Alice", 28);
+person.greet();
+            </code></pre>
+
+            <h3>Working with Arrays</h3>
+            <pre><code>
+// Typed arrays in TypeScript
+const numbers: number[] = [1, 2, 3, 4, 5];
+const fruits: Array<string> = ["Apple", "Banana", "Orange"];
+
+console.log("Numbers:", numbers);
+console.log("Fruits:", fruits);
+
+// Array methods
+numbers.forEach(num => {
+    console.log(num * 2);
+});
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-typescript-program-linux.png" alt="Running TypeScript Program on Linux" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing TypeScript file being compiled and executed on Linux</em></p>
+            </div>
+        </section>
+
+        <!-- Visual Setup Guides -->
+        <section class="glass-block setup-section">
+            <h2>Visual Setup Guides</h2><br>
+
+            <h3>Project Directory Structure</h3>
+            <div class="screen-shot">
+                <img src="screens/project-structure-linux.png" alt="TypeScript Project Structure" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>File explorer showing organized TypeScript project structure on Linux</em></p>
+            </div><br><br>
+
+            <h3>tsconfig.json Configuration</h3>
+            <div class="screen-shot">
+                <img src="screens/tsconfig-setup-linux.png" alt="TypeScript Configuration File" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing tsconfig.json with compiler options on Linux</em></p>
+            </div><br><br>
+
+            <h3>Compiling TypeScript to JavaScript</h3>
+            <div class="screen-shot">
+                <img src="screens/typescript-compilation-linux.png" alt="TypeScript Compilation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing TypeScript compilation process on Linux</em></p>
+            </div><br><br>
+
+            <h3>Complete VS Code Setup for TypeScript</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-typescript-setup-linux.png" alt="Complete VS Code Setup" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code fully configured with TypeScript extensions on Linux</em></p>
+            </div><br><br>
+
+            <h3>Running TypeScript Files</h3>
+            <div class="screen-shot">
+                <img src="screens/typescript-execution-linux.png" alt="Executing TypeScript Files" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing TypeScript file execution on Linux</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: npm Command Not Found</h3>
+            <p><strong>Problem:</strong> 'npm: command not found' error in Terminal</p>
+            <p><strong>Solution:</strong> Reinstall Node.js: <code>sudo apt install nodejs npm</code> (Debian/Ubuntu)</p><br>
+
+            <h3>Issue 2: TypeScript Compiler Not Found</h3>
+            <p><strong>Problem:</strong> 'tsc: command not found' error</p>
+            <p><strong>Solution:</strong> Run <code>npm install -g typescript</code> to install TypeScript globally</p><br>
+
+            <h3>Issue 3: VS Code Extension Not Working</h3>
+            <p><strong>Problem:</strong> TypeScript syntax highlighting or IntelliSense not working</p>
+            <p><strong>Solution:</strong> Restart VS Code by pressing <code>Ctrl+Shift+P</code> and selecting "Developer: Reload Window"</p><br>
+
+            <h3>Issue 4: Permission Denied Error</h3>
+            <p><strong>Problem:</strong> 'Permission denied' when trying to access files or install packages</p>
+            <p><strong>Solution:</strong> Use <code>sudo</code> for system-level operations or fix npm permissions</p><br>
+
+            <h3>Issue 5: Module Not Found Error</h3>
+            <p><strong>Problem:</strong> Cannot find module error when importing packages</p>
+            <p><strong>Solution:</strong> Run <code>npm install</code> to install dependencies listed in package.json</p><br>
+
+            <h3>Issue 6: Port Already in Use</h3>
+            <p><strong>Problem:</strong> Error saying a port is already in use when running a development server</p>
+            <p><strong>Solution:</strong> Kill the process using the port: <code>lsof -ti:3000 | xargs kill -9</code> (replace 3000 with your port)</p>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Linux Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Ctrl+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Ctrl+Shift+P</code> - Open Command Palette</li><br>
+                <li><code>Ctrl+K Ctrl+0</code> - Fold all regions</li><br>
+                <li><code>Ctrl+K Ctrl+J</code> - Unfold all regions</li><br>
+                <li><code>Ctrl+Shift+M</code> - Show Problems</li><br>
+                <li><code>F5</code> - Start Debugging</li><br>
+                <li><code>Ctrl+,</code> - Open Settings</li><br>
+                <li><code>Ctrl+B</code> - Toggle Sidebar</li><br>
+                <li><code>Ctrl+J</code> - Toggle Terminal</li><br>
+                <li><code>Ctrl+/</code> - Toggle Line Comment</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up TypeScript on your Linux machine. You are now ready to:</p><br>
+            <ul>
+                <li>Create type-safe JavaScript applications</li><br>
+                <li>Learn TypeScript fundamentals and advanced concepts</li><br>
+                <li>Build scalable web applications</li><br>
+                <li>Develop full-stack applications with Node.js and TypeScript</li><br>
+                <li>Use TypeScript with popular frameworks like React, Vue, and Angular</li><br>
+                <li>Collaborate with other developers using type safety</li><br>
+                <li>Deploy TypeScript projects to production environments</li><br>
+            </ul>
+            <p>Start exploring TypeScript by writing simple programs and gradually move towards building more complex applications. Visit the <a class="download-link" href="https://www.typescriptlang.org/" target="_blank">official TypeScript website</a> for more resources and tutorials.</p><br>
+            <p>For additional help or questions, visit the <a class="download-link" href="https://stackoverflow.com/questions/tagged/typescript" target="_blank">Stack Overflow TypeScript tag</a>, the <a class="download-link" href="https://github.com/microsoft/TypeScript" target="_blank">TypeScript GitHub repository</a>, or the <a class="download-link" href="https://www.typescriptlang.org/community" target="_blank">TypeScript Community</a>.</p><br>
+            <p><strong>Happy Coding with TypeScript on Linux!</strong></p>
+        </section>
+    </main>
+</body>
+</html>

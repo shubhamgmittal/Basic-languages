@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotlin Setup Guide for macOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Kotlin Setup Guide for macOS</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up Kotlin, ensure you have the following installed on your macOS system:</p><br>
+            <ul>
+                <li><strong>Java Development Kit (JDK):</strong> Version 8 or higher (Kotlin runs on the JVM)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code or IntelliJ IDEA</li><br>
+                <li><strong>Kotlin Compiler:</strong> Latest stable version</li><br>
+                <li><strong>Terminal:</strong> macOS Terminal or iTerm2</li><br>
+                <li><strong>Package Manager:</strong> Homebrew (recommended for easy installation)</li><br>
+                <li><strong>Git:</strong> For version control (optional but recommended)</li><br>
+            </ul>
+        </section>
+
+        <!-- Download Homebrew Section -->
+        <section class="glass-block setup-section">
+            <h2>Install Homebrew (Recommended)</h2>
+            <p class="setup-text">
+                Homebrew is the easiest way to install development tools on macOS.
+            </p><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Terminal on your Mac</li><br>
+                <li>Copy and paste the following command:
+                    <br><br><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+                </li><br>
+                <li>Press Enter and follow the on-screen instructions</li><br>
+                <li>Verify installation:
+                    <br><br><code>brew --version</code>
+                </li>
+            </ol><br><br>
+            <div class="screen-shot">
+                <img src="screens/homebrew-installation.png" alt="Homebrew Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful Homebrew installation</em></p>
+            </div>
+        </section>
+
+                <!-- Download vscode editor -->
+        <section class="glass-block setup-section">
+            <h2>Download Visual Studio Code</h2>
+        <p class="setup-text">
+            Here is the installer matching your operating system.
+        </p>
+
+        <ul class="setup-list">
+            <li>
+                <strong>macOS (Universal)</strong><br>
+                <a class="download-link"
+                   href="https://update.code.visualstudio.com/latest/darwin/universal/stable">
+                   Download VS Code for macOS
+                </a>
+            </li> 
+        </ul>
+        </section>
+
+        <!-- Installation Steps Section -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installation</h2><br>
+            <h3>Step 1: Install Java Development Kit (JDK)</h3><br>
+            <ol>
+                <li>Using Homebrew (Recommended):
+                    <br><br><code>brew install openjdk@17</code>
+                </li><br>
+                <li>Link JDK to system path:
+                    <br><br><code>sudo ln -sfn /usr/local/opt/openjdk@17/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-17.jdk</code>
+                </li><br>
+                <li>Verify JDK installation:
+                    <br><br><code>java -version</code><br>
+                    <code>javac -version</code>
+                </li><br>
+                <li>Set JAVA_HOME environment variable:
+                    <br><br>Open <code>~/.zshrc</code> (for macOS Catalina or later) or <code>~/.bash_profile</code> (for older versions) and add:
+                    <br><code>export JAVA_HOME=$(/usr/libexec/java_home -v 17)</code><br>
+                    <code>export PATH=$JAVA_HOME/bin:$PATH</code><br>
+                    Then run: <code>source ~/.zshrc</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/jdk-mac-installation.png" alt="JDK Installation on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful JDK installation and version verification</em></p>
+            </div><br><br>
+
+            <h3>Step 2: Install Kotlin Compiler</h3><br>
+            <ol>
+                <li>Using Homebrew (Easiest method):
+                    <br><br><code>brew install kotlin</code>
+                </li><br>
+                <li>Or using SDKMAN:
+                    <br><br><code>curl -s "https://get.sdkman.io" | bash</code><br>
+                    <code>source "$HOME/.sdkman/bin/sdkman-init.sh"</code><br>
+                    <code>sdk install kotlin</code>
+                </li><br>
+                <li>Verify Kotlin installation:
+                    <br><br><code>kotlinc -version</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/kotlin-mac-installation.png" alt="Kotlin Compiler Installation on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal displaying successful Kotlin compiler installation</em></p>
+            </div><br><br>
+
+            <h3>Step 3: Set Up VS Code</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Cmd+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Install necessary extensions for Kotlin development</li><br>
+                <li>Restart VS Code by pressing <code>Cmd+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol>
+
+            <div class="screen-shot">
+                <img src="screens/vscode-setup-mac.png" alt="VS Code Setup on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code Extensions panel ready for Kotlin development</em></p>
+            </div>
+        </section>
+
+        <!-- Required Extensions Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions</h2><br>
+            <p>Install the following VS Code extensions for optimal Kotlin development:</p><br>
+            <ul>
+                <li><strong>Kotlin Language:</strong> Official Kotlin language support extension</li><br>
+                <li><strong>Code Runner:</strong> Allows quick execution of Kotlin code</li><br>
+                <li><strong>Debugger for Java:</strong> Debugging support for Kotlin (runs on JVM)</li><br>
+                <li><strong>GitLens:</strong> Git integration for version control</li><br>
+                <li><strong>Prettier:</strong> Code formatter for clean code formatting</li><br>
+                <li><strong>Better Comments:</strong> Highlights different comment types</li><br>
+            </ul>
+        </section>
+
+        <!-- Best Extensions Section -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Cmd+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for Kotlin Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>Kotlin Language</strong><br>
+                    <em>Publisher:</em> JetBrains<br>
+                    <em>Features:</em> Syntax highlighting, code completion, and IntelliSense for Kotlin<br>
+                    <em>Install Command:</em> Search "Kotlin Language"
+                </li><br>
+                <li>
+                    <strong>Code Runner</strong><br>
+                    <em>Publisher:</em> Jun Han<br>
+                    <em>Features:</em> Run Kotlin code snippets directly from the editor<br>
+                    <em>Install Command:</em> Search "Code Runner"
+                </li><br>
+                <li>
+                    <strong>Debugger for Java</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> Debug Kotlin applications running on the JVM<br>
+                    <em>Install Command:</em> Search "Debugger for Java"
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> GitKraken<br>
+                    <em>Features:</em> Git integration, commit history, and version control<br>
+                    <em>Install Command:</em> Search "GitLens"
+                </li><br>
+                <li>
+                    <strong>Prettier</strong><br>
+                    <em>Publisher:</em> Prettier<br>
+                    <em>Features:</em> Automatic code formatting for clean syntax<br>
+                    <em>Install Command:</em> Search "Prettier"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Highlights different comment types with colors<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/kotlin-extension-mac.png" alt="Kotlin Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing Kotlin Language extension from JetBrains</em></p>
+            </div>
+        </section>
+
+        <!-- Basic Code for Beginners Section -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners</h2>
+            <p>Here's a simple Hello World program to get you started with Kotlin:</p><br>
+            <h3>HelloWorld.kt</h3>
+            <pre><code>
+// Your first Kotlin program
+fun main() {
+    println("Hello, World!")
+}
+            </code></pre>
+
+            <h3>Simple Calculator</h3>
+            <pre><code>
+fun main() {
+    val num1 = 10
+    val num2 = 20
+    
+    val sum = num1 + num2
+    val difference = num1 - num2
+    val product = num1 * num2
+    val quotient = num1 / num2
+    
+    println("Sum: $sum")
+    println("Difference: $difference")
+    println("Product: $product")
+    println("Quotient: $quotient")
+}
+            </code></pre>
+
+            <h3>Using Variables and Conditionals</h3>
+            <pre><code>
+fun main() {
+    val name = "Kotlin Developer"
+    val age = 25
+    
+    println("Name: $name")
+    println("Age: $age")
+    
+    if (age >= 18) {
+        println("You are an adult!")
+    } else {
+        println("You are a minor!")
+    }
+}
+            </code></pre>
+
+            <h3>Simple Loop</h3>
+            <pre><code>
+fun main() {
+    for (i in 1..5) {
+        println("Number: $i")
+    }
+}
+            </code></pre>
+
+            <h3>Working with Functions</h3>
+            <pre><code>
+fun greet(name: String): String {
+    return "Hello, $name!"
+}
+
+fun main() {
+    val message = greet("macOS Developer")
+    println(message)
+}
+            </code></pre>
+
+            <h3>Working with Lists</h3>
+            <pre><code>
+fun main() {
+    val fruits = listOf("Apple", "Banana", "Orange", "Mango")
+    
+    println("Fruits list:")
+    for (fruit in fruits) {
+        println("- $fruit")
+    }
+    
+    println("\nTotal fruits: ${fruits.size}")
+}
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-kotlin-program-mac.png" alt="Running Kotlin Program on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing HelloWorld.kt with output in the terminal</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: JAVA_HOME Not Set</h3>
+            <p><strong>Problem:</strong> Command not found or JAVA_HOME is not recognized</p>
+            <p><strong>Solution:</strong> Make sure you've added the JAVA_HOME export to your .zshrc or .bash_profile file and run <code>source ~/.zshrc</code></p><br>
+
+            <h3>Issue 2: Kotlin Compiler Not Found</h3>
+            <p><strong>Problem:</strong> kotlinc: command not found</p>
+            <p><strong>Solution:</strong> Reinstall Kotlin using <code>brew reinstall kotlin</code> or verify Homebrew installation</p><br>
+
+            <h3>Issue 3: M1/M2 Mac Compatibility</h3>
+            <p><strong>Problem:</strong> Extension or tool not compatible with Apple Silicon</p>
+            <p><strong>Solution:</strong> Download the Apple Silicon version of VS Code and ensure JDK is the ARM64 version</p><br>
+
+            <h3>Issue 4: VS Code Extension Not Working</h3>
+            <p><strong>Problem:</strong> Kotlin syntax highlighting not working</p>
+            <p><strong>Solution:</strong> Restart VS Code by pressing <code>Cmd+Shift+P</code> and selecting "Developer: Reload Window"</p>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful macOS Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Cmd+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Cmd+K Cmd+0</code> - Fold all regions</li><br>
+                <li><code>Cmd+K Cmd+J</code> - Unfold all regions</li><br>
+                <li><code>Cmd+Shift+P</code> - Open Command Palette</li><br>
+                <li><code>Cmd+Shift+M</code> - Show Problems</li><br>
+                <li><code>Cmd+Shift+D</code> - Start Debugging</li><br>
+                <li><code>Cmd+,</code> - Open Settings</li><br>
+                <li><code>Cmd+B</code> - Toggle Sidebar</li><br>
+                <li><code>Cmd+J</code> - Toggle Terminal</li><br>
+                <li><code>Cmd+/</code> - Toggle Line Comment</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up Kotlin on your macOS machine. You are now ready to:</p><br>
+            <ul>
+                <li>Create and run Kotlin applications</li><br>
+                <li>Learn Kotlin fundamentals and advanced concepts</li><br>
+                <li>Build projects using Kotlin</li><br>
+                <li>Integrate Kotlin with existing Java projects</li><br>
+                <li>Develop cross-platform applications with Kotlin Multiplatform</li><br>
+                <li>Use modern IDE features with full debugging support</li><br>
+            </ul>
+            <p>Start exploring Kotlin by writing simple programs and gradually move towards building more complex applications. Visit the <a href="https://kotlinlang.org/" target="_blank">official Kotlin documentation</a> for more resources and tutorials.</p><br>
+            <p>For additional help or questions, visit the <a href="https://kotlinlang.slack.com" target="_blank">Kotlin Slack community</a> or the <a href="https://stackoverflow.com/questions/tagged/kotlin" target="_blank">Stack Overflow Kotlin tag</a>.</p><br>
+            <p><strong>Happy Coding on macOS!</strong></p>
+        </section>
+    </main>
+</body>
+</html>
