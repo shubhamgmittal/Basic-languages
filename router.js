@@ -461,6 +461,68 @@ function routeUser() {
 
 
 
+    // language 12 = c
+
+    if (language === "c") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "C setup/setup-c-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "C setup/setup-c-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "C setup/setup-c-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "C setup/setup-c-linux.html";
+            return;
+        }
+    }
+
+
+
+
+    // language 13 = c++
+
+    if (language === "cpp") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "cpp setup/setup-cpp-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "cpp setup/setup-cpp-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "cpp setup/setup-cpp-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "cpp setup/setup-cpp-linux.html";
+            return;
+        }
+    }
+
+
 
 
 
