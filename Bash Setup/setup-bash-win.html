@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bash Setup Guide for Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Bash Setup Guide for Windows</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up Bash, ensure you have the following installed on your Windows system:</p><br>
+            <ul>
+                <li><strong>Windows:</strong> Version 10 or 11 (64-bit recommended)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code (recommended)</li><br>
+                <li><strong>Bash Environment:</strong> WSL (Windows Subsystem for Linux), Git Bash, or MSYS2</li><br>
+                <li><strong>Administrator Access:</strong> For installing software and enabling features</li><br>
+                <li><strong>Git:</strong> For version control and Git Bash (optional but recommended)</li><br>
+            </ul>
+        </section>
+
+        <!-- Download Code Editor or Specially VS Code -->
+        <section class="glass-block setup-section">
+            <h2>Download Code Editor or Specially VS Code</h2>
+            <p class="setup-text">
+                Visual Studio Code is highly recommended for Bash scripting due to its excellent terminal integration and extensions.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Method 1: Direct Download (Installer)</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/download">
+                        Download VS Code for Windows (Installer)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 2: Direct Download (Portable)</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/download">
+                        Download VS Code for Windows (Portable)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 3: Using Windows Package Manager</strong><br>
+                    <code>winget install Microsoft.VisualStudioCode</code>
+                </li><br>
+                <li>
+                    <strong>Method 4: Using Chocolatey</strong><br>
+                    <code>choco install vscode</code>
+                </li><br>
+                <li>
+                    <strong>Method 5: From Official Website</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/">
+                        Visual Studio Code Official Website
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-windows.png" alt="VS Code on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code running on Windows with integrated terminal</em></p>
+            </div>
+        </section>
+
+        <!-- Steps of Installations -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installations</h2><br>
+            <h3>Step 1: Enable WSL (Recommended for Full Bash Experience)</h3><br>
+            <ol>
+                <li>Open PowerShell as Administrator</li><br>
+                <li>Enable WSL feature:
+                    <br><br><code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</code>
+                </li><br>
+                <li>Enable Virtual Machine Platform:
+                    <br><br><code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code>
+                </li><br>
+                <li>Restart your computer</li><br>
+                <li>Install WSL2 kernel update (download from Microsoft website)</li><br>
+                <li>Set WSL2 as default:
+                    <br><br><code>wsl --set-default-version 2</code>
+                </li><br>
+                <li>Install a Linux distribution (e.g., Ubuntu):
+                    <br><br><code>wsl --install -d Ubuntu</code>
+                </li>
+            </ol><br><br>
+
+            <h3>Step 2: Alternative - Install Git Bash</h3><br>
+            <ol>
+                <li>Download Git for Windows from <a href="https://git-scm.com/download/win">git-scm.com</a></li><br>
+                <li>Run the installer</li><br>
+                <li>Select "Use Git from Git Bash only" during installation</li><br>
+                <li>Complete the installation</li><br>
+                <li>Launch Git Bash from Start menu</li>
+            </ol><br><br>
+
+            <h3>Step 3: Install VS Code</h3><br>
+            <ol>
+                <li>Download VS Code installer from the official website</li><br>
+                <li>Run the installer executable</li><br>
+                <li>Click "Next" and accept the license agreement</li><br>
+                <li>Choose installation location (default is fine)</li><br>
+                <li>Complete the installation and launch VS Code</li>
+            </ol><br><br>
+
+            <h3>Step 4: Configure VS Code for Bash</h3><br>
+            <ol>
+                <li>Open VS Code</li><br>
+                <li>Press <code>Ctrl+Shift+P</code> to open Command Palette</li><br>
+                <li>Type "Terminal: Select Default Profile" and select WSL or Git Bash</li><br>
+                <li>Open integrated terminal: <code>Ctrl+`</code></li><br>
+                <li>Verify Bash is working: <code>echo "Hello, Bash!"</code></li>
+            </ol><br><br>
+
+            <h3>Step 5: Install VS Code Extensions</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for "Bash" and install relevant extensions</li><br>
+                <li>Click "Install" for each extension</li><br>
+                <li>Reload VS Code by pressing <code>Ctrl+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol><br><br>
+
+            <h3>Step 6: Create Your First Bash Script</h3><br>
+            <ol>
+                <li>Open VS Code and create a new file: <code>hello.sh</code></li><br>
+                <li>Add shebang: <code>#!/bin/bash</code></li><br>
+                <li>Add code: <code>echo "Hello, Bash!"</code></li><br>
+                <li>Save the file</li><br>
+                <li>Make it executable: <code>chmod +x hello.sh</code> (in WSL/Git Bash)</li><br>
+                <li>Run the script: <code>./hello.sh</code></li>
+            </ol>
+        </section>
+
+        <!-- Required Extension Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extension Section</h2><br>
+            <p>Install the following VS Code extensions for optimal Bash development:</p><br>
+            <ul>
+                <li><strong>Shell</strong> - Shell script support</li><br>
+                <li><strong>Bash IDE</strong> - Bash language support</li><br>
+                <li><strong>Bash Debug</strong> - Debug support for Bash scripts</li><br>
+                <li><strong>Code Runner</strong> - Run code snippets</li><br>
+                <li><strong>Better Comments</strong> - Highlights different comment types</li><br>
+                <li><strong>GitLens</strong> - Git integration for version control</li><br>
+                <li><strong>Prettier</strong> - Code formatter</li><br>
+            </ul>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners Sections -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners Sections</h2>
+            <p>Here are simple Bash scripts to get you started:</p><br>
+            <h3>Hello World Script</h3>
+            <pre><code>
+#!/bin/bash
+echo "Hello, World!"
+            </code></pre>
+
+            <h3>Variables</h3>
+            <pre><code>
+#!/bin/bash
+name="Alice"
+age=25
+echo "Name: $name"
+echo "Age: $age"
+            </code></pre>
+
+            <h3>User Input</h3>
+            <pre><code>
+#!/bin/bash
+echo "What is your name?"
+read name
+echo "Hello, $name!"
+            </code></pre>
+
+            <h3>Conditional Statements</h3>
+            <pre><code>
+#!/bin/bash
+echo "Enter a number:"
+read num
+if [ $num -gt 10 ]; then
+    echo "Number is greater than 10"
+elif [ $num -eq 10 ]; then
+    echo "Number is equal to 10"
+else
+    echo "Number is less than 10"
+fi
+            </code></pre>
+
+            <h3>Loops</h3>
+            <pre><code>
+#!/bin/bash
+# For loop
+for i in {1..5}; do
+    echo "Number: $i"
+done
+
+# While loop
+count=1
+while [ $count -le 5 ]; do
+    echo "Count: $count"
+    ((count++))
+done
+            </code></pre>
+
+            <h3>Functions</h3>
+            <pre><code>
+#!/bin/bash
+greet() {
+    echo "Hello, $1!"
+}
+
+greet "World"
+greet "Bash"
+            </code></pre>
+
+            <h3>File Operations</h3>
+            <pre><code>
+#!/bin/bash
+# Create a file
+echo "This is a test file" > test.txt
+
+# Read a file
+cat test.txt
+
+# Check if file exists
+if [ -f test.txt ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+
+# Remove file
+rm test.txt
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-bash-program-windows.png" alt="Running Bash Script on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing Bash script execution in integrated terminal on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Best Extension for Bash Development -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for Bash Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>Shell</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> Syntax highlighting and basic language support for shell scripts<br>
+                    <em>Install Command:</em> Search "Shell"
+                </li><br>
+                <li>
+                    <strong>Bash IDE</strong><br>
+                    <em>Publisher:</em> Mads Hartmann<br>
+                    <em>Features:</em> Advanced Bash language support with IntelliSense<br>
+                    <em>Install Command:</em> Search "Bash IDE"
+                </li><br>
+                <li>
+                    <strong>Bash Debug</strong><br>
+                    <em>Publisher:</em> rogalmic<br>
+                    <em>Features:</em> Debug support for Bash scripts<br>
+                    <em>Install Command:</em> Search "Bash Debug"
+                </li><br>
+                <li>
+                    <strong>Code Runner</strong><br>
+                    <em>Publisher:</em> Jun Han<br>
+                    <em>Features:</em> Run code snippets and scripts directly from VS Code<br>
+                    <em>Install Command:</em> Search "Code Runner"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Color-code comment types for better organization<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> GitKraken<br>
+                    <em>Features:</em> Git integration and version control visualization<br>
+                    <em>Install Command:</em> Search "GitLens"
+                </li><br>
+                <li>
+                    <strong>Prettier</strong><br>
+                    <em>Publisher:</em> Prettier<br>
+                    <em>Features:</em> Automatic code formatting<br>
+                    <em>Install Command:</em> Search "Prettier"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/bash-extension-windows.png" alt="Bash Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing Bash extensions in VS Code on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Visual Setup Guides -->
+        <section class="glass-block setup-section">
+            <h2>Visual Setup Guides</h2><br>
+
+            <h3>WSL Installation</h3>
+            <div class="screen-shot">
+                <img src="screens/wsl-setup-windows.png" alt="WSL Setup on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>PowerShell showing WSL installation on Windows</em></p>
+            </div><br><br>
+
+            <h3>VS Code Terminal Configuration</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-terminal-windows.png" alt="VS Code Terminal on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code with configured Bash terminal on Windows</em></p>
+            </div><br><br>
+
+            <h3>Running Bash Scripts</h3>
+            <div class="screen-shot">
+                <img src="screens/bash-run-windows.png" alt="Running Bash on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing Bash script execution on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: WSL Installation Fails</h3>
+            <p><strong>Problem:</strong> WSL installation fails with error messages</p>
+            <p><strong>Solution:</strong> Ensure virtualization is enabled in BIOS, run as Administrator</p><br>
+
+            <h3>Issue 2: Bash Command Not Found</h3>
+            <p><strong>Problem:</strong> 'bash: command not found' in terminal</p>
+            <p><strong>Solution:</strong> Ensure WSL or Git Bash is properly installed and in PATH</p><br>
+
+            <h3>Issue 3: Permission Denied</h3>
+            <p><strong>Problem:</strong> 'Permission denied' when running scripts</p>
+            <p><strong>Solution:</strong> Make script executable with <code>chmod +x script.sh</code></p><br>
+
+            <h3>Issue 4: Extensions Not Working</h3>
+            <p><strong>Problem:</strong> Bash extensions not providing syntax highlighting</p>
+            <p><strong>Solution:</strong> Ensure file has .sh extension and correct shebang</p><br>
+
+            <h3>Issue 5: Terminal Not Opening in VS Code</h3>
+            <p><strong>Problem:</strong> Cannot open integrated terminal</p>
+            <p><strong>Solution:</strong> Configure default terminal profile in VS Code settings</p>
+        </section>
+
+        <!-- Useful Commands Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Commands for Bash Development</h2><br>
+            <ul>
+                <li><code>bash --version</code> - Check Bash version</li><br>
+                <li><code>which bash</code> - Find Bash location</li><br>
+                <li><code>chmod +x file.sh</code> - Make script executable</li><br>
+                <li><code>./script.sh</code> - Run a Bash script</li><br>
+                <li><code>echo $PATH</code> - Show PATH environment variable</li><br>
+                <li><code>ls -la</code> - List files with details</li><br>
+                <li><code>pwd</code> - Print working directory</li><br>
+                <li><code>cd directory</code> - Change directory</li><br>
+                <li><code>mkdir dirname</code> - Create directory</li><br>
+                <li><code>rm filename</code> - Remove file</li><br>
+                <li><code>cat filename</code> - Display file contents</li><br>
+                <li><code>grep pattern file</code> - Search for pattern in file</li><br>
+            </ul>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Windows Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Ctrl+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Ctrl+Shift+P</code> - Open Command Palette</li><br>
+                <li><code>Ctrl+K Ctrl+0</code> - Fold all regions</li><br>
+                <li><code>Ctrl+K Ctrl+J</code> - Unfold all regions</li><br>
+                <li><code>Ctrl+Shift+M</code> - Show Problems</li><br>
+                <li><code>F5</code> - Start Debugging</li><br>
+                <li><code>Ctrl+,</code> - Open Settings</li><br>
+                <li><code>Ctrl+B</code> - Toggle Sidebar</li><br>
+                <li><code>Ctrl+`</code> - Toggle Terminal</li><br>
+                <li><code>Ctrl+/</code> - Toggle Line Comment</li><br>
+                <li><code>Ctrl+H</code> - Find and Replace</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up Bash on your Windows machine. You are now ready to:</p><br>
+            <ul>
+                <li>Write powerful Bash scripts for automation</li><br>
+                <li>Manage files and directories efficiently</li><br>
+                <li>Create command-line tools and utilities</li><br>
+                <li>Automate repetitive tasks</li><br>
+                <li>Work with Linux-like environment on Windows</li><br>
+                <li>Develop shell scripts for system administration</li><br>
+                <li>Integrate Bash with other programming languages</li><br>
+                <li>Build complex workflows and pipelines</li><br>
+            </ul>
+            <p>Start exploring Bash by writing simple scripts and gradually move towards more complex automation tasks. Visit the <a class="download-link" href="https://www.gnu.org/software/bash/" target="_blank">official Bash website</a> for comprehensive documentation and tutorials.</p><br>
+            <p>For learning resources, check out:</p>
+            <ul>
+                <li><a class="download-link" href="https://www.gnu.org/software/bash/manual/" target="_blank">Bash Reference Manual</a></li><br>
+                <li><a class="download-link" href="https://tldp.org/LDP/abs/html/" target="_blank">Advanced Bash-Scripting Guide</a></li><br>
+                <li><a class="download-link" href="https://linuxcommand.org/" target="_blank">Linux Command Line Tutorials</a></li><br>
+            </ul>
+            <p>For additional help or questions, visit the <a class="download-link" href="https://stackoverflow.com/questions/tagged/bash" target="_blank">Stack Overflow Bash tag</a>, the <a class="download-link" href="https://github.com/Microsoft/WSL" target="_blank">WSL GitHub repository</a>, or the <a class="download-link" href="https://www.reddit.com/r/bash/" target="_blank">Bash subreddit</a>.</p><br>
+            <p><strong>Happy Scripting with Bash on Windows!</strong></p>
+        </section>
+    </main>
+</body>
+</html>

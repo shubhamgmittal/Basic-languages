@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Setup Guide for Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Ruby Setup Guide for Windows</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up Ruby, ensure you have the following installed on your Windows system:</p><br>
+            <ul>
+                <li><strong>Windows:</strong> Version 7 or higher (Windows 10/11 recommended)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code (recommended)</li><br>
+                <li><strong>Ruby:</strong> Latest stable version (3.x recommended)</li><br>
+                <li><strong>RubyGems:</strong> Ruby package manager (comes with Ruby)</li><br>
+                <li><strong>Bundler:</strong> Dependency manager for Ruby projects</li><br>
+                <li><strong>Git for Windows:</strong> For version control (optional but recommended)</li><br>
+                <li><strong>Administrator Access:</strong> For installing software</li><br>
+            </ul>
+        </section>
+
+        <!-- Download Ruby Section -->
+        <section class="glass-block setup-section">
+            <h2>Download and Install Ruby</h2>
+            <p class="setup-text">
+                Ruby is a dynamic, open-source programming language focused on simplicity and productivity.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Method 1: Install via RubyInstaller (Recommended)</strong><br>
+                    <a class="download-link" href="https://rubyinstaller.org/">
+                        Download RubyInstaller for Windows
+                    </a><br>
+                    Choose the version with DevKit for native extensions
+                </li><br>
+                <li>
+                    <strong>Method 2: Install via Windows Package Manager</strong><br>
+                    <code>winget install RubyInstallerTeam.Ruby</code>
+                </li><br>
+                <li>
+                    <strong>Method 3: Install via Chocolatey</strong><br>
+                    <code>choco install ruby</code>
+                </li><br>
+                <li>
+                    <strong>Method 4: Install via Scoop</strong><br>
+                    <code>scoop install ruby</code>
+                </li><br>
+                <li>
+                    <strong>Method 5: Download from Official Website</strong><br>
+                    <a class="download-link" href="https://www.ruby-lang.org/en/downloads/">
+                        Download Ruby from Official Website
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/ruby-windows.png" alt="Ruby Installation on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing successful Ruby installation verification on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Download VS Code -->
+        <section class="glass-block setup-section">
+            <h2>Download Visual Studio Code</h2>
+            <p class="setup-text">
+                Here are the options to install VS Code on Windows.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Method 1: Direct Download (Installer)</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/download">
+                        Download VS Code for Windows (Installer)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 2: Direct Download (Portable)</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/download">
+                        Download VS Code for Windows (Portable)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 3: Using Windows Package Manager</strong><br>
+                    <code>winget install Microsoft.VisualStudioCode</code>
+                </li><br>
+                <li>
+                    <strong>Method 4: Using Chocolatey</strong><br>
+                    <code>choco install vscode</code>
+                </li><br>
+                <li>
+                    <strong>Method 5: From Official Website</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/">
+                        Visual Studio Code Official Website
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-windows.png" alt="VS Code on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code running on Windows with dark theme</em></p>
+            </div>
+        </section>
+
+        <!-- Installation Steps Section -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installation</h2><br>
+            <h3>Step 1: Install Ruby</h3><br>
+            <ol>
+                <li>Download RubyInstaller from the official website</li><br>
+                <li>Run the installer executable (.exe file)</li><br>
+                <li>Accept the license agreement and click "Next"</li><br>
+                <li>Choose installation directory (default is fine)</li><br>
+                <li>Select components to install (include MSYS2 and MINGW if prompted)</li><br>
+                <li>Complete the installation</li><br>
+                <li>Open Command Prompt and verify installation:
+                    <br><br><code>ruby -v</code><br>
+                    <code>gem -v</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/ruby-installation-windows.png" alt="Ruby Installation Process" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing successful Ruby and Gem installation on Windows</em></p>
+            </div><br><br>
+
+            <h3>Step 2: Install Bundler</h3><br>
+            <ol>
+                <li>Open Command Prompt as Administrator</li><br>
+                <li>Install Bundler:
+                    <br><br><code>gem install bundler</code>
+                </li><br>
+                <li>Verify installation:
+                    <br><br><code>bundler -v</code>
+                </li>
+            </ol><br><br>
+
+            <h3>Step 3: Create Your First Ruby Project</h3><br>
+            <ol>
+                <li>Open Command Prompt</li><br>
+                <li>Navigate to your desired location:
+                    <br><br><code>cd Documents</code>
+                </li><br>
+                <li>Create a new directory:
+                    <br><br><code>mkdir hello_ruby</code>
+                </li><br>
+                <li>Navigate to the directory:
+                    <br><br><code>cd hello_ruby</code>
+                </li><br>
+                <li>Create a Gemfile:
+                    <br><br><code>bundler init</code>
+                </li>
+            </ol><br><br>
+
+            <h3>Step 4: Install VS Code</h3><br>
+            <ol>
+                <li>Download VS Code installer from the official website</li><br>
+                <li>Run the installer executable</li><br>
+                <li>Click "Next" and accept the license agreement</li><br>
+                <li>Choose installation location (default is fine)</li><br>
+                <li>Complete the installation and launch VS Code</li>
+            </ol><br><br> 
+
+            <h3>Step 5: Install VS Code Extensions</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for "Ruby" and install the official Ruby extension</li><br>
+                <li>Search for additional Ruby extensions</li><br>
+                <li>Click "Install" for each extension</li><br>
+                <li>Reload VS Code by pressing <code>Ctrl+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol><br><br>
+
+            <h3>Step 6: Run Your First Ruby Program</h3><br>
+            <ol>
+                <li>Open VS Code and create a new file: <code>hello.rb</code></li><br>
+                <li>Add code: <code>puts "Hello, Ruby!"</code></li><br>
+                <li>Save the file</li><br>
+                <li>Open integrated terminal in VS Code: <code>Ctrl+`</code></li><br>
+                <li>Run the program:
+                    <br><br><code>ruby hello.rb</code>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Required Extensions Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions</h2><br>
+            <p>Install the following VS Code extensions for optimal Ruby development:</p><br>
+            <ul>
+                <li><strong>Ruby:</strong> Official Ruby language support</li><br>
+                <li><strong>Ruby Solargraph:</strong> Ruby language server</li><br>
+                <li><strong>Ruby LSP:</strong> Language server protocol for Ruby</li><br>
+                <li><strong>Ruby on Rails:</strong> Rails framework support</li><br>
+                <li><strong>Better Comments:</strong> Highlights different comment types</li><br>
+                <li><strong>GitLens:</strong> Git integration for version control</li><br>
+                <li><strong>Prettier:</strong> Code formatter</li><br>
+            </ul>
+        </section>
+
+        <!-- Best Extensions for Ruby Development -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for Ruby Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>Ruby</strong><br>
+                    <em>Publisher:</em> Peng Lv<br>
+                    <em>Features:</em> Syntax highlighting, snippets, and basic language support<br>
+                    <em>Install Command:</em> Search "Ruby"
+                </li><br>
+                <li>
+                    <strong>Ruby Solargraph</strong><br>
+                    <em>Publisher:</em> Castwide<br>
+                    <em>Features:</em> IntelliSense, code completion, and diagnostics<br>
+                    <em>Install Command:</em> Search "Ruby Solargraph"
+                </li><br>
+                <li>
+                    <strong>Ruby LSP</strong><br>
+                    <em>Publisher:</em> Shopify<br>
+                    <em>Features:</em> Advanced language server with refactoring support<br>
+                    <em>Install Command:</em> Search "Ruby LSP"
+                </li><br>
+                <li>
+                    <strong>Ruby on Rails</strong><br>
+                    <em>Publisher:</em> bung87<br>
+                    <em>Features:</em> Rails-specific snippets and navigation<br>
+                    <em>Install Command:</em> Search "Ruby on Rails"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Color-code comment types for better organization<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> GitKraken<br>
+                    <em>Features:</em> Git integration and version control visualization<br>
+                    <em>Install Command:</em> Search "GitLens"
+                </li><br>
+                <li>
+                    <strong>Prettier</strong><br>
+                    <em>Publisher:</em> Prettier<br>
+                    <em>Features:</em> Automatic code formatting<br>
+                    <em>Install Command:</em> Search "Prettier"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/ruby-extension-windows.png" alt="Ruby Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing Ruby extension in VS Code on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners</h2>
+            <p>Here are simple Ruby programs to get you started:</p><br>
+            <h3>Hello World Program</h3>
+            <pre><code>
+puts "Hello, World!"
+            </code></pre>
+
+            <h3>Variables and Data Types</h3>
+            <pre><code>
+# Integer
+age = 25
+
+# String
+name = "Alice"
+
+# Float
+height = 5.8
+
+# Boolean
+is_active = true
+
+puts "Name: #{name}"
+puts "Age: #{age}"
+puts "Height: #{height}"
+puts "Active: #{is_active}"
+            </code></pre>
+
+            <h3>Methods (Functions)</h3>
+            <pre><code>
+def add(a, b)
+  a + b
+end
+
+def greet(name)
+  "Hello, #{name}!"
+end
+
+result = add(10, 5)
+puts "10 + 5 = #{result}"
+
+greeting = greet("Ruby")
+puts greeting
+            </code></pre>
+
+            <h3>Control Flow (if/else)</h3>
+            <pre><code>
+age = 20
+
+if age >= 18
+  puts "You are an adult"
+elsif age >= 13
+  puts "You are a teenager"
+else
+  puts "You are a child"
+end
+            </code></pre>
+
+            <h3>Loops</h3>
+            <pre><code>
+# for loop
+for i in 1..5
+  puts "Number: #{i}"
+end
+
+# while loop
+count = 0
+while count < 5
+  puts "Count: #{count}"
+  count += 1
+end
+            </code></pre>
+
+            <h3>Arrays and Hashes</h3>
+            <pre><code>
+# Array
+numbers = [1, 2, 3, 4, 5]
+numbers.push(6)
+
+puts "First number: #{numbers[0]}"
+
+numbers.each do |num|
+  puts "Number: #{num}"
+end
+
+puts "Array length: #{numbers.length}"
+
+# Hash
+person = {
+  "name" => "John Doe",
+  "age" => 30,
+  "email" => "john@example.com"
+}
+
+puts "Name: #{person["name"]}"
+puts "Age: #{person["age"]}"
+puts "Email: #{person["email"]}"
+            </code></pre>
+
+            <h3>Classes and Objects</h3>
+            <pre><code>
+class Person
+  attr_accessor :name, :age, :email
+
+  def initialize(name, age, email)
+    @name = name
+    @age = age
+    @email = email
+  end
+
+  def introduce
+    "Hi, I'm #{@name} and I'm #{@age} years old."
+  end
+end
+
+person = Person.new("John Doe", 30, "john@example.com")
+puts person.introduce
+puts "Email: #{person.email}"
+            </code></pre>
+
+            <h3>Error Handling</h3>
+            <pre><code>
+def divide(a, b)
+  begin
+    result = a / b
+    "Result: #{result}"
+  rescue ZeroDivisionError
+    "Cannot divide by zero"
+  end
+end
+
+puts divide(10, 2)
+puts divide(10, 0)
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-ruby-program-windows.png" alt="Running Ruby Program on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing Ruby code with output on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Visual Setup Guides -->
+        <section class="glass-block setup-section">
+            <h2>Visual Setup Guides</h2><br>
+
+            <h3>Project Directory Structure</h3>
+            <div class="screen-shot">
+                <img src="screens/project-structure-ruby-windows.png" alt="Ruby Project Structure on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>File explorer showing organized Ruby project structure on Windows</em></p>
+            </div><br><br>
+
+            <h3>Bundler Project Setup</h3>
+            <div class="screen-shot">
+                <img src="screens/bundler-setup-windows.png" alt="Bundler Project Setup on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing Bundler project creation on Windows</em></p>
+            </div><br><br>
+
+            <h3>Complete VS Code Setup for Ruby</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-ruby-setup-windows.png" alt="Complete VS Code Setup on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code fully configured with Ruby extensions on Windows</em></p>
+            </div><br><br>
+
+            <h3>Running Ruby Programs</h3>
+            <div class="screen-shot">
+                <img src="screens/ruby-run-windows.png" alt="Running Ruby on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing Ruby program execution on Windows</em></p>
+            </div><br><br>
+
+            <h3>Gem Installation</h3>
+            <div class="screen-shot">
+                <img src="screens/gem-install-windows.png" alt="Gem Installation on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing gem installation process on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: Ruby Command Not Found</h3>
+            <p><strong>Problem:</strong> 'ruby: command not found' in Command Prompt</p>
+            <p><strong>Solution:</strong> Ensure Ruby is added to PATH during installation, or restart Command Prompt</p><br>
+
+            <h3>Issue 2: Gem Command Not Working</h3>
+            <p><strong>Problem:</strong> 'gem: command not found'</p>
+            <p><strong>Solution:</strong> Gem comes with Ruby; reinstall Ruby if missing</p><br>
+
+            <h3>Issue 3: MSYS2/MINGW Not Installed</h3>
+            <p><strong>Problem:</strong> Native extensions fail to compile</p>
+            <p><strong>Solution:</strong> Reinstall RubyInstaller with DevKit option</p><br>
+
+            <h3>Issue 4: Bundler Not Found</h3>
+            <p><strong>Problem:</strong> 'bundler: command not found'</p>
+            <p><strong>Solution:</strong> Install Bundler: <code>gem install bundler</code></p><br>
+
+            <h3>Issue 5: Ruby Extensions Not Working in VS Code</h3>
+            <p><strong>Problem:</strong> No IntelliSense or syntax highlighting</p>
+            <p><strong>Solution:</strong> Install Ruby Solargraph extension and run <code>gem install solargraph</code></p><br>
+
+            <h3>Issue 6: SSL Certificate Issues</h3>
+            <p><strong>Problem:</strong> Gem installation fails with SSL errors</p>
+            <p><strong>Solution:</strong> Update Ruby or use <code>gem update --system</code></p><br>
+
+            <h3>Issue 7: Permission Denied When Installing Gems</h3>
+            <p><strong>Problem:</strong> 'Permission denied' when installing gems</p>
+            <p><strong>Solution:</strong> Run Command Prompt as Administrator or use <code>--user-install</code> flag</p>
+        </section>
+
+        <!-- Useful Commands Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Commands for Ruby Development</h2><br>
+            <ul>
+                <li><code>ruby -v</code> - Check Ruby version</li><br>
+                <li><code>gem -v</code> - Check Gem version</li><br>
+                <li><code>bundler -v</code> - Check Bundler version</li><br>
+                <li><code>ruby file.rb</code> - Run a Ruby file</li><br>
+                <li><code>irb</code> - Start interactive Ruby shell</li><br>
+                <li><code>gem install gem_name</code> - Install a gem</li><br>
+                <li><code>gem list</code> - List installed gems</li><br>
+                <li><code>bundle init</code> - Create a new Gemfile</li><br>
+                <li><code>bundle install</code> - Install gems from Gemfile</li><br>
+                <li><code>bundle exec command</code> - Run command with bundled gems</li><br>
+                <li><code>gem update --system</code> - Update RubyGems system</li><br>
+                <li><code>gem cleanup</code> - Remove old gem versions</li><br>
+            </ul>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Windows Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Ctrl+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Ctrl+Shift+P</code> - Open Command Palette</li><br>
+                <li><code>Ctrl+K Ctrl+0</code> - Fold all regions</li><br>
+                <li><code>Ctrl+K Ctrl+J</code> - Unfold all regions</li><br>
+                <li><code>Ctrl+Shift+M</code> - Show Problems</li><br>
+                <li><code>F5</code> - Start Debugging</li><br>
+                <li><code>Ctrl+,</code> - Open Settings</li><br>
+                <li><code>Ctrl+B</code> - Toggle Sidebar</li><br>
+                <li><code>Ctrl+`</code> - Toggle Terminal</li><br>
+                <li><code>Ctrl+/</code> - Toggle Line Comment</li><br>
+                <li><code>Ctrl+H</code> - Find and Replace</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up Ruby on your Windows machine. You are now ready to:</p><br>
+            <ul>
+                <li>Write dynamic and productive Ruby code</li><br>
+                <li>Build web applications with Ruby on Rails</li><br>
+                <li>Create command-line tools and scripts</li><br>
+                <li>Develop automation scripts</li><br>
+                <li>Work with databases and APIs</li><br>
+                <li>Contribute to open-source Ruby projects</li><br>
+                <li>Learn object-oriented programming concepts</li><br>
+                <li>Explore the Ruby ecosystem with gems</li><br>
+            </ul>
+            <p>Start exploring Ruby by building simple scripts and gradually move towards more complex applications. Visit the <a class="download-link" href="https://www.ruby-lang.org/" target="_blank">official Ruby website</a> for comprehensive documentation and tutorials.</p><br>
+            <p>For learning resources, check out:</p>
+            <ul>
+                <li><a class="download-link" href="https://www.ruby-lang.org/en/documentation/" target="_blank">Ruby Documentation</a></li><br>
+                <li><a class="download-link" href="https://ruby-doc.org/" target="_blank">Ruby Doc</a></li><br>
+                <li><a class="download-link" href="https://guides.rubyonrails.org/" target="_blank">Ruby on Rails Guides</a></li><br>
+            </ul>
+            <p>For additional help or questions, visit the <a class="download-link" href="https://stackoverflow.com/questions/tagged/ruby" target="_blank">Stack Overflow Ruby tag</a>, the <a class="download-link" href="https://github.com/ruby/ruby" target="_blank">Ruby GitHub repository</a>, or the <a class="download-link" href="https://www.ruby-forum.com/" target="_blank">Ruby Forum</a>.</p><br>
+            <p><strong>Happy Coding with Ruby on Windows!</strong></p>
+        </section>
+    </main>
+</body>
+</html>

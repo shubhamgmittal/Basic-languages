@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorFlow Setup Guide for Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>TensorFlow Setup Guide for Windows</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up TensorFlow, ensure you have the following installed on your Windows system:</p><br>
+            <ul>
+                <li><strong>Python:</strong> Version 3.9 or higher (3.11 recommended)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code (recommended)</li><br>
+                <li><strong>TensorFlow:</strong> Latest stable version</li><br>
+                <li><strong>pip:</strong> Python package manager (comes with Python)</li><br>
+                <li><strong>Virtual Environment:</strong> For isolated project environments</li><br>
+                <li><strong>CUDA & cuDNN:</strong> GPU support (optional but recommended)</li><br>
+                <li><strong>Git:</strong> For version control (optional but recommended)</li><br>
+            </ul>
+        </section>
+
+        <!-- Download Python Section -->
+        <section class="glass-block setup-section">
+            <h2>Download Python</h2>
+            <p class="setup-text">
+                Python is the primary language for TensorFlow development.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Download Python 3.11 (Recommended)</strong><br>
+                    <a class="download-link" href="https://www.python.org/downloads/">
+                        Download Python from Official Website
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Or Download Anaconda Distribution (Includes many ML libraries)</strong><br>
+                    <a class="download-link" href="https://www.anaconda.com/download">
+                        Download Anaconda for Windows
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/python-windows.png" alt="Python Installation on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing successful Python installation verification</em></p>
+            </div>
+        </section>
+
+        <!-- Download VS Code -->
+        <section class="glass-block setup-section">
+            <h2>Download Visual Studio Code</h2>
+            <p class="setup-text">
+                Here is the installer matching your operating system.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Windows (64-bit)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/win32-x64/stable">
+                        Download VS Code for Windows (64-bit)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Windows (32-bit)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/win32/stable">
+                        Download VS Code for Windows (32-bit)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Or Download from Official Website</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/">
+                        Visual Studio Code Official Website
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-windows.png" alt="VS Code on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code running on Windows with dark theme</em></p>
+            </div>
+        </section>
+
+        <!-- Installation Steps Section -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installation</h2><br>
+            <h3>Step 1: Install Python</h3><br>
+            <ol>
+                <li>Download Python 3.11 from the official website</li><br>
+                <li>Double-click the installer and launch the setup wizard</li><br>
+                <li><strong>Important:</strong> Check the box "Add Python to PATH" during installation</li><br>
+                <li>Click "Install Now" or choose custom installation options</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Verify the installation by opening Command Prompt and running:
+                    <br><br><code>python --version</code><br>
+                    <code>pip --version</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/python-installation-win.png" alt="Python Installation Process" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Python installer with "Add Python to PATH" checkbox highlighted</em></p>
+            </div><br><br>
+
+            <h3>Step 2: Create Virtual Environment</h3><br>
+            <ol>
+                <li>Open Command Prompt (cmd.exe)</li><br>
+                <li>Navigate to your project folder:
+                    <br><br><code>cd C:\Users\YourUsername\Documents\Projects</code>
+                </li><br>
+                <li>Create a virtual environment:
+                    <br><br><code>python -m venv tensorflow-env</code>
+                </li><br>
+                <li>Activate the virtual environment:
+                    <br><br><code>tensorflow-env\Scripts\activate</code>
+                </li><br>
+                <li>You should see <code>(tensorflow-env)</code> prefix in your command prompt</li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/venv-creation-win.png" alt="Virtual Environment Creation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing virtual environment activation on Windows</em></p>
+            </div><br><br>
+
+            <h3>Step 3: Install TensorFlow</h3><br>
+            <ol>
+                <li>Make sure your virtual environment is activated</li><br>
+                <li>Upgrade pip to the latest version:
+                    <br><br><code>pip install --upgrade pip</code>
+                </li><br>
+                <li>Install TensorFlow:
+                    <br><br><code>pip install tensorflow</code>
+                </li><br>
+                <li>Wait for installation to complete (may take several minutes)</li><br>
+                <li>Verify TensorFlow installation:
+                    <br><br><code>python -c "import tensorflow as tf; print(tf.__version__)"</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/tensorflow-installation-win.png" alt="TensorFlow Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing successful TensorFlow installation</em></p>
+            </div><br><br>
+
+            <h3>Step 4: Install Jupyter Notebook (Optional but Recommended)</h3><br>
+            <ol>
+                <li>With virtual environment activated, install Jupyter:
+                    <br><br><code>pip install jupyter</code>
+                </li><br>
+                <li>Launch Jupyter Notebook:
+                    <br><br><code>jupyter notebook</code>
+                </li><br>
+                <li>A web browser will open with Jupyter Notebook interface</li>
+            </ol><br>
+
+            <h3>Step 5: Install VS Code Extensions</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for Python and TensorFlow related extensions</li><br>
+                <li>Click "Install" for each extension</li><br>
+                <li>Reload VS Code by pressing <code>Ctrl+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol>
+        </section>
+
+        <!-- Required Extensions Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions</h2><br>
+            <p>Install the following VS Code extensions for optimal TensorFlow development:</p><br>
+            <ul>
+                <li><strong>Python:</strong> Official Python language support</li><br>
+                <li><strong>Pylance:</strong> Advanced Python IntelliSense</li><br>
+                <li><strong>Jupyter:</strong> Jupyter Notebook support in VS Code</li><br>
+                <li><strong>Python Docstring Generator:</strong> Auto-generate docstrings</li><br>
+                <li><strong>Better Comments:</strong> Highlights different comment types</li><br>
+                <li><strong>GitLens:</strong> Git integration for version control</li><br>
+                <li><strong>Prettier:</strong> Code formatter</li><br>
+            </ul>
+        </section>
+
+        <!-- Best Extensions for TensorFlow Development -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for TensorFlow Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>Python</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> IntelliSense, linting, debugging, code formatting<br>
+                    <em>Install Command:</em> Search "Python"
+                </li><br>
+                <li>
+                    <strong>Pylance</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> Advanced IntelliSense with type checking<br>
+                    <em>Install Command:</em> Search "Pylance"
+                </li><br>
+                <li>
+                    <strong>Jupyter</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> Run Jupyter notebooks directly in VS Code<br>
+                    <em>Install Command:</em> Search "Jupyter"
+                </li><br>
+                <li>
+                    <strong>Python Docstring Generator</strong><br>
+                    <em>Publisher:</em> Nils Werner<br>
+                    <em>Features:</em> Auto-generate docstrings for Python functions<br>
+                    <em>Install Command:</em> Search "Python Docstring Generator"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Color-code comment types for better organization<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> GitKraken<br>
+                    <em>Features:</em> Git integration and version control visualization<br>
+                    <em>Install Command:</em> Search "GitLens"
+                </li><br>
+                <li>
+                    <strong>Prettier</strong><br>
+                    <em>Publisher:</em> Prettier<br>
+                    <em>Features:</em> Automatic code formatting<br>
+                    <em>Install Command:</em> Search "Prettier"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/tensorflow-extension-win.png" alt="TensorFlow Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing Python extension in VS Code</em></p>
+            </div>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners</h2>
+            <p>Here are simple TensorFlow programs to get you started:</p><br>
+            <h3>Import TensorFlow</h3>
+            <pre><code>
+import tensorflow as tf
+import numpy as np
+
+# Print TensorFlow version
+print(f"TensorFlow version: {tf.__version__}")
+
+# Create a simple tensor
+tensor = tf.constant([1, 2, 3, 4, 5])
+print("Tensor:", tensor.numpy())
+            </code></pre>
+
+            <h3>Basic Tensor Operations</h3>
+            <pre><code>
+import tensorflow as tf
+
+# Create tensors
+a = tf.constant([1, 2, 3])
+b = tf.constant([4, 5, 6])
+
+# Perform operations
+add_result = tf.add(a, b)
+multiply_result = tf.multiply(a, b)
+
+print("Addition:", add_result.numpy())
+print("Multiplication:", multiply_result.numpy())
+            </code></pre>
+
+            <h3>Simple Neural Network</h3>
+            <pre><code>
+import tensorflow as tf
+from tensorflow import keras
+
+# Create a simple neural network
+model = keras.Sequential([
+    keras.layers.Dense(128, activation='relu', input_shape=(784,)),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile the model
+model.compile(
+    optimizer='adam',
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+print("Model created successfully!")
+print(model.summary())
+            </code></pre>
+
+            <h3>Train a Simple Model</h3>
+            <pre><code>
+import tensorflow as tf
+from tensorflow import keras
+
+# Load MNIST dataset
+(x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+
+# Normalize the data
+x_train = x_train.astype('float32') / 255
+x_test = x_test.astype('float32') / 255
+
+# Flatten the images
+x_train = x_train.reshape(-1, 28*28)
+x_test = x_test.reshape(-1, 28*28)
+
+# Create model
+model = keras.Sequential([
+    keras.layers.Dense(128, activation='relu', input_shape=(784,)),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+# Train
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+
+# Evaluate
+score = model.evaluate(x_test, y_test, verbose=0)
+print(f"Test accuracy: {score[1]*100:.2f}%")
+            </code></pre>
+
+            <h3>Using Keras Functional API</h3>
+            <pre><code>
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+
+# Create model using Functional API
+inputs = keras.Input(shape=(784,))
+x = layers.Dense(128, activation='relu')(inputs)
+x = layers.Dropout(0.2)(x)
+x = layers.Dense(64, activation='relu')(x)
+outputs = layers.Dense(10, activation='softmax')(x)
+
+model = keras.Model(inputs=inputs, outputs=outputs)
+
+# Compile model
+model.compile(
+    optimizer='adam',
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+print("Functional API model created!")
+model.summary()
+            </code></pre>
+
+            <h3>Image Classification Example</h3>
+            <pre><code>
+import tensorflow as tf
+from tensorflow import keras
+
+# Load pre-trained MobileNetV2 model
+model = keras.applications.MobileNetV2(weights='imagenet')
+
+# Load and preprocess an image
+image = keras.preprocessing.image.load_img('image.jpg', target_size=(224, 224))
+image_array = keras.preprocessing.image.img_to_array(image)
+image_array = keras.applications.mobilenet_v2.preprocess_input(image_array)
+image_batch = tf.expand_dims(image_array, 0)
+
+# Make predictions
+predictions = model.predict(image_batch)
+decoded_predictions = keras.applications.mobilenet_v2.decode_predictions(predictions)[0]
+
+print("Predictions:")
+for label, description, score in decoded_predictions:
+    print(f"{description}: {score*100:.2f}%")
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-tensorflow-program-win.png" alt="Running TensorFlow Program on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing TensorFlow code with output</em></p>
+            </div>
+        </section>
+
+        <!-- Visual Setup Guides -->
+        <section class="glass-block setup-section">
+            <h2>Visual Setup Guides</h2><br>
+
+            <h3>Project Directory Structure</h3>
+            <div class="screen-shot">
+                <img src="screens/project-structure-tf-win.png" alt="TensorFlow Project Structure" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>File explorer showing organized TensorFlow project structure</em></p>
+            </div><br><br>
+
+            <h3>Virtual Environment Setup</h3>
+            <div class="screen-shot">
+                <img src="screens/venv-setup-win.png" alt="Virtual Environment Setup" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing virtual environment setup and activation</em></p>
+            </div><br><br>
+
+            <h3>Complete VS Code Setup for TensorFlow</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-tensorflow-setup-win.png" alt="Complete VS Code Setup" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code fully configured with TensorFlow extensions</em></p>
+            </div><br><br>
+
+            <h3>Running TensorFlow in Jupyter Notebook</h3>
+            <div class="screen-shot">
+                <img src="screens/jupyter-tensorflow-win.png" alt="Jupyter Notebook with TensorFlow" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Jupyter Notebook showing TensorFlow code execution</em></p>
+            </div><br><br>
+
+            <h3>TensorFlow Training Progress</h3>
+            <div class="screen-shot">
+                <img src="screens/tensorflow-training-win.png" alt="Model Training" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing model training progress and accuracy metrics</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: Python Not Found</h3>
+            <p><strong>Problem:</strong> 'python' is not recognized as an internal or external command</p>
+            <p><strong>Solution:</strong> Ensure Python is installed and added to PATH. Reinstall Python and check "Add Python to PATH" during installation.</p><br>
+
+            <h3>Issue 2: pip Not Found</h3>
+            <p><strong>Problem:</strong> 'pip' is not recognized as an internal or external command</p>
+            <p><strong>Solution:</strong> Run <code>python -m pip --version</code> or reinstall Python with pip included</p><br>
+
+            <h3>Issue 3: Virtual Environment Not Activating</h3>
+            <p><strong>Problem:</strong> Virtual environment fails to activate</p>
+            <p><strong>Solution:</strong> Ensure you're in the correct directory and run <code>tensorflow-env\Scripts\activate</code> (Windows)</p><br>
+
+            <h3>Issue 4: TensorFlow Import Error</h3>
+            <p><strong>Problem:</strong> ModuleNotFoundError: No module named 'tensorflow'</p>
+            <p><strong>Solution:</strong> Install TensorFlow: <code>pip install tensorflow</code> in your virtual environment</p><br>
+
+            <h3>Issue 5: CUDA/GPU Issues</h3>
+            <p><strong>Problem:</strong> TensorFlow not detecting GPU</p>
+            <p><strong>Solution:</strong> Install CUDA and cuDNN, or use CPU version of TensorFlow</p><br>
+
+            <h3>Issue 6: Jupyter Notebook Not Starting</h3>
+            <p><strong>Problem:</strong> 'jupyter' command not found</p>
+            <p><strong>Solution:</strong> Install Jupyter: <code>pip install jupyter</code> in your virtual environment</p>
+        </section>
+
+        <!-- Useful Commands Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Commands for TensorFlow Development</h2><br>
+            <ul>
+                <li><code>python --version</code> - Check Python version</li><br>
+                <li><code>pip --version</code> - Check pip version</li><br>
+                <li><code>python -m venv tensorflow-env</code> - Create virtual environment</li><br>
+                <li><code>tensorflow-env\Scripts\activate</code> - Activate virtual environment</li><br>
+                <li><code>deactivate</code> - Deactivate virtual environment</li><br>
+                <li><code>pip install tensorflow</code> - Install TensorFlow</li><br>
+                <li><code>pip install tensorflow-gpu</code> - Install GPU version</li><br>
+                <li><code>python -c "import tensorflow as tf; print(tf.__version__)"</code> - Check TensorFlow version</li><br>
+                <li><code>jupyter notebook</code> - Start Jupyter</li><br>
+                <li><code>pip list</code> - List installed packages</li><br>
+            </ul>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Windows Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Ctrl+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Ctrl+Shift+P</code> - Open Command Palette</li><br>
+                <li><code>Ctrl+K Ctrl+0</code> - Fold all regions</li><br>
+                <li><code>Ctrl+K Ctrl+J</code> - Unfold all regions</li><br>
+                <li><code>Ctrl+Shift+M</code> - Show Problems</li><br>
+                <li><code>F5</code> - Start Debugging</li><br>
+                <li><code>Ctrl+,</code> - Open Settings</li><br>
+                <li><code>Ctrl+B</code> - Toggle Sidebar</li><br>
+                <li><code>Ctrl+J</code> - Toggle Terminal</li><br>
+                <li><code>Ctrl+/</code> - Toggle Line Comment</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up TensorFlow on your Windows machine. You are now ready to:</p><br>
+            <ul>
+                <li>Build and train neural networks</li><br>
+                <li>Perform machine learning tasks</li><br>
+                <li>Create deep learning models</li><br>
+                <li>Work with computer vision projects</li><br>
+                <li>Develop natural language processing applications</li><br>
+                <li>Deploy machine learning models</li><br>
+                <li>Contribute to AI and ML research</li><br>
+            </ul>
+            <p>Start exploring TensorFlow by building simple projects and gradually move towards more complex machine learning applications. Visit the <a class="download-link" href="https://www.tensorflow.org/" target="_blank">official TensorFlow website</a> for comprehensive documentation and tutorials.</p><br>
+            <p>For additional help or questions, visit the <a class="download-link" href="https://stackoverflow.com/questions/tagged/tensorflow" target="_blank">Stack Overflow TensorFlow tag</a>, the <a class="download-link" href="https://github.com/tensorflow/tensorflow" target="_blank">TensorFlow GitHub repository</a>, or the <a class="download-link" href="https://discuss.tensorflow.org/" target="_blank">TensorFlow Discussion Forum</a>.</p><br>
+            <p><strong>Happy Learning with TensorFlow on Windows!</strong></p>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Setup Guide for Windows</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Rust Setup Guide for Windows</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up Rust, ensure you have the following installed on your Windows system:</p><br>
+            <ul>
+                <li><strong>Windows:</strong> Version 7 or higher (Windows 10/11 recommended)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code (recommended)</li><br>
+                <li><strong>Rust:</strong> Latest stable version</li><br>
+                <li><strong>Cargo:</strong> Rust package manager (comes with Rust)</li><br>
+                <li><strong>Visual Studio Build Tools:</strong> Required for compilation</li><br>
+                <li><strong>Git for Windows:</strong> For version control (optional but recommended)</li><br>
+                <li><strong>Administrator Access:</strong> For installing software</li><br>
+            </ul>
+        </section>
+
+        <!-- Download vscode editor -->
+        <section class="glass-block setup-section">
+            <h2>Download Visual Studio Code</h2>
+        <p class="setup-text">
+            Here is the installer matching your operating system.
+        </p>
+
+        <ul class="setup-list">
+            <li>
+                <strong>Windows (64-bit)</strong><br>
+                <a class="download-link"
+                   href="https://update.code.visualstudio.com/latest/win32-x64-user/stable">
+                   Download VS Code for Windows
+                </a>
+            </li>
+        </ul>
+        </section>
+
+        <!-- Download Rust Section -->
+        <section class="glass-block setup-section">
+            <h2>Download and Install Rust</h2>
+            <p class="setup-text">
+                Rust is the programming language for systems-level development and performance-critical applications.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Method 1: Install via Official rustup (Recommended)</strong><br>
+                    Download from: <a class="download-link" href="https://rustup.rs/" target="_blank">https://rustup.rs/</a><br>
+                    Run <code>rustup-init.exe</code> and follow the installer
+                </li><br>
+                <li>
+                    <strong>Method 2: Install via Windows Package Manager (Recommended)</strong><br>
+                    <code>winget install Rustlang.Rust.MSVC</code>
+                </li><br>
+                <li>
+                    <strong>Method 3: Install via Chocolatey</strong><br>
+                    <code>choco install rust</code>
+                </li><br>
+                <li>
+                    <strong>Method 4: Download from Official Website</strong><br>
+                    <a class="download-link" href="https://www.rust-lang.org/tools/install">
+                        Download Rust from Official Website
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/rust-windows.png" alt="Rust Installation on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing successful Rust installation verification on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Download VS Code -->
+        <section class="glass-block setup-section">
+            <h2>Download Visual Studio Code</h2>
+            <p class="setup-text">
+                Here are the options to install VS Code on Windows.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Method 1: Direct Download (Installer)</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/download">
+                        Download VS Code for Windows (Installer)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 2: Direct Download (Portable)</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/download">
+                        Download VS Code for Windows (Portable)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 3: Using Windows Package Manager</strong><br>
+                    <code>winget install Microsoft.VisualStudioCode</code>
+                </li><br>
+                <li>
+                    <strong>Method 4: Using Chocolatey</strong><br>
+                    <code>choco install vscode</code>
+                </li><br>
+                <li>
+                    <strong>Method 5: From Official Website</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/">
+                        Visual Studio Code Official Website
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-windows.png" alt="VS Code on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code running on Windows with dark theme</em></p>
+            </div>
+        </section>
+
+        <!-- Installation Steps Section -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installation</h2><br>
+            <h3>Step 1: Install Visual Studio Build Tools</h3><br>
+            <ol>
+                <li>Download Visual Studio Build Tools from the official website</li><br>
+                <li>Run the installer executable</li><br>
+                <li>Select "Desktop development with C++"</li><br>
+                <li>Click "Install" and wait for completion</li><br>
+                <li>Restart your computer</li>
+            </ol><br>
+
+            <h3>Step 2: Install Rust</h3><br>
+            <ol>
+                <li>Download rustup-init.exe from <a class="download-link" href="https://rustup.rs/">https://rustup.rs/</a></li><br>
+                <li>Double-click the downloaded file to run the installer</li><br>
+                <li>Press <code>1</code> to proceed with standard installation</li><br>
+                <li>Wait for Rust to download and install (may take several minutes)</li><br>
+                <li>Press <code>Enter</code> to complete the installation</li><br>
+                <li>Open a new Command Prompt window and verify installation:
+                    <br><br><code>rustc --version</code><br>
+                    <code>cargo --version</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/rust-installation-windows.png" alt="Rust Installation Process" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing successful Rust and Cargo installation on Windows</em></p>
+            </div><br><br>
+
+            <h3>Step 3: Create Your First Rust Project</h3><br>
+            <ol>
+                <li>Open Command Prompt or PowerShell</li><br>
+                <li>Navigate to your desired location:
+                    <br><br><code>cd Documents</code>
+                </li><br>
+                <li>Create a new Rust project:
+                    <br><br><code>cargo new hello_world</code>
+                </li><br>
+                <li>Navigate to the project:
+                    <br><br><code>cd hello_world</code>
+                </li><br>
+                <li>View the project structure:
+                    <br><br><code>dir</code>
+                </li>
+            </ol><br>
+
+            <h3>Step 4: Install VS Code</h3><br>
+            <ol>
+                <li>Download VS Code installer from the official website</li><br>
+                <li>Run the installer executable</li><br>
+                <li>Click "Next" and accept the license agreement</li><br>
+                <li>Choose installation location (default is fine)</li><br>
+                <li>Complete the installation and launch VS Code</li>
+            </ol><br>
+
+            <h3>Step 5: Install VS Code Extensions</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for "rust-analyzer" and install it</li><br>
+                <li>Search for additional Rust extensions</li><br>
+                <li>Click "Install" for each extension</li><br>
+                <li>Reload VS Code by pressing <code>Ctrl+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol>
+
+            <h3>Step 6: Build and Run Your Project</h3><br>
+            <ol>
+                <li>Open your project folder in VS Code</li><br>
+                <li>Build the project:
+                    <br><br><code>cargo build</code>
+                </li><br>
+                <li>Run the project:
+                    <br><br><code>cargo run</code>
+                </li><br>
+                <li>Build for release (optimized):
+                    <br><br><code>cargo build --release</code>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Required Extensions Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions</h2><br>
+            <p>Install the following VS Code extensions for optimal Rust development:</p><br>
+            <ul>
+                <li><strong>rust-analyzer:</strong> Official Rust language server</li><br>
+                <li><strong>CodeLLDB:</strong> Debugger for Rust</li><br>
+                <li><strong>Rust Syntax:</strong> Syntax highlighting for Rust</li><br>
+                <li><strong>Better TOML:</strong> TOML file support for Cargo.toml</li><br>
+                <li><strong>crates:</strong> Dependency manager for Cargo</li><br>
+                <li><strong>Better Comments:</strong> Highlights different comment types</li><br>
+                <li><strong>GitLens:</strong> Git integration for version control</li><br>
+            </ul>
+        </section>
+
+        <!-- Best Extensions for Rust Development -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for Rust Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>rust-analyzer</strong><br>
+                    <em>Publisher:</em> The Rust Programming Language Foundation<br>
+                    <em>Features:</em> IntelliSense, code navigation, error checking, inline hints<br>
+                    <em>Install Command:</em> Search "rust-analyzer"
+                </li><br>
+                <li>
+                    <strong>CodeLLDB</strong><br>
+                    <em>Publisher:</em> Vadim Chugunov<br>
+                    <em>Features:</em> Native debugger for Rust with breakpoints and stepping<br>
+                    <em>Install Command:</em> Search "CodeLLDB"
+                </li><br>
+                <li>
+                    <strong>Rust Syntax</strong><br>
+                    <em>Publisher:</em> dustypomerleau<br>
+                    <em>Features:</em> Enhanced syntax highlighting for Rust code<br>
+                    <em>Install Command:</em> Search "Rust Syntax"
+                </li><br>
+                <li>
+                    <strong>Better TOML</strong><br>
+                    <em>Publisher:</em> bungcip<br>
+                    <em>Features:</em> TOML support for Cargo.toml files<br>
+                    <em>Install Command:</em> Search "Better TOML"
+                </li><br>
+                <li>
+                    <strong>crates</strong><br>
+                    <em>Publisher:</em> serayuzgur<br>
+                    <em>Features:</em> Manages dependencies in Cargo.toml and checks for updates<br>
+                    <em>Install Command:</em> Search "crates"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Color-code comment types for better organization<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> GitKraken<br>
+                    <em>Features:</em> Git integration and version control visualization<br>
+                    <em>Install Command:</em> Search "GitLens"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/rust-extension-windows.png" alt="Rust Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing rust-analyzer extension in VS Code on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners</h2>
+            <p>Here are simple Rust programs to get you started:</p><br>
+            <h3>Hello World Program</h3>
+            <pre><code>
+fn main() {
+    println!("Hello, World!");
+}
+            </code></pre>
+
+            <h3>Variables and Data Types</h3>
+            <pre><code>
+fn main() {
+    // Integer
+    let age: i32 = 25;
+    
+    // String
+    let name: &str = "Alice";
+    
+    // Floating-point
+    let height: f64 = 5.8;
+    
+    // Boolean
+    let is_active: bool = true;
+    
+    println!("Name: {}", name);
+    println!("Age: {}", age);
+    println!("Height: {}", height);
+    println!("Active: {}", is_active);
+}
+            </code></pre>
+
+            <h3>Functions</h3>
+            <pre><code>
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn greet(name: &str) -> String {
+    format!("Hello, {}!", name)
+}
+
+fn main() {
+    let result = add(10, 5);
+    println!("10 + 5 = {}", result);
+    
+    let greeting = greet("Rust");
+    println!("{}", greeting);
+}
+            </code></pre>
+
+            <h3>Control Flow (if/else)</h3>
+            <pre><code>
+fn main() {
+    let age = 20;
+    
+    if age >= 18 {
+        println!("You are an adult");
+    } else if age >= 13 {
+        println!("You are a teenager");
+    } else {
+        println!("You are a child");
+    }
+}
+            </code></pre>
+
+            <h3>Loops</h3>
+            <pre><code>
+fn main() {
+    // for loop
+    for i in 1..=5 {
+        println!("Number: {}", i);
+    }
+    
+    // while loop
+    let mut count = 0;
+    while count < 5 {
+        println!("Count: {}", count);
+        count += 1;
+    }
+}
+            </code></pre>
+
+            <h3>Vectors and Collections</h3>
+            <pre><code>
+fn main() {
+    // Vector
+    let mut numbers: Vec<i32> = vec![1, 2, 3, 4, 5];
+    
+    // Add element
+    numbers.push(6);
+    
+    // Access element
+    println!("First number: {}", numbers[0]);
+    
+    // Iterate
+    for num in &numbers {
+        println!("Number: {}", num);
+    }
+    
+    println!("Vector length: {}", numbers.len());
+}
+            </code></pre>
+
+            <h3>Structs</h3>
+            <pre><code>
+struct Person {
+    name: String,
+    age: u32,
+    email: String,
+}
+
+fn main() {
+    let person = Person {
+        name: String::from("John Doe"),
+        age: 30,
+        email: String::from("john@example.com"),
+    };
+    
+    println!("Name: {}", person.name);
+    println!("Age: {}", person.age);
+    println!("Email: {}", person.email);
+}
+            </code></pre>
+
+            <h3>Enums and Pattern Matching</h3>
+            <pre><code>
+enum Color {
+    Red,
+    Green,
+    Blue,
+}
+
+fn main() {
+    let my_color = Color::Red;
+    
+    match my_color {
+        Color::Red => println!("The color is red"),
+        Color::Green => println!("The color is green"),
+        Color::Blue => println!("The color is blue"),
+    }
+}
+            </code></pre>
+
+            <h3>Error Handling with Result</h3>
+            <pre><code>
+fn divide(a: i32, b: i32) -> Result<i32, String> {
+    if b == 0 {
+        Err(String::from("Cannot divide by zero"))
+    } else {
+        Ok(a / b)
+    }
+}
+
+fn main() {
+    match divide(10, 2) {
+        Ok(result) => println!("Result: {}", result),
+        Err(error) => println!("Error: {}", error),
+    }
+}
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-rust-program-windows.png" alt="Running Rust Program on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing Rust code with output on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Visual Setup Guides -->
+        <section class="glass-block setup-section">
+            <h2>Visual Setup Guides</h2><br>
+
+            <h3>Project Directory Structure</h3>
+            <div class="screen-shot">
+                <img src="screens/project-structure-rust-windows.png" alt="Rust Project Structure on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>File explorer showing organized Rust project structure on Windows</em></p>
+            </div><br><br>
+
+            <h3>Cargo Project Setup</h3>
+            <div class="screen-shot">
+                <img src="screens/cargo-setup-windows.png" alt="Cargo Project Setup on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing Cargo project creation on Windows</em></p>
+            </div><br><br>
+
+            <h3>Complete VS Code Setup for Rust</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-rust-setup-windows.png" alt="Complete VS Code Setup on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code fully configured with Rust extensions on Windows</em></p>
+            </div><br><br>
+
+            <h3>Building and Running Rust Project</h3>
+            <div class="screen-shot">
+                <img src="screens/cargo-build-windows.png" alt="Cargo Build on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Command Prompt showing Cargo build and run process on Windows</em></p>
+            </div><br><br>
+
+            <h3>Debugging Rust Code</h3>
+            <div class="screen-shot">
+                <img src="screens/rust-debugging-windows.png" alt="Rust Debugging on Windows" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing Rust debugging with CodeLLDB on Windows</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: Visual Studio Build Tools Not Found</h3>
+            <p><strong>Problem:</strong> 'cl.exe: command not found' or linker errors</p>
+            <p><strong>Solution:</strong> Install Visual Studio Build Tools and select "Desktop development with C++" workload</p><br>
+
+            <h3>Issue 2: Rust Command Not Found</h3>
+            <p><strong>Problem:</strong> 'rustc: command not found' or 'cargo: command not found'</p>
+            <p><strong>Solution:</strong> Restart your Command Prompt or PowerShell after installation, or add Rust to PATH manually</p><br>
+
+            <h3>Issue 3: Cargo New Not Working</h3>
+            <p><strong>Problem:</strong> 'cargo: command not found' when creating new project</p>
+            <p><strong>Solution:</strong> Ensure Rust is properly installed and environment PATH is updated</p><br>
+
+            <h3>Issue 4: Compilation Errors with Missing Dependencies</h3>
+            <p><strong>Problem:</strong> Project fails to compile with linker errors</p>
+            <p><strong>Solution:</strong> Ensure Visual Studio Build Tools are properly installed with C++ support</p><br>
+
+            <h3>Issue 5: rust-analyzer Not Working</h3>
+            <p><strong>Problem:</strong> IntelliSense not showing suggestions in VS Code</p>
+            <p><strong>Solution:</strong> Reinstall rust-analyzer extension or run <code>rustup component add rust-analyzer</code></p><br>
+
+            <h3>Issue 6: CodeLLDB Debugging Not Working</h3>
+            <p><strong>Problem:</strong> Debugger not launching or breakpoints not working</p>
+            <p><strong>Solution:</strong> Update CodeLLDB and rebuild the project in debug mode: <code>cargo build</code></p><br>
+
+            <h3>Issue 7: Long Compilation Times</h3>
+            <p><strong>Problem:</strong> Project takes very long to compile</p>
+            <p><strong>Solution:</strong> Use incremental compilation or split large projects into smaller modules. Disable debug info in release builds</p>
+        </section>
+
+        <!-- Useful Commands Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Commands for Rust Development</h2><br>
+            <ul>
+                <li><code>rustc --version</code> - Check Rust compiler version</li><br>
+                <li><code>cargo --version</code> - Check Cargo version</li><br>
+                <li><code>cargo new project_name</code> - Create new Rust project</li><br>
+                <li><code>cargo build</code> - Build the project in debug mode</li><br>
+                <li><code>cargo build --release</code> - Build optimized release version</li><br>
+                <li><code>cargo run</code> - Build and run the project</li><br>
+                <li><code>cargo check</code> - Check code without building</li><br>
+                <li><code>cargo test</code> - Run tests</li><br>
+                <li><code>cargo doc --open</code> - Generate and open documentation</li><br>
+                <li><code>cargo fmt</code> - Format code with rustfmt</li><br>
+                <li><code>cargo clippy</code> - Run Clippy linter</li><br>
+                <li><code>rustup update</code> - Update Rust to latest version</li><br>
+                <li><code>rustup component add rust-analyzer</code> - Install rust-analyzer component</li><br>
+            </ul>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Windows Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Ctrl+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Ctrl+Shift+P</code> - Open Command Palette</li><br>
+                <li><code>Ctrl+K Ctrl+0</code> - Fold all regions</li><br>
+                <li><code>Ctrl+K Ctrl+J</code> - Unfold all regions</li><br>
+                <li><code>Ctrl+Shift+M</code> - Show Problems</li><br>
+                <li><code>F5</code> - Start Debugging</li><br>
+                <li><code>Ctrl+,</code> - Open Settings</li><br>
+                <li><code>Ctrl+B</code> - Toggle Sidebar</li><br>
+                <li><code>Ctrl+J</code> - Toggle Terminal</li><br>
+                <li><code>Ctrl+/</code> - Toggle Line Comment</li><br>
+                <li><code>Ctrl+H</code> - Find and Replace</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up Rust on your Windows machine. You are now ready to:</p><br>
+            <ul>
+                <li>Write safe and concurrent systems code</li><br>
+                <li>Build command-line applications</li><br>
+                <li>Develop web servers and services</li><br>
+                <li>Create embedded systems applications</li><br>
+                <li>Learn systems programming concepts</li><br>
+                <li>Contribute to open-source Rust projects</li><br>
+                <li>Build high-performance applications</li><br>
+                <li>Leverage Rust's memory safety features</li><br>
+            </ul>
+            <p>Start exploring Rust by building simple programs and gradually move towards more complex systems applications. Visit the <a class="download-link" href="https://www.rust-lang.org/" target="_blank">official Rust website</a> for comprehensive documentation and tutorials.</p><br>
+            <p>For learning resources, check out:</p>
+            <ul>
+                <li><a class="download-link" href="https://doc.rust-lang.org/book/" target="_blank">The Rust Programming Language (The Book)</a></li><br>
+                <li><a class="download-link" href="https://doc.rust-lang.org/rust-by-example/" target="_blank">Rust by Example</a></li><br>
+                <li><a class="download-link" href="https://doc.rust-lang.org/std/" target="_blank">Standard Library Documentation</a></li><br>
+            </ul>
+            <p>For additional help or questions, visit the <a class="download-link" href="https://stackoverflow.com/questions/tagged/rust" target="_blank">Stack Overflow Rust tag</a>, the <a class="download-link" href="https://github.com/rust-lang/rust" target="_blank">Rust GitHub repository</a>, or the <a class="download-link" href="https://users.rust-lang.org/" target="_blank">Rust Users Forum</a>.</p><br>
+            <p><strong>Happy Coding with Rust on Windows!</strong></p>
+        </section>
+    </main>
+</body>
+</html>

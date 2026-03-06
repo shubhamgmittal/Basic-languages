@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TensorFlow Setup Guide for macOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>TensorFlow Setup Guide for macOS</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up TensorFlow, ensure you have the following installed on your macOS system:</p><br>
+            <ul>
+                <li><strong>Python:</strong> Version 3.9 or higher (3.11 recommended)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code (recommended)</li><br>
+                <li><strong>TensorFlow:</strong> Latest stable version</li><br>
+                <li><strong>pip:</strong> Python package manager (comes with Python)</li><br>
+                <li><strong>Virtual Environment:</strong> For isolated project environments</li><br>
+                <li><strong>Homebrew:</strong> Package manager for macOS (recommended)</li><br>
+                <li><strong>Metal Performance Shaders:</strong> GPU acceleration for Apple Silicon (M1/M2/M3)</li><br>
+                <li><strong>Git:</strong> For version control (optional but recommended)</li><br>
+            </ul>
+        </section>
+
+        <!-- Download Homebrew Section -->
+        <section class="glass-block setup-section">
+            <h2>Install Homebrew (Recommended)</h2>
+            <p class="setup-text">
+                Homebrew makes it easy to install development tools on macOS.
+            </p><br>
+            <h3>Installation Steps:</h3>
+            <ol>
+                <li>Open Terminal on your Mac</li><br>
+                <li>Copy and paste the following command:
+                    <br><br><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+                </li><br>
+                <li>Press Enter and follow the on-screen instructions</li><br>
+                <li>Verify installation:
+                    <br><br><code>brew --version</code>
+                </li>
+            </ol><br><br>
+            <div class="screen-shot">
+                <img src="screens/homebrew-installation-mac.png" alt="Homebrew Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful Homebrew installation on macOS</em></p>
+            </div>
+        </section>
+
+        <!-- Download Python Section -->
+        <section class="glass-block setup-section">
+            <h2>Download and Install Python</h2>
+            <p class="setup-text">
+                Python is the primary language for TensorFlow development on macOS.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Method 1: Install via Homebrew (Recommended)</strong><br>
+                    <code>brew install python@3.11</code>
+                </li><br>
+                <li>
+                    <strong>Method 2: Direct Download (Intel)</strong><br>
+                    <a class="download-link" href="https://www.python.org/downloads/">
+                        Download Python from Official Website
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 3: Direct Download (Apple Silicon)</strong><br>
+                    <a class="download-link" href="https://www.python.org/downloads/">
+                        Download Python for Apple Silicon
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 4: Use Anaconda Distribution (Includes many ML libraries)</strong><br>
+                    <a class="download-link" href="https://www.anaconda.com/download">
+                        Download Anaconda for macOS
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/python-mac.png" alt="Python Installation on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful Python installation verification on macOS</em></p>
+            </div>
+        </section>
+
+        <!-- Download VS Code -->
+        <section class="glass-block setup-section">
+            <h2>Download Visual Studio Code</h2>
+            <p class="setup-text">
+                Here are the options to install VS Code on macOS.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Method 1: Install via Homebrew (Recommended)</strong><br>
+                    <code>brew install --cask visual-studio-code</code>
+                </li><br>
+                <li>
+                    <strong>Method 2: Direct Download (Intel)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/darwin-x64/stable">
+                        Download VS Code for macOS (Intel)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 3: Direct Download (Apple Silicon)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/darwin-arm64/stable">
+                        Download VS Code for macOS (Apple Silicon/M1/M2/M3)
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 4: From Official Website</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/">
+                        Visual Studio Code Official Website
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-mac.png" alt="VS Code on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code running on macOS with dark theme</em></p>
+            </div>
+        </section>
+
+        <!-- Installation Steps Section -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installation</h2><br>
+            <h3>Step 1: Install Python (if not using Homebrew)</h3><br>
+            <ol>
+                <li>Download Python installer from the official website</li><br>
+                <li>Double-click the installer and follow the setup wizard</li><br>
+                <li>Accept the license agreement and click "Continue"</li><br>
+                <li>Choose the installation destination</li><br>
+                <li>Click "Install" and wait for the installation to complete</li><br>
+                <li>Verify the installation by opening Terminal and running:
+                    <br><br><code>python3 --version</code><br>
+                    <code>pip3 --version</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/python-installation-mac.png" alt="Python Installation Process" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful Python and pip installation on macOS</em></p>
+            </div><br><br>
+
+            <h3>Step 2: Create Virtual Environment</h3><br>
+            <ol>
+                <li>Open Terminal on your Mac</li><br>
+                <li>Navigate to your project folder:
+                    <br><br><code>cd ~/Documents/Projects</code>
+                </li><br>
+                <li>Create a virtual environment:
+                    <br><br><code>python3 -m venv tensorflow-env</code>
+                </li><br>
+                <li>Activate the virtual environment:
+                    <br><br><code>source tensorflow-env/bin/activate</code>
+                </li><br>
+                <li>You should see <code>(tensorflow-env)</code> prefix in your Terminal prompt</li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/venv-creation-mac.png" alt="Virtual Environment Creation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing virtual environment activation on macOS</em></p>
+            </div><br><br>
+
+            <h3>Step 3: Install TensorFlow</h3><br>
+            <ol>
+                <li>Make sure your virtual environment is activated</li><br>
+                <li>Upgrade pip to the latest version:
+                    <br><br><code>pip install --upgrade pip</code>
+                </li><br>
+                <li>Install TensorFlow (Intel or Apple Silicon):
+                    <br><br><code>pip install tensorflow</code> (Intel Mac)<br>
+                    <code>pip install tensorflow-macos</code> (Apple Silicon M1/M2/M3)
+                </li><br>
+                <li>Wait for installation to complete (may take several minutes)</li><br>
+                <li>Verify TensorFlow installation:
+                    <br><br><code>python -c "import tensorflow as tf; print(tf.__version__)"</code>
+                </li>
+            </ol><br>
+
+            <div class="screen-shot">
+                <img src="screens/tensorflow-installation-mac.png" alt="TensorFlow Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing successful TensorFlow installation on macOS</em></p>
+            </div><br><br>
+
+            <h3>Step 4: Install Metal Performance Shaders (Apple Silicon Only)</h3><br>
+            <ol>
+                <li>For Apple Silicon (M1/M2/M3) GPU acceleration, install:
+                    <br><br><code>pip install tensorflow-metal</code>
+                </li><br>
+                <li>Verify GPU acceleration:
+                    <br><br><code>python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"</code>
+                </li>
+            </ol><br>
+
+            <h3>Step 5: Install Jupyter Notebook (Optional but Recommended)</h3><br>
+            <ol>
+                <li>With virtual environment activated, install Jupyter:
+                    <br><br><code>pip install jupyter</code>
+                </li><br>
+                <li>Launch Jupyter Notebook:
+                    <br><br><code>jupyter notebook</code>
+                </li><br>
+                <li>A web browser will open with Jupyter Notebook interface</li>
+            </ol><br>
+
+            <h3>Step 6: Install VS Code</h3><br>
+            <ol>
+                <li>Using Homebrew (recommended):
+                    <br><br><code>brew install --cask visual-studio-code</code>
+                </li><br>
+                <li>Or download directly from the official website</li><br>
+                <li>Launch VS Code:
+                    <br><br><code>code</code>
+                </li>
+            </ol><br>
+
+            <h3>Step 7: Install VS Code Extensions</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Cmd+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for Python and TensorFlow related extensions</li><br>
+                <li>Click "Install" for each extension</li><br>
+                <li>Reload VS Code by pressing <code>Cmd+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol>
+        </section>
+
+        <!-- Required Extensions Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions</h2><br>
+            <p>Install the following VS Code extensions for optimal TensorFlow development:</p><br>
+            <ul>
+                <li><strong>Python:</strong> Official Python language support</li><br>
+                <li><strong>Pylance:</strong> Advanced Python IntelliSense</li><br>
+                <li><strong>Jupyter:</strong> Jupyter Notebook support in VS Code</li><br>
+                <li><strong>Python Docstring Generator:</strong> Auto-generate docstrings</li><br>
+                <li><strong>Better Comments:</strong> Highlights different comment types</li><br>
+                <li><strong>GitLens:</strong> Git integration for version control</li><br>
+                <li><strong>Prettier:</strong> Code formatter</li><br>
+            </ul>
+        </section>
+
+        <!-- Best Extensions for TensorFlow Development -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Cmd+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for TensorFlow Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>Python</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> IntelliSense, linting, debugging, code formatting<br>
+                    <em>Install Command:</em> Search "Python"
+                </li><br>
+                <li>
+                    <strong>Pylance</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> Advanced IntelliSense with type checking<br>
+                    <em>Install Command:</em> Search "Pylance"
+                </li><br>
+                <li>
+                    <strong>Jupyter</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> Run Jupyter notebooks directly in VS Code<br>
+                    <em>Install Command:</em> Search "Jupyter"
+                </li><br>
+                <li>
+                    <strong>Python Docstring Generator</strong><br>
+                    <em>Publisher:</em> Nils Werner<br>
+                    <em>Features:</em> Auto-generate docstrings for Python functions<br>
+                    <em>Install Command:</em> Search "Python Docstring Generator"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Color-code comment types for better organization<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> GitKraken<br>
+                    <em>Features:</em> Git integration and version control visualization<br>
+                    <em>Install Command:</em> Search "GitLens"
+                </li><br>
+                <li>
+                    <strong>Prettier</strong><br>
+                    <em>Publisher:</em> Prettier<br>
+                    <em>Features:</em> Automatic code formatting<br>
+                    <em>Install Command:</em> Search "Prettier"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/tensorflow-extension-mac.png" alt="TensorFlow Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing Python extension in VS Code on macOS</em></p>
+            </div>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners</h2>
+            <p>Here are simple TensorFlow programs to get you started:</p><br>
+            <h3>Import TensorFlow</h3>
+            <pre><code>
+import tensorflow as tf
+import numpy as np
+
+# Print TensorFlow version
+print(f"TensorFlow version: {tf.__version__}")
+
+# Create a simple tensor
+tensor = tf.constant([1, 2, 3, 4, 5])
+print("Tensor:", tensor.numpy())
+            </code></pre>
+
+            <h3>Basic Tensor Operations</h3>
+            <pre><code>
+import tensorflow as tf
+
+# Create tensors
+a = tf.constant([1, 2, 3])
+b = tf.constant([4, 5, 6])
+
+# Perform operations
+add_result = tf.add(a, b)
+multiply_result = tf.multiply(a, b)
+
+print("Addition:", add_result.numpy())
+print("Multiplication:", multiply_result.numpy())
+            </code></pre>
+
+            <h3>Simple Neural Network</h3>
+            <pre><code>
+import tensorflow as tf
+from tensorflow import keras
+
+# Create a simple neural network
+model = keras.Sequential([
+    keras.layers.Dense(128, activation='relu', input_shape=(784,)),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile the model
+model.compile(
+    optimizer='adam',
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+print("Model created successfully!")
+print(model.summary())
+            </code></pre>
+
+            <h3>Train a Simple Model</h3>
+            <pre><code>
+import tensorflow as tf
+from tensorflow import keras
+
+# Load MNIST dataset
+(x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+
+# Normalize the data
+x_train = x_train.astype('float32') / 255
+x_test = x_test.astype('float32') / 255
+
+# Flatten the images
+x_train = x_train.reshape(-1, 28*28)
+x_test = x_test.reshape(-1, 28*28)
+
+# Create model
+model = keras.Sequential([
+    keras.layers.Dense(128, activation='relu', input_shape=(784,)),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile
+model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+# Train
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+
+# Evaluate
+score = model.evaluate(x_test, y_test, verbose=0)
+print(f"Test accuracy: {score[1]*100:.2f}%")
+            </code></pre>
+
+            <h3>Using Keras Functional API</h3>
+            <pre><code>
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+
+# Create model using Functional API
+inputs = keras.Input(shape=(784,))
+x = layers.Dense(128, activation='relu')(inputs)
+x = layers.Dropout(0.2)(x)
+x = layers.Dense(64, activation='relu')(x)
+outputs = layers.Dense(10, activation='softmax')(x)
+
+model = keras.Model(inputs=inputs, outputs=outputs)
+
+# Compile model
+model.compile(
+    optimizer='adam',
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+print("Functional API model created!")
+model.summary()
+            </code></pre>
+
+            <h3>Image Classification Example</h3>
+            <pre><code>
+import tensorflow as tf
+from tensorflow import keras
+
+# Load pre-trained MobileNetV2 model
+model = keras.applications.MobileNetV2(weights='imagenet')
+
+# Load and preprocess an image
+image = keras.preprocessing.image.load_img('image.jpg', target_size=(224, 224))
+image_array = keras.preprocessing.image.img_to_array(image)
+image_array = keras.applications.mobilenet_v2.preprocess_input(image_array)
+image_batch = tf.expand_dims(image_array, 0)
+
+# Make predictions
+predictions = model.predict(image_batch)
+decoded_predictions = keras.applications.mobilenet_v2.decode_predictions(predictions)[0]
+
+print("Predictions:")
+for label, description, score in decoded_predictions:
+    print(f"{description}: {score*100:.2f}%")
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-tensorflow-program-mac.png" alt="Running TensorFlow Program on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing TensorFlow code with output on macOS</em></p>
+            </div>
+        </section>
+
+        <!-- Visual Setup Guides -->
+        <section class="glass-block setup-section">
+            <h2>Visual Setup Guides</h2><br>
+
+            <h3>Project Directory Structure</h3>
+            <div class="screen-shot">
+                <img src="screens/project-structure-tf-mac.png" alt="TensorFlow Project Structure on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>File explorer showing organized TensorFlow project structure on macOS</em></p>
+            </div><br><br>
+
+            <h3>Virtual Environment Setup</h3>
+            <div class="screen-shot">
+                <img src="screens/venv-setup-mac.png" alt="Virtual Environment Setup on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing virtual environment setup and activation on macOS</em></p>
+            </div><br><br>
+
+            <h3>Complete VS Code Setup for TensorFlow</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-tensorflow-setup-mac.png" alt="Complete VS Code Setup on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code fully configured with TensorFlow extensions on macOS</em></p>
+            </div><br><br>
+
+            <h3>Running TensorFlow in Jupyter Notebook</h3>
+            <div class="screen-shot">
+                <img src="screens/jupyter-tensorflow-mac.png" alt="Jupyter Notebook with TensorFlow on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Jupyter Notebook showing TensorFlow code execution on macOS</em></p>
+            </div><br><br>
+
+            <h3>TensorFlow Training Progress</h3>
+            <div class="screen-shot">
+                <img src="screens/tensorflow-training-mac.png" alt="Model Training on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing model training progress and accuracy metrics on macOS</em></p>
+            </div><br><br>
+
+            <h3>GPU Acceleration Verification (Apple Silicon)</h3>
+            <div class="screen-shot">
+                <img src="screens/gpu-acceleration-mac.png" alt="GPU Acceleration on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing Metal GPU acceleration enabled for Apple Silicon</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: Python3 Command Not Found</h3>
+            <p><strong>Problem:</strong> 'python3: command not found' error in Terminal</p>
+            <p><strong>Solution:</strong> Install Python via Homebrew: <code>brew install python@3.11</code></p><br>
+
+            <h3>Issue 2: pip Not Found</h3>
+            <p><strong>Problem:</strong> 'pip: command not found' or 'pip3: command not found'</p>
+            <p><strong>Solution:</strong> Install with Python: <code>brew install python@3.11</code> or try <code>python3 -m pip --version</code></p><br>
+
+            <h3>Issue 3: Virtual Environment Not Activating</h3>
+            <p><strong>Problem:</strong> Virtual environment fails to activate</p>
+            <p><strong>Solution:</strong> Ensure you're in the correct directory and run <code>source tensorflow-env/bin/activate</code></p><br>
+
+            <h3>Issue 4: TensorFlow Import Error</h3>
+            <p><strong>Problem:</strong> ModuleNotFoundError: No module named 'tensorflow'</p>
+            <p><strong>Solution:</strong> Install TensorFlow: <code>pip install tensorflow</code> (Intel) or <code>pip install tensorflow-macos</code> (Apple Silicon)</p><br>
+
+            <h3>Issue 5: Apple Silicon Compatibility</h3>
+            <p><strong>Problem:</strong> TensorFlow not working on M1/M2/M3</p>
+            <p><strong>Solution:</strong> Use <code>pip install tensorflow-macos</code> and <code>pip install tensorflow-metal</code> for GPU acceleration</p><br>
+
+            <h3>Issue 6: GPU Not Detected on Apple Silicon</h3>
+            <p><strong>Problem:</strong> Metal GPU acceleration not enabled</p>
+            <p><strong>Solution:</strong> Install Metal plugin: <code>pip install tensorflow-metal</code> and verify with <code>python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"</code></p><br>
+
+            <h3>Issue 7: Jupyter Notebook Not Starting</h3>
+            <p><strong>Problem:</strong> 'jupyter: command not found'</p>
+            <p><strong>Solution:</strong> Install Jupyter: <code>pip install jupyter</code> in your virtual environment</p>
+        </section>
+
+        <!-- Useful Commands Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Commands for TensorFlow Development</h2><br>
+            <ul>
+                <li><code>python3 --version</code> - Check Python version</li><br>
+                <li><code>pip3 --version</code> - Check pip version</li><br>
+                <li><code>python3 -m venv tensorflow-env</code> - Create virtual environment</li><br>
+                <li><code>source tensorflow-env/bin/activate</code> - Activate virtual environment</li><br>
+                <li><code>deactivate</code> - Deactivate virtual environment</li><br>
+                <li><code>pip install tensorflow</code> - Install TensorFlow (Intel)</li><br>
+                <li><code>pip install tensorflow-macos</code> - Install TensorFlow (Apple Silicon)</li><br>
+                <li><code>pip install tensorflow-metal</code> - Install Metal GPU acceleration (Apple Silicon)</li><br>
+                <li><code>python -c "import tensorflow as tf; print(tf.__version__)"</code> - Check TensorFlow version</li><br>
+                <li><code>python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"</code> - Check GPU availability</li><br>
+                <li><code>jupyter notebook</code> - Start Jupyter</li><br>
+                <li><code>pip list</code> - List installed packages</li><br>
+                <li><code>pip freeze > requirements.txt</code> - Save dependencies to file</li><br>
+            </ul>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful macOS Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Cmd+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Cmd+Shift+P</code> - Open Command Palette</li><br>
+                <li><code>Cmd+K Cmd+0</code> - Fold all regions</li><br>
+                <li><code>Cmd+K Cmd+J</code> - Unfold all regions</li><br>
+                <li><code>Cmd+Shift+M</code> - Show Problems</li><br>
+                <li><code>F5</code> - Start Debugging</li><br>
+                <li><code>Cmd+,</code> - Open Settings</li><br>
+                <li><code>Cmd+B</code> - Toggle Sidebar</li><br>
+                <li><code>Cmd+J</code> - Toggle Terminal</li><br>
+                <li><code>Cmd+/</code> - Toggle Line Comment</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up TensorFlow on your macOS machine. You are now ready to:</p><br>
+            <ul>
+                <li>Build and train neural networks</li><br>
+                <li>Perform machine learning tasks</li><br>
+                <li>Create deep learning models</li><br>
+                <li>Work with computer vision projects</li><br>
+                <li>Develop natural language processing applications</li><br>
+                <li>Deploy machine learning models</li><br>
+                <li>Leverage GPU acceleration on Apple Silicon (M1/M2/M3)</li><br>
+                <li>Contribute to AI and ML research</li><br>
+            </ul>
+            <p>Start exploring TensorFlow by building simple projects and gradually move towards more complex machine learning applications. Visit the <a class="download-link" href="https://www.tensorflow.org/" target="_blank">official TensorFlow website</a> for comprehensive documentation and tutorials.</p><br>
+            <p>For Apple Silicon specific information, check out the <a class="download-link" href="https://developer.apple.com/metal/tensorflow-plugin/" target="_blank">Apple Metal TensorFlow Plugin</a> documentation.</p><br>
+            <p>For additional help or questions, visit the <a class="download-link" href="https://stackoverflow.com/questions/tagged/tensorflow" target="_blank">Stack Overflow TensorFlow tag</a>, the <a class="download-link" href="https://github.com/tensorflow/tensorflow" target="_blank">TensorFlow GitHub repository</a>, or the <a class="download-link" href="https://discuss.tensorflow.org/" target="_blank">TensorFlow Discussion Forum</a>.</p><br>
+            <p><strong>Happy Learning with TensorFlow on macOS!</strong></p>
+        </section>
+    </main>
+</body>
+</html>

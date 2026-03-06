@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bash Setup Guide for macOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <h1>Bash Setup Guide for macOS</h1>
+
+        <!-- Required Software Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p>Before setting up Bash, ensure you have the following installed on your macOS system:</p><br>
+            <ul>
+                <li><strong>macOS:</strong> Version 10.14 or higher (macOS Mojave or later recommended)</li><br>
+                <li><strong>Code Editor:</strong> Visual Studio Code (recommended)</li><br>
+                <li><strong>Bash:</strong> Pre-installed (version 3.x), but consider upgrading to 4.x or 5.x</li><br>
+                <li><strong>Terminal:</strong> Terminal.app or iTerm2</li><br>
+                <li><strong>Homebrew:</strong> Package manager for macOS (optional but recommended)</li><br>
+                <li><strong>Git:</strong> For version control (optional but recommended)</li><br>
+            </ul>
+        </section>
+
+        <!-- Download Code Editor or Specially VS Code -->
+        <section class="glass-block setup-section">
+            <h2>Download Code Editor or Specially VS Code</h2>
+            <p class="setup-text">
+                Visual Studio Code is highly recommended for Bash scripting due to its excellent terminal integration and extensions.
+            </p><br>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Method 1: Direct Download (Installer)</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/download">
+                        Download VS Code for macOS
+                    </a>
+                </li><br>
+                <li>
+                    <strong>Method 2: Install via Homebrew</strong><br>
+                    <code>brew install --cask visual-studio-code</code>
+                </li><br>
+                <li>
+                    <strong>Method 3: From Official Website</strong><br>
+                    <a class="download-link" href="https://code.visualstudio.com/">
+                        Visual Studio Code Official Website
+                    </a>
+                </li>
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-mac.png" alt="VS Code on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code running on macOS with integrated terminal</em></p>
+            </div>
+        </section>
+
+        <!-- Steps of Installations -->
+        <section class="glass-block setup-section">
+            <h2>Steps of Installations</h2><br>
+            <h3>Step 1: Check Current Bash Version</h3><br>
+            <ol>
+                <li>Open Terminal on your macOS system</li><br>
+                <li>Check Bash version:
+                    <br><br><code>bash --version</code>
+                </li><br>
+                <li>Note: macOS ships with Bash 3.x; consider upgrading for better features</li>
+            </ol><br><br>
+
+            <h3>Step 2: Install Homebrew (Optional but Recommended)</h3><br>
+            <ol>
+                <li>Install Homebrew:
+                    <br><br><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code>
+                </li><br>
+                <li>Add Homebrew to PATH (follow the instructions printed after installation)</li><br>
+                <li>Verify installation:
+                    <br><br><code>brew --version</code>
+                </li>
+            </ol><br><br>
+
+            <h3>Step 3: Upgrade Bash (Optional)</h3><br>
+            <ol>
+                <li>Install newer Bash version:
+                    <br><br><code>brew install bash</code>
+                </li><br>
+                <li>Add new Bash to /etc/shells:
+                    <br><br><code>echo '/usr/local/bin/bash' | sudo tee -a /etc/shells</code>
+                </li><br>
+                <li>Change default shell:
+                    <br><br><code>chsh -s /usr/local/bin/bash</code>
+                </li><br>
+                <li>Restart Terminal and verify:
+                    <br><br><code>bash --version</code>
+                </li>
+            </ol><br><br>
+
+            <h3>Step 4: Install VS Code</h3><br>
+            <ol>
+                <li>Download VS Code from the official website</li><br>
+                <li>Open the downloaded .dmg file</li><br>
+                <li>Drag VS Code to the Applications folder</li><br>
+                <li>Launch VS Code from Applications</li><br>
+                <li>Or install via Homebrew:
+                    <br><br><code>brew install --cask visual-studio-code</code>
+                </li>
+            </ol><br><br>
+
+            <h3>Step 5: Configure VS Code for Bash</h3><br>
+            <ol>
+                <li>Open VS Code</li><br>
+                <li>Open integrated terminal: <code>Ctrl+`</code></li><br>
+                <li>Verify Bash is working: <code>echo "Hello, Bash!"</code></li><br>
+                <li>Check terminal profile settings if needed</li>
+            </ol><br>
+
+            <h3>Step 6: Install VS Code Extensions</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Cmd+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for "Bash" and install relevant extensions</li><br>
+                <li>Click "Install" for each extension</li><br>
+                <li>Reload VS Code by pressing <code>Cmd+Shift+P</code> and selecting "Developer: Reload Window"</li>
+            </ol><br><br>
+
+            <h3>Step 7: Create Your First Bash Script</h3><br>
+            <ol>
+                <li>Open VS Code and create a new file: <code>hello.sh</code></li><br>
+                <li>Add shebang: <code>#!/bin/bash</code></li><br>
+                <li>Add code: <code>echo "Hello, Bash!"</code></li><br>
+                <li>Save the file</li><br>
+                <li>Make it executable: <code>chmod +x hello.sh</code></li><br>
+                <li>Run the script: <code>./hello.sh</code></li>
+            </ol><br><br>
+        </section>
+
+        <!-- Required Extension Section -->
+        <section class="glass-block setup-section">
+            <h2>Required Extension Section</h2><br>
+            <p>Install the following VS Code extensions for optimal Bash development:</p><br>
+            <ul>
+                <li><strong>Shell</strong> - Shell script support</li><br>
+                <li><strong>Bash IDE</strong> - Bash language support</li><br>
+                <li><strong>Bash Debug</strong> - Debug support for Bash scripts</li><br>
+                <li><strong>Code Runner</strong> - Run code snippets</li><br>
+                <li><strong>Better Comments</strong> - Highlights different comment types</li><br>
+                <li><strong>GitLens</strong> - Git integration for version control</li><br>
+                <li><strong>Prettier</strong> - Code formatter</li><br>
+            </ul>
+        </section>
+
+        <!-- Basic Lines of Code for Beginners Sections -->
+        <section class="glass-block setup-section">
+            <h2>Basic Lines of Code for Beginners Sections</h2>
+            <p>Here are simple Bash scripts to get you started:</p><br>
+            <h3>Hello World Script</h3>
+            <pre><code>
+#!/bin/bash
+echo "Hello, World!"
+            </code></pre>
+
+            <h3>Variables</h3>
+            <pre><code>
+#!/bin/bash
+name="Alice"
+age=25
+echo "Name: $name"
+echo "Age: $age"
+            </code></pre>
+
+            <h3>User Input</h3>
+            <pre><code>
+#!/bin/bash
+echo "What is your name?"
+read name
+echo "Hello, $name!"
+            </code></pre>
+
+            <h3>Conditional Statements</h3>
+            <pre><code>
+#!/bin/bash
+echo "Enter a number:"
+read num
+if [ $num -gt 10 ]; then
+    echo "Number is greater than 10"
+elif [ $num -eq 10 ]; then
+    echo "Number is equal to 10"
+else
+    echo "Number is less than 10"
+fi
+            </code></pre>
+
+            <h3>Loops</h3>
+            <pre><code>
+#!/bin/bash
+# For loop
+for i in {1..5}; do
+    echo "Number: $i"
+done
+
+# While loop
+count=1
+while [ $count -le 5 ]; do
+    echo "Count: $count"
+    ((count++))
+done
+            </code></pre>
+
+            <h3>Functions</h3>
+            <pre><code>
+#!/bin/bash
+greet() {
+    echo "Hello, $1!"
+}
+
+greet "World"
+greet "Bash"
+            </code></pre>
+
+            <h3>File Operations</h3>
+            <pre><code>
+#!/bin/bash
+# Create a file
+echo "This is a test file" > test.txt
+
+# Read a file
+cat test.txt
+
+# Check if file exists
+if [ -f test.txt ]; then
+    echo "File exists"
+else
+    echo "File does not exist"
+fi
+
+# Remove file
+rm test.txt
+            </code></pre>
+
+            <div class="screen-shot">
+                <img src="screens/first-bash-program-mac.png" alt="Running Bash Script on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code showing Bash script execution in integrated terminal on macOS</em></p>
+            </div>
+        </section>
+
+        <!-- Best Extension for Bash Development -->
+        <section class="glass-block setup-section">
+            <h2>How to Install Extensions</h2><br>
+            <h3>Installation Steps:</h3><br>
+            <ol>
+                <li>Open Visual Studio Code</li><br>
+                <li>Press <code>Cmd+Shift+X</code> to open the Extensions panel</li><br>
+                <li>Search for the extension name in the search box</li><br>
+                <li>Click the "Install" button next to the extension</li><br>
+                <li>Wait for the installation to complete</li><br>
+                <li>Click "Reload" if prompted to reload VS Code</li><br>
+            </ol><br>
+
+            <h3>Best Extensions for Bash Development:</h3><br>
+            <ul>
+                <li>
+                    <strong>Shell</strong><br>
+                    <em>Publisher:</em> Microsoft<br>
+                    <em>Features:</em> Syntax highlighting and basic language support for shell scripts<br>
+                    <em>Install Command:</em> Search "Shell"
+                </li><br>
+                <li>
+                    <strong>Bash IDE</strong><br>
+                    <em>Publisher:</em> Mads Hartmann<br>
+                    <em>Features:</em> Advanced Bash language support with IntelliSense<br>
+                    <em>Install Command:</em> Search "Bash IDE"
+                </li><br>
+                <li>
+                    <strong>Bash Debug</strong><br>
+                    <em>Publisher:</em> rogalmic<br>
+                    <em>Features:</em> Debug support for Bash scripts<br>
+                    <em>Install Command:</em> Search "Bash Debug"
+                </li><br>
+                <li>
+                    <strong>Code Runner</strong><br>
+                    <em>Publisher:</em> Jun Han<br>
+                    <em>Features:</em> Run code snippets and scripts directly from VS Code<br>
+                    <em>Install Command:</em> Search "Code Runner"
+                </li><br>
+                <li>
+                    <strong>Better Comments</strong><br>
+                    <em>Publisher:</em> Aaron Bond<br>
+                    <em>Features:</em> Color-code comment types for better organization<br>
+                    <em>Install Command:</em> Search "Better Comments"
+                </li><br>
+                <li>
+                    <strong>GitLens</strong><br>
+                    <em>Publisher:</em> GitKraken<br>
+                    <em>Features:</em> Git integration and version control visualization<br>
+                    <em>Install Command:</em> Search "GitLens"
+                </li><br>
+                <li>
+                    <strong>Prettier</strong><br>
+                    <em>Publisher:</em> Prettier<br>
+                    <em>Features:</em> Automatic code formatting<br>
+                    <em>Install Command:</em> Search "Prettier"
+                </li><br>
+            </ul>
+
+            <div class="screen-shot">
+                <img src="screens/bash-extension-mac.png" alt="Bash Extension Installation" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Installing Bash extensions in VS Code on macOS</em></p>
+            </div>
+        </section>
+
+        <!-- Visual Setup Guides -->
+        <section class="glass-block setup-section">
+            <h2>Visual Setup Guides</h2><br>
+
+            <h3>Bash Version Check</h3>
+            <div class="screen-shot">
+                <img src="screens/bash-version-mac.png" alt="Bash Version on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing Bash version check on macOS</em></p>
+            </div><br><br>
+
+            <h3>Homebrew Installation</h3>
+            <div class="screen-shot">
+                <img src="screens/homebrew-install-mac.png" alt="Homebrew Installation on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing Homebrew installation on macOS</em></p>
+            </div><br><br>
+
+            <h3>VS Code Terminal Configuration</h3>
+            <div class="screen-shot">
+                <img src="screens/vscode-terminal-mac.png" alt="VS Code Terminal on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>VS Code with configured Bash terminal on macOS</em></p>
+            </div><br><br>
+
+            <h3>Running Bash Scripts</h3>
+            <div class="screen-shot">
+                <img src="screens/bash-run-mac.png" alt="Running Bash on macOS" style="width:100%; height:auto;">
+                <p style="text-align: center; margin-top: 10px;"><em>Terminal showing Bash script execution on macOS</em></p>
+            </div>
+        </section>
+
+        <!-- Troubleshooting Section -->
+        <section class="glass-block setup-section">
+            <h2>Troubleshooting Common Issues</h2><br>
+
+            <h3>Issue 1: Bash Command Not Found</h3>
+            <p><strong>Problem:</strong> 'bash: command not found' in terminal</p>
+            <p><strong>Solution:</strong> Ensure Bash is installed and in PATH</p><br>
+
+            <h3>Issue 2: Permission Denied</h3>
+            <p><strong>Problem:</strong> 'Permission denied' when running scripts</p>
+            <p><strong>Solution:</strong> Make script executable with <code>chmod +x script.sh</code></p><br>
+
+            <h3>Issue 3: Extensions Not Working</h3>
+            <p><strong>Problem:</strong> Bash extensions not providing syntax highlighting</p>
+            <p><strong>Solution:</strong> Ensure file has .sh extension and correct shebang</p><br>
+
+            <h3>Issue 4: Terminal Not Opening in VS Code</h3>
+            <p><strong>Problem:</strong> Cannot open integrated terminal</p>
+            <p><strong>Solution:</strong> Configure default terminal profile in VS Code settings</p><br>
+
+            <h3>Issue 5: Homebrew Installation Fails</h3>
+            <p><strong>Problem:</strong> Homebrew installation fails</p>
+            <p><strong>Solution:</strong> Install Xcode Command Line Tools first: <code>xcode-select --install</code></p>
+        </section>
+
+        <!-- Useful Commands Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful Commands for Bash Development</h2><br>
+            <ul>
+                <li><code>bash --version</code> - Check Bash version</li><br>
+                <li><code>which bash</code> - Find Bash location</li><br>
+                <li><code>chmod +x file.sh</code> - Make script executable</li><br>
+                <li><code>./script.sh</code> - Run a Bash script</li><br>
+                <li><code>echo $PATH</code> - Show PATH environment variable</li><br>
+                <li><code>ls -la</code> - List files with details</li><br>
+                <li><code>pwd</code> - Print working directory</li><br>
+                <li><code>cd directory</code> - Change directory</li><br>
+                <li><code>mkdir dirname</code> - Create directory</li><br>
+                <li><code>rm filename</code> - Remove file</li><br>
+                <li><code>cat filename</code> - Display file contents</li><br>
+                <li><code>grep pattern file</code> - Search for pattern in file</li><br>
+            </ul>
+        </section>
+
+        <!-- Keyboard Shortcuts Section -->
+        <section class="glass-block setup-section">
+            <h2>Useful macOS Keyboard Shortcuts for VS Code</h2><br>
+            <ul>
+                <li><code>Cmd+Shift+X</code> - Open Extensions panel</li><br>
+                <li><code>Cmd+Shift+P</code> - Open Command Palette</li><br>
+                <li><code>Cmd+K Cmd+0</code> - Fold all regions</li><br>
+                <li><code>Cmd+K Cmd+J</code> - Unfold all regions</li><br>
+                <li><code>Cmd+Shift+M</code> - Show Problems</li><br>
+                <li><code>F5</code> - Start Debugging</li><br>
+                <li><code>Cmd+,</code> - Open Settings</li><br>
+                <li><code>Cmd+B</code> - Toggle Sidebar</li><br>
+                <li><code>Ctrl+`</code> - Toggle Terminal</li><br>
+                <li><code>Cmd+/</code> - Toggle Line Comment</li><br>
+                <li><code>Cmd+H</code> - Find and Replace</li><br>
+            </ul>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="glass-block setup-section">
+            <h2>Conclusion</h2><br>
+            <p>Congratulations! You have successfully set up Bash on your macOS machine. You are now ready to:</p><br>
+            <ul>
+                <li>Write powerful Bash scripts for automation</li><br>
+                <li>Manage files and directories efficiently</li><br>
+                <li>Create command-line tools and utilities</li><br>
+                <li>Automate repetitive tasks</li><br>
+                <li>Work with macOS system scripts</li><br>
+                <li>Develop shell scripts for development workflows</li><br>
+                <li>Integrate Bash with other programming languages</li><br>
+                <li>Build complex workflows and pipelines</li><br>
+            </ul>
+            <p>Start exploring Bash by writing simple scripts and gradually move towards more complex automation tasks. Visit the <a class="download-link" href="https://www.gnu.org/software/bash/" target="_blank">official Bash website</a> for comprehensive documentation and tutorials.</p><br>
+            <p>For learning resources, check out:</p>
+            <ul>
+                <li><a class="download-link" href="https://www.gnu.org/software/bash/manual/" target="_blank">Bash Reference Manual</a></li><br>
+                <li><a class="download-link" href="https://tldp.org/LDP/abs/html/" target="_blank">Advanced Bash-Scripting Guide</a></li><br>
+                <li><a class="download-link" href="https://linuxcommand.org/" target="_blank">Linux Command Line Tutorials</a></li><br>
+            </ul>
+            <p>For additional help or questions, visit the <a class="download-link" href="https://stackoverflow.com/questions/tagged/bash" target="_blank">Stack Overflow Bash tag</a>, the <a class="download-link" href="https://github.com/Microsoft/vscode" target="_blank">VS Code GitHub repository</a>, or the <a class="download-link" href="https://www.reddit.com/r/bash/" target="_blank">Bash subreddit</a>.</p><br>
+            <p><strong>Happy Scripting with Bash on macOS!</strong></p>
+        </section>
+    </main>
+</body>
+</html>
