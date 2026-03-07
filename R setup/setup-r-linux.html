@@ -12,7 +12,7 @@
 
         <!-- Required Software -->
         <section class="glass-block setup-section">
-            <h2 style="color: black;">Required Software</h2>
+            <h2>Required Software</h2>
             <p>To set up R development environment on Linux, you'll need the following components:</p><br>
             <ul>
                 <li><strong>R:</strong> The core R programming language and runtime environment.</li><br>
@@ -25,35 +25,35 @@
 
         <!-- Download Code Editor -->
         <section class="glass-block setup-section">
-            <h2 style="color: black;">Download Visual Studio Code</h2>
+            <h2>Download Visual Studio Code</h2>
             <p>Visual Studio Code (VS Code) is a powerful and lightweight code editor that provides excellent support for R development through various extensions.</p><br><br>
 
-            <h3 style="color: black;">Installation Methods:</h3><br>
+            <h3>Installation Methods:</h3><br>
 
-            <h4 style="color: black;">Method 1: Using Snap (Recommended for Ubuntu/Debian)</h4>
+            <h4>Method 1: Using Snap (Recommended for Ubuntu/Debian)</h4>
             <pre class="code-block">
 sudo snap install code --classic
             </pre>
 <br><br>   
-            <h4 style="color: black;">Method 2: Using Package Manager (For Ubuntu/Debian)</h4><br>
+            <h4>Method 2: Using Package Manager (For Ubuntu/Debian)</h4><br>
             <pre class="code-block">
 sudo apt update
 sudo apt install code
             </pre>
 <br><br>
-            <p style="color: black;"><strong>For Fedora/RHEL/CentOS:</strong></p>
+            <p><strong>For Fedora/RHEL/CentOS:</strong></p>
             <pre class="code-block">
 sudo dnf install code
 # or for older versions:
 sudo yum install code
             </pre>
 <br><br>
-            <p style="color: black;"><strong>For Arch Linux:</strong></p>
+            <p><strong>For Arch Linux:</strong></p>
             <pre class="code-block">
 sudo pacman -S code
             </pre>
 <br><br>
-            <h4 style="color: black;">Method 3: Manual Download</h4>
+            <h4>Method 3: Manual Download</h4>
             <ol>
                 <li>Visit <a class="download-link" href="https://code.visualstudio.com/download" target="_blank">code.visualstudio.com/download</a></li><br>
                 <li>Download the .deb (Ubuntu/Debian) or .rpm (Fedora/RHEL) package</li><br>
@@ -65,7 +65,7 @@ sudo rpm -i code-*.rpm   # For Fedora/RHEL<br>
                 </li><br>
             </ol><br>
 
-            <h3 style="color: black;">Here is how it should look after installation</h3>
+            <h3>Here is how it should look after installation</h3>
             <div class="screen-shot">
                 <img src="screens/vscode.png" alt="VS Code" style="width:100%; height:100%;">
             </div>
@@ -73,18 +73,18 @@ sudo rpm -i code-*.rpm   # For Fedora/RHEL<br>
 
         <!-- Installation Steps -->
         <section class="glass-block setup-section">
-            <h2 style="color: black;">Steps of Installation</h2><br>
+            <h2>Steps of Installation</h2><br>
 
-            <h3 style="color: black;">Step 1: Install R</h3><br>
+            <h3>Step 1: Install R</h3><br>
             <p>Choose the method that matches your Linux distribution:</p><br><br>
 
-            <h4 style="color: black;">Ubuntu/Debian:</h4>
+            <h4>Ubuntu/Debian:</h4>
             <pre class="code-block">
 sudo apt update
 sudo apt install r-base r-base-dev
             </pre>
 <br><br>
-                <h4 style="color: black;">Fedora/RHEL/CentOS:</h4>
+                <h4>Fedora/RHEL/CentOS:</h4>
             <pre class="code-block">
 # For Fedora:
 sudo dnf install R
@@ -94,17 +94,17 @@ sudo yum install epel-release
 sudo yum install R
             </pre>
 <br><br>
-            <h4 style="color: black;">Arch Linux:</h4>
+            <h4>Arch Linux:</h4>
             <pre class="code-block">
 sudo pacman -S r
             </pre>
 <br><br>
-            <h4 style="color: black;">openSUSE:</h4>
+            <h4>openSUSE:</h4>
             <pre class="code-block">
 sudo zypper install R-base R-base-devel
             </pre>
 <br><br>
-            <h3 style="color: black;">Step 2: Install RStudio (Recommended)</h3>
+            <h3>Step 2: Install RStudio (Recommended)</h3>
             <ol>
                 <li>Download RStudio Desktop from <a class="download-link" href="https://posit.co/download/rstudio-desktop/" target="_blank">Posit website</a></li><br>
                 <li>Choose the Ubuntu/Debian (.deb) or Red Hat/CentOS (.rpm) version</li><br>
@@ -121,7 +121,7 @@ sudo rpm -i rstudio-*.rpm
                 <li>Launch RStudio - it should automatically detect your R installation</li>
             </ol>
 <br><br>
-            <h3 style="color: black;">Step 3: Install R Extensions in VS Code</h3><br>
+            <h3>Step 3: Install R Extensions in VS Code</h3><br>
             <ol>
                 <li>Open Visual Studio Code</li>
                 <li>Go to Extensions (Ctrl+Shift+X)</li>
@@ -130,7 +130,7 @@ sudo rpm -i rstudio-*.rpm
                 <li>Reload VS Code after installation</li>
             </ol>
 <br><br>
-            <h3 style="color: black;">Step 4: Verify Installation</h3><br>
+            <h3>Step 4: Verify Installation</h3><br>
             <p>Open a terminal and run:</p>
             <pre class="code-block">
 R --version
@@ -147,10 +147,10 @@ R
 
         <!-- Required Extensions -->
         <section class="glass-block setup-section">
-            <h2 style="color: black;">Required Extensions for VS Code</h2>
+            <h2>Required Extensions for VS Code</h2>
             <p>Install these essential extensions to enhance your R development experience in VS Code:</p>
 <br>
-            <h3 style="color: black;">1. R (Official Extension by REditorSupport)</h3>
+            <h3>1. R (Official Extension by REditorSupport)</h3>
             <ul>
                 <li>Provides syntax highlighting and code completion</li>
                 <li>Supports running R code directly from the editor</li>
@@ -158,26 +158,26 @@ R
                 <li>Supports rmarkdown and Shiny development</li>
             </ul>
             <br>
-            <h3 style="color: black;">2. R LSP Client</h3>
+            <h3>2. R LSP Client</h3>
             <ul>
                 <li>Language Server Protocol support for R</li>
                 <li>Advanced code navigation and refactoring</li>
                 <li>Improved IntelliSense capabilities</li>
             </ul>
             <br>
-            <h3 style="color: black;">3. R Debugger</h3>
+            <h3>3. R Debugger</h3>
             <ul>
                 <li>Debugging tools for R code</li>
                 <li>Breakpoint support and variable inspection</li>
             </ul>
             <br>
-            <h3 style="color: black;">4. R Package Manager</h3>
+            <h3>4. R Package Manager</h3>
             <ul>
                 <li>Manage R packages from VS Code</li>
                 <li>Easy installation and removal of packages</li>
             </ul>
             <br>
-            <h3 style="color: black;">5. Code Runner</h3>
+            <h3>5. Code Runner</h3>
             <ul>
                 <li>Quick code execution for various languages including R</li>
                 <li>Run selected lines or entire scripts</li>
@@ -186,16 +186,16 @@ R
 
         <!-- Basic Code Examples -->
         <section class="glass-block setup-section">
-            <h2 style="color: black;">Basic Lines of Code for Beginners</h2>
+            <h2>Basic Lines of Code for Beginners</h2>
             <p>Here are some simple R programs to test your setup and get started with R programming:</p>
             <br>
-                <h3 style="color: black;">Example 1: Hello World</h3>
+                <h3>Example 1: Hello World</h3>
             <pre class="code-block">
 # Simple Hello World program
 print("Hello, World!")
             </pre>
             <br>
-            <h3 style="color: black;">Example 2: Working with Variables</h3>
+            <h3>Example 2: Working with Variables</h3>
             <pre class="code-block">
 # Create variables
 name <- "John"
@@ -208,7 +208,7 @@ print(age)
 print(height)
             </pre>
             <br>
-            <h3 style="color: black;">Example 3: Basic Arithmetic</h3>
+            <h3>Example 3: Basic Arithmetic</h3>
             <pre class="code-block">
 # Perform basic calculations
 a <- 10
@@ -227,7 +227,7 @@ print(division)      # 2
 print(modulus)       # 0
             </pre>
             <br>
-            <h3 style="color: black;">Example 4: Working with Vectors</h3>
+            <h3>Example 4: Working with Vectors</h3>
             <pre class="code-block">
 # Create vectors
 numbers <- c(1, 2, 3, 4, 5)
@@ -242,7 +242,7 @@ sum(numbers)         # 15
 length(names)        # 3
             </pre>
             <br>
-            <h3 style="color: black;">Example 5: Conditional Statements</h3>
+            <h3>Example 5: Conditional Statements</h3>
             <pre class="code-block">
 # If-else statement
 score <- 85
@@ -256,7 +256,7 @@ if (score >= 80) {
 }
             </pre>
             <br>
-            <h3 style="color: black;">Example 6: Loops</h3>
+            <h3>Example 6: Loops</h3>
             <pre class="code-block">
 # For loop
 for (i in 1:5) {
@@ -271,7 +271,7 @@ while (x <= 3) {
 }
             </pre>
             <br>
-            <h3 style="color: black;">Example 7: Functions</h3>
+            <h3>Example 7: Functions</h3>
             <pre class="code-block">
 # Define a function
 greet <- function(name) {
@@ -291,7 +291,7 @@ result <- add_numbers(10, 20)
 print(result)  # 30
             </pre>
             <br>
-            <h3 style="color: black;">Example 8: Working with Data Frames</h3>
+            <h3>Example 8: Working with Data Frames</h3>
             <pre class="code-block">
 # Create a data frame
 students <- data.frame(
@@ -314,17 +314,17 @@ print(students[1,])
 
         <!-- Best Extensions for R Development -->
         <section class="glass-block setup-section">
-            <h2 style="color: black;">Best Extensions for R Development</h2><br>
+            <h2>Best Extensions for R Development</h2><br>
             <p>To maximize your R development experience, here are the recommended extensions and tools:</p>
             <br>
-            <h3 style="color: black;">Essential Extensions:</h3>
+            <h3>Essential Extensions:</h3>
             <ul>
                 <li><strong>R (by REditorSupport):</strong> The official extension providing comprehensive R language support</li>
                 <li><strong>R LSP Client:</strong> Language Server Protocol for advanced IDE features</li>
                 <li><strong>Code Runner:</strong> Execute code snippets quickly</li>
             </ul>
             <br>
-            <h3 style="color: black;">Productivity Extensions:</h3>
+            <h3>Productivity Extensions:</h3>
             <ul>
                 <li><strong>Rainbow Brackets:</strong> Color-code matching brackets for better code readability</li>
                 <li><strong>Bracket Pair Colorizer:</strong> Helps track nested brackets easily</li>
@@ -332,21 +332,21 @@ print(students[1,])
                 <li><strong>GitLens:</strong> Git integration and history tracking</li>
             </ul>
             <br>
-            <h3 style="color: black;">Data Science Extensions:</h3>
+            <h3>Data Science Extensions:</h3>
             <ul>
                 <li><strong>Jupyter:</strong> Support for R notebooks and interactive development</li>
                 <li><strong>Excel Viewer:</strong> View and edit CSV and Excel files directly</li>
                 <li><strong>R Markdown:</strong> Support for creating dynamic documents with R code</li>
             </ul>
             <br>
-            <h3 style="color: black;">Theme and UI Extensions:</h3>
+            <h3>Theme and UI Extensions:</h3>
             <ul>
                 <li><strong>One Dark Pro:</strong> Popular dark theme with excellent contrast</li>
                 <li><strong>Dracula Official:</strong> Beautiful dark color scheme</li>
                 <li><strong>Icons Extension:</strong> Better file icons for visual identification</li>
             </ul>
             <br>
-            <h3 style="color: black;">Installation Tips:</h3>
+            <h3>Installation Tips:</h3>
             <ol>
                 <li>Open <strong></strong>Visual Studio Code</strong> Extensions panel (<strong></strong>Ctrl+Shift+X</strong>)</li>
                 <li>Search for each extension by name</li><br>
@@ -357,7 +357,7 @@ print(students[1,])
 
         <!-- Conclusion -->
         <section class="glass-block setup-section">
-            <h2 style="color: black;">Conclusion</h2>
+            <h2>Conclusion</h2>
             <p>Congratulations! You have successfully set up R on your Linux machine. You now have:</p><br>
             <ul>
                 <li>R installed and ready for execution</li><br>
