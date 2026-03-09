@@ -34,6 +34,12 @@ function routeUser() {
     // ===============================
     // HTML ROUTES
     // ===============================
+
+
+
+
+        // language 1 = HTML
+
     if (language === "html") {
 
         // Windows (10 / 11)
@@ -64,7 +70,7 @@ function routeUser() {
 
 
 
-    // language 1 = nodejs
+    // language 2 = nodejs
 
     if (language === "nodejs") {
 
@@ -96,7 +102,7 @@ function routeUser() {
 
 
 
-    // language 2 = python
+    // language 3 = python
 
     if (language === "python") {
 
@@ -129,7 +135,7 @@ function routeUser() {
     
 
 
-    // language 3 = Angular
+    // language 4 = Angular
 
     if (language === "angular") {
 
@@ -161,7 +167,7 @@ function routeUser() {
 
 
 
-    // language 4 = Django
+    // language 5 = Django
 
     if (language === "django") {
 
@@ -194,7 +200,7 @@ function routeUser() {
 
 
 
-    // language 5 = Flask
+    // language 6 = Flask
 
     if (language === "flask") {
 
@@ -227,7 +233,7 @@ function routeUser() {
 
 
 
-    // language 5 = Go
+    // language 7 = Go
 
     if (language === "go") {
 
@@ -261,7 +267,7 @@ function routeUser() {
 
 
 
-    // language 6 = Java
+    // language 8 = Java
 
     if (language === "java") {
 
@@ -295,7 +301,7 @@ function routeUser() {
 
 
 
-    // language 7 = Javascript
+    // language 9 = Javascript
 
     if (language === "javascript") {
 
@@ -329,41 +335,8 @@ function routeUser() {
 
 
 
-    // language 8 = Nodejs
 
-    if (language === "nodejs") {
-
-        // Windows (10 / 11)
-        if (os === "windows") {
-            window.location.href = "Nodejs setup/setup-nodejs-win.html";
-            return;
-        }
-
-        // macOS
-        if (os === "mac") {
-            window.location.href = "Nodejs setup/setup-nodejs-mac.html";
-            return;
-        }
-
-        // ChromeOS (treated separately but same setup)
-        if (os === "chromeos") {
-            window.location.href = "Nodejs setup/setup-nodejs-linux.html";
-            return;
-        }
-
-        // All Linux distributions
-        if (os === "linux") {
-            window.location.href = "Nodejs setup/setup-nodejs-linux.html";
-            return;
-        }
-    }
-
-
-
-
-
-
-    // language 9 = PHP
+    // language 10 = PHP
 
     if (language === "php") {
 
@@ -395,7 +368,7 @@ function routeUser() {
 
 
 
-    // language 10 = React
+    // language 11 = React
 
     if (language === "react") {
 
@@ -428,7 +401,7 @@ function routeUser() {
 
 
 
-    // language 11 = vue
+    // language 12 = vue
 
     if (language === "vue") {
 
@@ -461,7 +434,7 @@ function routeUser() {
 
 
 
-    // language 12 = c
+    // language 13 = c
 
     if (language === "c") {
 
@@ -493,7 +466,7 @@ function routeUser() {
 
 
 
-    // language 13 = c++
+    // language 14 = c++
 
     if (language === "cpp") {
 
@@ -521,6 +494,345 @@ function routeUser() {
             return;
         }
     }
+
+
+
+
+
+
+
+    // language 15 = Bash
+
+    if (language === "Bash") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "Bash setup/setup-bash-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "Bash setup/setup-bash-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "Bash setup/setup-bash-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "Bash setup/setup-bash-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+    // language 16 = CSS
+
+    if (language === "css") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "CSS setup/setup-css-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "CSS setup/setup-css-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "CSS setup/setup-css-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "CSS setup/setup-css-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+
+    // language 17 = Kotlin
+
+    if (language === "Kotlin") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "Kotlin setup/setup-kotlin-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "Kotlin setup/setup-kotlin-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "Kotlin setup/setup-kotlin-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "Kotlin setup/setup-kotlin-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+
+    // language 18 = R
+
+    if (language === "R") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "R setup/setup-r-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "R setup/setup-r-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "R setup/setup-r-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "R setup/setup-r-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+    // language 19 = Ruby
+
+    if (language === "Ruby") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "Ruby setup/setup-ruby-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "Ruby setup/setup-ruby-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "Ruby setup/setup-ruby-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "Ruby setup/setup-ruby-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    // language 20 = Rust
+
+    if (language === "Rust") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "Rust/setup-rust-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "Rust/setup-rust-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "Rust/setup-rust-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "Rust setup/setup-rust-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    // language 21 = Swift
+
+    if (language === "Swift") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "Swift setup/setup-swift-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "Swift setup/setup-swift-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "Swift setup/setup-swift-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "Swift setup/setup-swift-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    // language 22 = TensorFlow
+
+    if (language === "TensorFlow") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "TensorFlow setup/setup-tensorflow-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "TensorFlow setup/setup-tensorflow-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "TensorFlow setup/setup-tensorflow-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "TensorFlow setup/setup-tensorflow-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    // language 23 = TypeScript
+
+    if (language === "TypeScript") {
+
+        // Windows (10 / 11)
+        if (os === "windows") {
+            window.location.href = "TypeScript setup/setup-typescript-win.html";
+            return;
+        }
+
+        // macOS
+        if (os === "mac") {
+            window.location.href = "TypeScript setup/setup-typescript-mac.html";
+            return;
+        }
+
+        // ChromeOS (treated separately but same setup)
+        if (os === "chromeos") {
+            window.location.href = "TypeScript setup/setup-typescript-linux.html";
+            return;
+        }
+
+        // All Linux distributions
+        if (os === "linux") {
+            window.location.href = "TypeScript setup/setup-typescript-linux.html";
+            return;
+        }
+    }
+
+
+
+
+
 
 
 
