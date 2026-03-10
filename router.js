@@ -763,29 +763,29 @@ function routeUser() {
 
     // language 22 = TensorFlow
 
-    if (language === "tensorflow") {
+    if (language === "TensorFlow") {
 
         // Windows (10 / 11)
         if (os === "windows") {
-            window.location.href = "TensorFlow setup/setup-tensorflow-win.html";
+            window.location.href = "TensorFlow Setup/setup-tensorflow-win.html";
             return;
         }
 
         // macOS
         if (os === "mac") {
-            window.location.href = "TensorFlow setup/setup-tensorflow-mac.html";
+            window.location.href = "TensorFlow Setup/setup-tensorflow-mac.html";
             return;
         }
 
         // ChromeOS (treated separately but same setup)
         if (os === "chromeos") {
-            window.location.href = "TensorFlow setup/setup-tensorflow-linux.html";
+            window.location.href = "TensorFlow Setup/setup-tensorflow-linux.html";
             return;
         }
 
         // All Linux distributions
         if (os === "linux") {
-            window.location.href = "TensorFlow setup/setup-tensorflow-linux.html";
+            window.location.href = "TensorFlow Setup/setup-tensorflow-linux.html";
             return;
         }
     }
