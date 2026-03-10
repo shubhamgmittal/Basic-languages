@@ -3,9 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Setup Guide for macOS</title>
+    <title>PHP Setup Guide for Linux</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main class="container">
+        <h1 style="color: black;">PHP Setup Guide for Linux</h1>
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <p class="setup-text">
+                To work with PHP professionally, you will need to install
+                <strong>PHP</strong> and a code editor like
+                <strong>Visual Studio Code</strong>.
+                PHP is a popular server-side scripting language used for web development, and Visual Studio Code is a great code editor that provides excellent support for PHP development.
+            </p>
+        </section>
+
+    <section class="glass-block setup-section">
+        <h2>Download Visual Studio Code</h2>
+        <p class="setup-text">
+            Here is the installer matching your operating system.
+        </p>
+
+        <ul class="setup-list">
+            <li>
+                <strong>macOS (Universal)</strong><br>
+                <a class="download-link"
+                   href="https://update.code.visualstudio.com/latest/darwin/universal/stable">
+                   Download VS Code for macOS
+                </a>
+            </li>
+
+            
+        </ul><br><br>
+        <h3>Here is how it should look after installation</h3><br>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/vs-code.png" alt="Visual studio code" style="width:100%; height:100%;">
+                </div>
+
+    </section>
+
+        <!-- Download php -->
+        <section class="glass-block setup-section">
+            <h2>Download PHP</h2>
+            <p class="setup-text">
+                Here is the installer matching your operating system.
+            </p>
+            <ul class="setup-list">
+                <li>
+                    <strong>Linux (64-bit)</strong><br>
+                    <a class="download-link" href="https://windows.php.net/download#php-8.2">
+                        Download PHP for Linux
+                    </a>
+                </li>   
+            </ul><br><br>
+            <h3>Here is how it should look after installation</h3>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/php.png" alt="PHP" style="width:100%; height:100%;">
+                </div>
+            </div>  
+        </section>  
+
+        <!-- Required Extensions -->
+        <section class="glass-block setup-section">
+            <h2>Required Extensions</h2>
+            <p class="setup-text">
+                After installing PHP and VS Code, you should install the following extensions in VS Code:
+            </p>
+            <ul class="setup-list">
+                <li><strong>PHP Intelephense</strong> - Provides intelligent code completion and error checking for PHP.</li>
+                <li><strong>PHP Debug</strong> - Allows debugging PHP applications in VS Code.</li>
+            </ul>
+        </section>
+
+        <!-- for beginner lines of code in php -->
+        <section class="glass-block setup-section">
+            <h2>Test Your Setup</h2>
+            <p class="setup-text    ">
+                To test your PHP setup, create a new file named <code>index.php</code> in your project directory and add the following code:
+            </p>
+            <pre class="code-block">
+&lt;?php
+echo "Hello, World!";
+?&gt;
+            </pre>
+            <p class="setup-text">
+                Save the file and run it using the command line or terminal:
+            </p>
+            <pre class="code-block">
+php index.php
+            </pre>
+            <p class="setup-text">
+                You should see the output <code>Hello, World!</code> in the terminal, confirming that your PHP setup is working correctly.  Congratulations on setting up your PHP development environment on Linux!  You are now ready to start building web applications with PHP and Visual Studio Code.
+            </p>
+    </main>
 </body>
 </html>
