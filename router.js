@@ -503,7 +503,7 @@ function routeUser() {
 
     // language 15 = Bash
 
-    if (language === "Bash") {
+    if (language === "bash") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -576,7 +576,7 @@ function routeUser() {
 
     // language 17 = Kotlin
 
-    if (language === "Kotlin") {
+    if (language === "kotlin") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -613,7 +613,7 @@ function routeUser() {
 
     // language 18 = R
 
-    if (language === "R") {
+    if (language === "r") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -649,7 +649,7 @@ function routeUser() {
 
     // language 19 = Ruby
 
-    if (language === "Ruby") {
+    if (language === "ruby") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -687,7 +687,7 @@ function routeUser() {
 
     // language 20 = Rust
 
-    if (language === "Rust") {
+    if (language === "rust") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -725,7 +725,7 @@ function routeUser() {
 
     // language 21 = Swift
 
-    if (language === "Swift") {
+    if (language === "swift") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -763,7 +763,7 @@ function routeUser() {
 
     // language 22 = TensorFlow
 
-    if (language === "TensorFlow") {
+    if (language === "tensorflow") {
 
         // Windows (10 / 11)
         if (os === "windows") {
@@ -802,7 +802,7 @@ function routeUser() {
 
     // language 23 = TypeScript
 
-    if (language === "TypeScript") {
+    if (language === "typeScript") {
 
         // Windows (10 / 11)
         if (os === "windows") {
