@@ -503,29 +503,29 @@ function routeUser() {
 
     // language 15 = Bash
 
-    if (language === "bash") {
+    if (language === "Bash") {
 
         // Windows (10 / 11)
         if (os === "windows") {
-            window.location.href = "Bash setup/setup-bash-win.html";
+            window.location.href = "Bash Setup/setup-bash-win.html";
             return;
         }
 
         // macOS
         if (os === "mac") {
-            window.location.href = "Bash setup/setup-bash-mac.html";
+            window.location.href = "Bash Setup/setup-bash-mac.html";
             return;
         }
 
         // ChromeOS (treated separately but same setup)
         if (os === "chromeos") {
-            window.location.href = "Bash setup/setup-bash-linux.html";
+            window.location.href = "Bash Setup/setup-bash-linux.html";
             return;
         }
 
         // All Linux distributions
         if (os === "linux") {
-            window.location.href = "Bash setup/setup-bash-linux.html";
+            window.location.href = "Bash Setup/setup-bash-linux.html";
             return;
         }
     }
