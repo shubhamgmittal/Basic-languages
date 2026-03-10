@@ -802,7 +802,7 @@ function routeUser() {
 
     // language 23 = TypeScript
 
-    if (language === "typeScript") {
+    if (language === "typescript") {
 
         // Windows (10 / 11)
         if (os === "windows") {
