@@ -1,50 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Go Setup Guide for Linux </title>
+    <title>Go Setup on Linux</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
     <main class="container">
-        <h1 style="color: black;">Go Setup Guide for Linux</h1>
 
-        <!-- Required Software -->
+        <h1 style="color: black;">Go Language Setup Linux</h1>
+
+        <!-- About go languages -->
         <section class="glass-block setup-section">
-            <h2>Required Software</h2>
-            <p class="setup-text">
-                To work with Go professionally, you will need to install
-                <strong>Go</strong> and a code editor like
-                <strong>Visual Studio Code</strong>.
-            </p>
+            <h2>About Go Language</h2>
+            <p>Go is a fast and efficient programming language used for backend development, DevOps tools, and cloud
+                computing.</p>
         </section>
 
-        <!-- Download Go -->
+        <!-- Prerequisites -->
         <section class="glass-block setup-section">
-            <h2>Download Go</h2>
+            <h2>Prerequisites</h2>
+            <ul>
+                <li>Linux operating system (Ubuntu, Debian, Fedora etc.)</li>
+                <li>Terminal access</li>
+                <li>Internet connection</li>
+            </ul>
+        </section>
+
+        <!-- Required software -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            <ul>
+                <li>Go Programming Language</li>
+                <li>Visual Studio Code</li>
+                <li>Terminal</li>
+            </ul>
+        </section>
+
+        <!-- Download vscode editor -->
+        <section class="glass-block setup-section">
+            <h2>Download Visual Studio Code</h2>
             <p class="setup-text">
                 Here is the installer matching your operating system.
             </p>
+
+            <ul class="setup-list">
+                <li>
+                    <strong>Linux (.deb)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/linux-deb-x64/stable">
+                        Download VS Code for Debian/Ubuntu
+                    </a>
+                </li>
+
+                <li>
+                    <strong>Linux (.rpm)</strong><br>
+                    <a class="download-link" href="https://update.code.visualstudio.com/latest/linux-rpm-x64/stable">
+                        Download VS Code for Fedora/RHEL
+                    </a>
+                </li>
+            </ul> <br><br>
+
+            <h3>Here is how it should look after installation</h3><br>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/vs-code.png" alt="Visual studio code" style="width:100%; height:100%;">
+                </div>
         </section>
 
-        <!-- Required Extensions -->
+
+        <!-- Installation steps -->
         <section class="glass-block setup-section">
-            <h2>Required Extensions</h2>
-            <p class="setup-text">
-                After installing VS Code, you should install the following extensions:
-            </p>
+            <h2>Installation Steps</h2>
+
+            <p>For Ubuntu / Debian:</p>
+
+            <pre>
+                sudo apt update
+                sudo apt install golang-go
+            </pre>
+
+            <p>Check installation:</p>
+
+            <pre>
+                go version
+            </pre>
+
         </section>
 
-        <!-- Conclusion -->
+
+        <!-- Required extensions -->
+        <section class="glass-block setup-section">
+            <h2>Best VS Code Extensions</h2>
+            <ul>
+                <li>Go (Official Extension)</li>
+                <li>Code Runner</li>
+                <li>Error Lens</li>
+                <li>GitLens</li>
+            </ul>
+        </section>
+
+        <!-- basic code for beginner -->
+        <section class="glass-block setup-section">
+            <h2>Basic Go Program</h2>
+
+            <pre>
+        package main
+        
+        import "fmt"
+        
+        func main() {
+            fmt.Println("Hello Go from Linux!")
+        }
+    </pre>
+
+            <p>Run program:</p>
+
+            <pre>
+        go run main.go
+    </pre>
+
+        </section>
+
+        <!-- conclusion -->
         <section class="glass-block setup-section">
             <h2>Conclusion</h2>
-            <p class="setup-text">
-                Congratulations! You have successfully set up Go on your Linux machine.
-            </p>
-            <p class="setup-text">
-                You are now ready to start building your Go projects.
-            </p>
+            <p>Go is now installed on your Linux system. You can start building CLI tools, APIs, and backend
+                applications.</p>
         </section>
+
     </main>
+
 </body>
+
 </html>

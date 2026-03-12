@@ -1,51 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Go Setup Guide for macOS </title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Go Setup on macOS</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <main class="container">
-        <h1 style="color: black;">Go Setup Guide for macOS</h1>
+<main class="container">
 
-        <!-- Required Software -->
-        <section class="glass-block setup-section">
-            <h2>Required Software</h2>
-            <p class="setup-text">
-                To work with Go professionally, you will need to install
-                <strong>Go</strong> and a code editor like
-                <strong>Visual Studio Code</strong>.
-            </p>
-        </section>
+    <h1>Go Language Setup (macOS)</h1>
+    
+    <section class="glass-block setup-section">
 
-            <!-- Download Go -->
-            <section class="glass-block setup-section">
-            <h2>Download Go</h2>
-            <p class="setup-text">
-                Here is the installer matching your operating system.
-            </p>
-        </section>
+        <!-- Description -->
+        <h2>About Go Language</h2>
+        <p>Go is an open-source programming language developed by Google. It is widely used for backend development, APIs, and cloud systems.</p>
+    </section>
+    
+    <!-- Prerequisites -->
+    <section class="glass-block setup-section">
+        <h2>Prerequisites</h2>
 
-        <!-- Required Extensions -->
-        <section class="glass-block setup-section">
-            <h2>Required Extensions</h2>
-            <p class="setup-text">
-                After installing VS Code, you should install the following extensions:
-            </p>
-        </section>  
+        <ul>
+            <li>macOS system</li>
+            <li>Terminal access</li>
+            <li>Internet connection</li>
+        </ul>
+    </section>
+    
+    <!-- Required softwares -->
+    <section class="glass-block setup-section">
+        <h2>Required Software</h2>
+        <ul>
+            <li>Go Programming Language</li>
+            <li>Visual Studio Code</li>
+            <li>Homebrew (optional)</li>
+        </ul>
+    </section>
+    
+<!-- Download vscode -->
+    <section class="glass-block setup-section">
+        <h2>Download Visual Studio Code</h2>
+        <p class="setup-text">
+            Here is the installer matching your operating system.
+        </p>
 
-        <!-- Conclusion -->
-        <section class="glass-block setup-section">
-            <h2>Conclusion</h2>
-            <p class="setup-text">
-                Congratulations! You have successfully set up Go on your Mac.
-            </p>
-            <p class="setup-text">
-                You are now ready to start building your Go projects.
-            </p>
-        </section>
-    </main>
+        <ul class="setup-list">
+            <li>
+                <strong>macOS (Universal)</strong><br>
+                <a class="download-link"
+                   href="https://update.code.visualstudio.com/latest/darwin/universal/stable">
+                   Download VS Code for macOS
+                </a>
+            </li>
+
+            
+        </ul><br><br>
+        <h3>Here is how it should look after installation</h3><br>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/vs-code.png" alt="Visual studio code" style="width:100%; height:100%;">
+                </div>
+
+    </section>
+    
+    <!-- Required extensions -->
+    <section class="glass-block setup-section">
+        <h2>Best VS Code Extensions</h2>
+        <ul>
+            <li>Go (Official Extension)</li>
+            <li>Code Runner</li>
+            <li>Error Lens</li>
+        </ul>
+    </section>
+    
+    <!-- basic code for beginners -->
+    <section class="glass-block setup-section">
+        <h2>Basic Go Program</h2>
+        
+        <pre>
+            package main
+            
+            import "fmt"
+            
+            func main() {
+                fmt.Println("Hello Go from macOS!")
+            }
+        </pre>
+        
+        <p>Run program:</p>
+        
+        <pre>
+            go run main.go
+        </pre>
+        
+    </section>
+    
+    <!-- conclusion -->
+    <section class="glass-block setup-section">
+        <h2>Conclusion</h2>
+        <p>You have successfully installed Go on macOS and can start developing applications.</p>
+    </section>
+    
+</main>
+    
+    
 </body>
 </html>

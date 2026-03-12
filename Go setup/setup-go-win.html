@@ -1,18 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Setup Guide for Windows</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Go Language Setup on Windows</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main class="container">
-        <h1 style="color: black;">Go Setup Guide for Windows</h1>
 
-        <!-- Required software -->
-          
+        <h1 style="color: black;">Go Language Setup Guide Windows</h1>    
+        
+        <!-- Description Section -->
+        <section class="glass-block setup-section">
+            <h2>About Go Language</h2>
+            <p>
+                Go (also called Golang) is an open-source programming language developed by 
+                Google. It is designed for simplicity, performance, and reliability. 
+                Go is widely used for backend development, cloud services, APIs, and 
+                high-performance applications.
+            </p>
+            
+            <p>
+                This guide will help beginners install Go on Windows and start writing their first Go program.
+            </p>
+        </section>
+        
+        
+        <!-- Prerequisites -->
+        <section class="glass-block setup-section">
+            <h2>Prerequisites</h2>
+            
+            <ul>
+                <li>Basic knowledge of programming</li>
+                <li>Windows 10 or Windows 11 operating system</li>
+                <li>Internet connection</li>
+                <li>Administrator permission to install software</li>
+            </ul>
+            
+        </section>
+        
+        
+        <!-- Required Software -->
+        <section class="glass-block setup-section">
+            <h2>Required Software</h2>
+            
+            <ul>
+                <li>Go Programming Language</li>
+                <li>Code Editor (Recommended: Visual Studio Code)</li>
+                <li>Web Browser to download tools</li>
+            </ul>
+            
+        </section>
+        
+        
+        <!-- Download VS Code -->
+    <section class="glass-block setup-section">
+        <h2>Download Visual Studio Code</h2>
+        <p class="setup-text">
+            Here is the installer matching your operating system.
+        </p>
 
+        <ul class="setup-list">
+            <li>
+                <strong>Windows (64-bit)</strong><br>
+                <a class="download-link"
+                   href="https://update.code.visualstudio.com/latest/win32-x64-user/stable">
+                   Download VS Code for Windows
+                </a>
+            </li>
+        </ul><br><br>
+        <h3>Here is how it should look after installation</h3><br>
+            <div class="screen-shot">
+                <div class="screen-shot">
+                    <img src="screens/vs-code.png" alt="Visual studio code" style="width:100%; height:100%;">
+                </div>
+
+    </section>
+            
+            
+            <!-- Installation Steps -->
+            <section class="glass-block setup-section">
+                <h2>Go Installation Steps (Windows)</h2>
+                
+                <ol>
+                    
+                    <li>
+                        Go to official website: <br>
+                        <a class="download-link" href="https://go.dev/dl/" target="_blank">
+                            https://go.dev/dl/
+                        </a>
+                    </li>
+                    
+                    <li>Download the latest <b>Windows .msi installer</b></li>
+                    
+                    <li>Open the downloaded file</li>
+                    
+                    <li>Click <b>Next → Install</b></li>
+                    
+                    <li>After installation, open <b>Command Prompt</b></li>
+                    
+                    <li>Check installation using command:</li>
+                    
+                    <pre>
+                        go version
+                    </pre>
+                    
+                    <li>If Go is installed correctly, it will display the installed version.</li>
+                    
+                </ol>
+                
+            </section>
+            
+            
+            <!-- Extensions -->
+            <section class="glass-block setup-section">
+                <h2>Best VS Code Extensions for Go</h2>
+                
+                <ul>
+                    <li><b>Go (by Google)</b> – Official Go extension</li>
+                    <li><b>Error Lens</b> – Shows errors inline</li>
+                    <li><b>Code Runner</b> – Run code quickly</li>
+                    <li><b>GitLens</b> – Git integration</li>
+                </ul>
+                
+                <p>To install extension:</p>
+                
+                <ol>
+                    <li>Open VS Code</li>
+                    <li>Click Extensions icon</li>
+                    <li>Search "Go"</li>
+                    <li>Click Install</li>
+                </ol>
+                
+            </section>
+            
+            
+            <!-- Beginner Code -->
+            <section class="glass-block setup-section">
+                <h2>Basic Go Program for Beginners</h2>
+                
+                <p>Create a file named <b>main.go</b> and write the following code:</p>
+                
+                <pre>
+                    package main
+                    
+                    import "fmt"
+                    
+                    func main() {
+                        
+                        fmt.Println("Hello, Welcome to Go Programming!")
+                        
+                    }
+                </pre>
+                
+                <p>Run the program using terminal:</p>
+                
+                <pre>
+                    go run main.go
+                </pre>
+                
+                <p>Output:</p>
+                
+                <pre>
+                    Hello, Welcome to Go Programming!
+                </pre>
+                
+            </section>
+            
+            
+            <!-- Conclusion -->
+            <section class="glass-block setup-section">
+                <h2>Conclusion</h2>
+                
+                <p>
+                    Go is a powerful and simple programming language ideal for backend 
+                    development, APIs, and cloud systems. By installing Go and VS Code, 
+                    you can quickly start building scalable applications.
+                </p>
+                
+                <p>
+                    Practice writing small programs and explore Go packages to become 
+                    comfortable with the language.
+                </p>
+                
+            </section>
     </main>
+
 </body>
 </html>
